@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<displayName>Adobe Digital Editions</displayName>
+	<description>Custom built Adobe Digital Editions ADML</description>
+	<resources>
+		<stringTable>
+			<string id="CAT_AdobeDigitalEditions">Adobe Digital Editions</string>
+			<string id="CAT_AdobeDigitalEditions_EXPLAIN">Category of custom settings for Adobe Digital Editions.</string>
+			<string id="POL_ADE_DoNotInstallAntivirus">Do not offer Antivirus program installation</string>
+			<string id="POL_ADE_DoNotInstallAntivirus_EXPLAIN">
+During installation of Adobe Digital Edition, the installer might ask you to install antivirus product (e.g. Norton, Symantec etc.) or trial one of those products. If you want to automatically decline this option, you can enable this policy and set value number 3. This policy will be necessary when deploying Adobe Digital Edition to be available either via Intune Company Portal or Software Center to all or selected users.
+
+Enabled and value number 3:
+Adobe Digital Edition will not pop up and ask you to install antivirus product into endpoint device running 64-bit Microsoft Windows operating system. This request will be automatically declined.
+
+NOTE: Setting value number 3 is mandatory when enabling this setting. DO NOT set other numbers or keep it blank when this policy is enabled as then this policy will not work!
+
+TECHNICAL DETAILS: This policy configures the value [ns] located under the [SOFTWARE\Wow6432Node\Symantec\NPInstaller\DeclineCount\adobeebook] key. This setting will be defined as [dword] and the value [00000003] will be assigned.
+
+Disabled:
+Adobe Digital Edition might pop up and ask you to install antivirus product. You can manually either accept or decline the request.
+
+Not Configured:
+By default, Adobe Digital Edition might pop up and ask you to install antivirus product. You can manually either accept or decline the request.</string>
+		</stringTable>
+		<presentationTable>
+			<presentation id="POL_ADE_DoNotInstallAntivirus">
+				<decimalTextBox refId="DXT_ADE_DoNotInstallAntivirus"/>
+			</presentation>
+		</presentationTable>
+	</resources>
+</policyDefinitionResources>

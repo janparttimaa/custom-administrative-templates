@@ -1,0 +1,22 @@
+<policyDefinitions revision="1.0" schemaVersion="1.0"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<policyNamespaces>
+		<target prefix="AobeDigitalEditions" namespace="MSC.Policies.856B09A6_F472_42F9_81C0_5C46AE5D35FE"/>
+		<using prefix="windows" namespace="Microsoft.Policies.Windows"/>
+	</policyNamespaces>
+	<supersededAdm fileName=""/>
+	<resources minRequiredRevision="1.0" fallbackCulture="EN-US"/>
+	<categories>
+		<category name="CAT_AdobeDigitalEditions" displayName="$(string.CAT_AdobeDigitalEditions)" explainText="$(string.CAT_AdobeDigitalEditions_EXPLAIN)"/>
+	</categories>
+	<policies>
+		<policy name="POL_ADE_DoNotInstallAntivirus" displayName="$(string.POL_ADE_DoNotInstallAntivirus)" explainText="$(string.POL_ADE_DoNotInstallAntivirus_EXPLAIN)" key="SOFTWARE\Wow6432Node\Symantec\NPInstaller\DeclineCount\adobeebook" class="Machine" presentation="$(presentation.POL_ADE_DoNotInstallAntivirus)">
+			<parentCategory ref="CAT_AdobeDigitalEditions"/>
+			<supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+			<elements>
+				<decimal id="DXT_ADE_DoNotInstallAntivirus" valueName="ns"/>
+			</elements>
+		</policy>
+	</policies>
+</policyDefinitions>
