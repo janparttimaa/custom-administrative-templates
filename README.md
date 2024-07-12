@@ -1,1 +1,1 @@
-# custom-administrative-templates
+# Custom Administrative Templates (ADMX & ADML)
