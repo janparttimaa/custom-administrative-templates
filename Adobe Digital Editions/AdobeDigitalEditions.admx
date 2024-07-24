@@ -2,7 +2,7 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<policyNamespaces>
-		<target prefix="AobeDigitalEditions" namespace="MSC.Policies.856B09A6_F472_42F9_81C0_5C46AE5D35FE"/>
+		<target prefix="AdobeDigitalEditions" namespace="MSC.Policies.856B09A6_F472_42F9_81C0_5C46AE5D35FE"/>
 		<using prefix="windows" namespace="Microsoft.Policies.Windows"/>
 	</policyNamespaces>
 	<supersededAdm fileName=""/>
