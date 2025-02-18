@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <policyNamespaces>
+    <target prefix="WindowsCustom" namespace="Microsoft.Policies.Windows.Custom" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0" />
+  <categories>
+    <category name="WindowsCustom" displayName="$(string.WindowsCustomSettingCategory)"/>
+  </categories>
+  <policies>
+    <policy name="BlockAADWorkplaceJoin" class="Machine" displayName="$(string.BlockAADWorkplaceJoin)" explainText="$(string.BlockAADWorkplaceJoin_help)" key="Software\Policies\Microsoft\Windows\WorkplaceJoin" valueName="BlockAADWorkplaceJoin">
+      <parentCategory ref="WindowsCustom"/>
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+     <policy name="DisableCachingOfSSLPages" class="Machine" displayName="$(string.DisableCachingOfSSLPages)" explainText="$(string.DisableCachingOfSSLPages_help)" key="Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings" valueName="DisableCachingOfSSLPages">
+      <parentCategory ref="WindowsCustom"/>
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+  </policies>
+</policyDefinitions>
