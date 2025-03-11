@@ -18,4 +18,4 @@ Here you can see OMA-URI information of the settings that are part of these ADMX
 ### Adobe Digital Editions
 | Name | Description | OMA-URI | Data type | Value 
 |---------|---------|---------|---------|---------|
-| DoNotInstallAntivirus | During installation of Adobe Digital Edition, the installer might ask you to install antivirus product (e.g. Norton, Symantec etc.) or trial one of those products.<br>If you enable this setting, those will not be installed. | ./Device/Vendor/MSFT/Policy/AdobeDigitalEditions~Policy~AdobeDigitalEditions/DoNotInstallAntivirus | String | <enabled/>
+| DoNotInstallAntivirus | (See below) | ./Device/Vendor/MSFT/Policy/AdobeDigitalEditions~Policy~AdobeDigitalEditions/DoNotInstallAntivirus | String | <enabled/>
