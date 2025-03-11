@@ -10,7 +10,7 @@ Here you can see OMA-URI information for released ADMX-templates, that can be de
 
 | ADMX-template | OMA-URI |
 |---------------|---------|
-| Adobe Digital Editions     | ./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/AdobeDigitalEditions/Policy/AdobeDigitalEditionsAdmx |
+| Adobe Digital Editions     | ```./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/AdobeDigitalEditions/Policy/AdobeDigitalEditionsAdmx``` |
 
 ## OMA-URI of settings
 Here you can see OMA-URI information of the settings that are part of these ADMX-templates, that can be deployed via Intune using ingestion with ingested ADMX-templates.
@@ -18,4 +18,4 @@ Here you can see OMA-URI information of the settings that are part of these ADMX
 ### Adobe Digital Editions
 | Name | Description | OMA-URI | Data type | Value 
 |---------|---------|---------|---------|---------|
-| DoNotInstallAntivirus | (See below) | ´´´./Device/Vendor/MSFT/Policy/AdobeDigitalEditions~Policy~AdobeDigitalEditions/DoNotInstallAntivirus´´´ | String | <enabled/>
+| ```DoNotInstallAntivirus``` | (See below) | ```./Device/Vendor/MSFT/Policy/AdobeDigitalEditions~Policy~AdobeDigitalEditions/DoNotInstallAntivirus``` | String | ```<enabled/>```
