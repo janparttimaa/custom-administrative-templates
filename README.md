@@ -20,7 +20,7 @@ Here you can see OMA-URI information of the settings that are part of these ADMX
 |---------|---------|---------|---------|---------|
 | ```DoNotInstallAntivirus``` | (See below) | ```./Device/Vendor/MSFT/Policy/AdobeDigitalEditions~Policy~AdobeDigitalEditions/DoNotInstallAntivirus``` | String | ```<enabled/>```
 
-#### Description
+#### Description (DoNotInstallAntivirus)
 During installation of Adobe Digital Edition, the installer might ask you to install antivirus product (e.g. Norton, Symantec etc.) or trial one of those products.
 
 If you enable this setting, Adobe Digital Edition will not pop up and ask you to install antivirus product into endpoint device running 64-bit Microsoft Windows operating system. This request will be automatically declined. Enabling this policy is required and necessary when deploying Adobe Digital Edition to be available either via Intune Company Portal or Software Center to all users or selected users.
