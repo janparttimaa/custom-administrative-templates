@@ -18,4 +18,4 @@ Here you can see OMA-URI information of the settings that are part of these ADMX
 ### Adobe Digital Editions
 | Name | Description | OMA-URI | Data type | Value 
 |---------|---------|---------|---------|---------|
-| DoNotInstallAntivirus | (See below) | ./Device/Vendor/MSFT/Policy/AdobeDigitalEditions~Policy~AdobeDigitalEditions/DoNotInstallAntivirus | String | <enabled/>
+| DoNotInstallAntivirus | (See below) | ´´´./Device/Vendor/MSFT/Policy/AdobeDigitalEditions~Policy~AdobeDigitalEditions/DoNotInstallAntivirus´´´ | String | <enabled/>
