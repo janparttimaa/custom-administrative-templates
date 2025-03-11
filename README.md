@@ -5,7 +5,7 @@ This repository includes some custom Administrative Templates that can be used o
 > [!CAUTION]
 > [Ingesting](https://petervanderwoude.nl/post/deep-dive-ingesting-third-party-admx-files/) (or [importing](https://learn.microsoft.com/en-us/mem/intune-service/configuration/administrative-templates-import-custom)) custom templates of [Microsoft Windows](https://github.com/janparttimaa/custom-administrative-templates/tree/main/Microsoft%20Windows) are currently not working on Microsoft Intune due to the fact that [Microsoft is currently blocking](https://learn.microsoft.com/en-us/windows/client-management/win32-and-centennial-app-policy-configuration#a-href-idoverviewaoverview) registry entries where custom policies are applying registry keys.
 
-## OMA-URI
+## OMA-URI of ADMX-templates
 Here you can see OMA-URI information for released ADMX-templates that can be deployed via Intune using ingestion.
 
 | ADMX-template | OMA-URI |
