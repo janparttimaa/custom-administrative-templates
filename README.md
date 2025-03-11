@@ -27,4 +27,7 @@ During installation of Adobe Digital Edition, the installer might ask you to ins
 
 If you disable this setting, Adobe Digital Edition will pop up and ask you to install antivirus product. You can manually either accept or decline the request.
 
+> [!NOTE]  
+> If you want to disable the setting via Intune, please make sure that value is then set to ```<disabled/>```
+
 If you not configure this setting, Adobe Digital Edition might pop up and ask you to install antivirus product depending what setting you have previously set. You can manually either accept or decline the request, if you get the request.
