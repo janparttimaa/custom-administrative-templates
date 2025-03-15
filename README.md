@@ -47,6 +47,12 @@ If you not configure this setting, Adobe Digital Edition might pop up and ask yo
 | ```Lang``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/7-Zip~Policy~7-Zip/Lang``` | String | ```<enabled/> <data id="Lang" value="-"/>```
 
 - **Friendly name of the setting:** Set language
+- **Registry Hive:** HKEY_CURRENT_USER
+- **Registry Path:** SOFTWARE\7-Zip
+- **Value Type:** REG_SZ
+- **Value Name:** Lang
+- **Enabled Value:** ```-```
+- **Disabled Value:** ```-```
 
 #### Description (Lang)
 Set and enforce language of the 7-Zip.
