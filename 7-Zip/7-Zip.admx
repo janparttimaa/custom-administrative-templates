@@ -13,7 +13,7 @@
 			<parentCategory ref="7-Zip"/>
 			<supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
 			<elements>
-        		<text id="SetLanguageBox" valueName="Lang" minValue="1" maxLength="2000" required="true" />
+        		<text id="SetLanguage" valueName="Lang" required="true" />
       		</elements>
     	</policy>
   	</policies>
