@@ -9,11 +9,11 @@
     	<category name="7-Zip" displayName="$(string.7-ZipSettingCategory)"/>
   </categories>
 	<policies>
-		<policy name="SetLanguage" class ="User" displayName="$(string.SetLanguage)" explainText="$(string.SetLanguage_help)" presentation="$(presentation.SetLanguage_Pres)" key="SOFTWARE\7-Zip">
+		<policy name="Lang" class ="User" displayName="$(string.Lang)" explainText="$(string.Lang_help)" presentation="$(presentation.Lang_Pres)" key="SOFTWARE\7-Zip">
 			<parentCategory ref="7-Zip"/>
 			<supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
 			<elements>
-        		<text id="SetLanguage" valueName="Lang" required="true" />
+        		<text id="Lang" valueName="Lang" required="true" />
       		</elements>
     	</policy>
   	</policies>
