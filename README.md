@@ -36,7 +36,7 @@ If you not configure this setting, Adobe Digital Edition might pop up and ask yo
 ### 7-Zip
 | Name | Description | OMA-URI | Data type | Recommended Value 
 |---------|---------|---------|---------|---------|
-| ```SetLanguage``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/7-Zip~Policy~7-Zip/SetLanguage``` | String | ```<enabled/> <data id="SetLanguage" value="-"/>```
+| ```Lang``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/7-Zip~Policy~7-Zip/Lang``` | String | ```<enabled/> <data id="Lang" value="-"/>```
 
 #### Description (SetLanguage)
 Set and enforce language of the 7-Zip.
