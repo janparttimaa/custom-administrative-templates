@@ -21,7 +21,7 @@ If you disable or not configure this setting, user can choose preferred language
     <presentationTable>      
       <presentation id="SetLanguage_Pres">
         <text>Set language</text>
-        <textBox refId="SetLanguageBox">
+        <textBox refId="SetLanguage">
           <label>Language:</label>
         </textBox>
       </presentation>
