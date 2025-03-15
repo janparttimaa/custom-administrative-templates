@@ -108,8 +108,37 @@ Please check language values in this table below:
 | Mongolian (Unicode) | ```mng``` ||
 | Mongolian | ```mn``` ||
 | Nepali | ```ne``` ||
-| Norwegian Bokmal| ```nb``` ||
-| Norwegian Nynorsk| ```nn``` ||
-| Pashto| ```ps``` ||
+| Norwegian Bokmal | ```nb``` ||
+| Norwegian Nynorsk | ```nn``` ||
+| Pashto | ```ps``` ||
+| Polish | ```pl``` ||
+| Portugese Brazilian | ```pt-br``` ||
+| Portugese Portugal | ```pt``` ||
+| Punhabi, Indian | ```pa-in``` ||
+| Romanian | ```ro``` ||
+| Russian | ```ru``` ||
+| Sanskrit, Indian | ```sa``` ||
+| Serbian - Cyrillic | ```sr-spc``` ||
+| Serbian - Latin | ```sr-spl``` ||
+| Sinhala | ```si``` ||
+| Slovak | ```sk``` ||
+| Slovenian | ```sl``` ||
+| Spanish | ```es``` ||
+| Swahili | ```sw``` ||
+| Swedish | ```sv``` ||
+| Tajik | ```tg``` ||
+| Tamil | ```ta``` ||
+| Tatar | ```tt``` ||
+| Thai | ```th``` ||
+| Turkish | ```tr``` ||
+| Turkmen | ```tk``` ||
+| Ukranian | ```uk``` ||
+| Uyghur | ```ug``` ||
+| Uzbek | ```uz``` ||
+| Uzbek - Cyrillic | ```uz-cyrl``` ||
+| Valencian | ```va``` ||
+| Vietnamese | ```vi``` ||
+| Welsh | ```cy``` ||
+| Yoruba | ```yo``` ||
 
 If you disable or not configure this setting, user can choose preferred language from 7-Zip's settings and we will not enforce user to use specific language.
