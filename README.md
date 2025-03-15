@@ -36,7 +36,7 @@ If you not configure this setting, Adobe Digital Edition might pop up and ask yo
 ### 7-Zip
 | Name | Description | OMA-URI | Data type | Recommended Value 
 |---------|---------|---------|---------|---------|
-| ```SetLanguage``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/7-Zip~Policy~7-Zip/SetLanguage``` | String | ```<enabled/>```
+| ```SetLanguage``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/7-Zip~Policy~7-Zip/SetLanguage``` | String | ```<enabled/> <data id="Lang" value "-"/>```
 
 #### Description (SetLanguage)
 During installation of Adobe Digital Edition, the installer might ask you to install antivirus product (e.g. Norton, Symantec etc.) or trial one of those products.
