@@ -22,6 +22,12 @@ Here you can see OMA-URI information of the settings that are part of these ADMX
 | ```DoNotInstallAntivirus``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/AdobeDigitalEditions~Policy~AdobeDigitalEditions/DoNotInstallAntivirus``` | String | ```<enabled/>```
 
 - **Friendly name of the setting:** Do not offer Antivirus program installation
+- **Registry Hive:** HKEY_LOCAL_MACHINE
+- **Registry Path:** SOFTWARE\Wow6432Node\Symantec\NPInstaller\DeclineCount\adobeebook
+- **Value Type:** REG_DWORD
+- **Value Name:** ns
+- **Enabled Value:** 3
+- **Disabled Value:** 0
 
 #### Description (DoNotInstallAntivirus)
 During installation of Adobe Digital Edition, the installer might ask you to install antivirus product (e.g. Norton, Symantec etc.) or trial one of those products.
