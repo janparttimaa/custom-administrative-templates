@@ -74,5 +74,19 @@ Please check language values in this table below:
 | Extremaduran | ```ext``` ||
 | Farsi | ```fa``` ||
 | Finnish | ```fi``` ||
+| French | ```fr``` ||
+| Frisian | ```fy``` ||
+| Friulian | ```fur``` ||
+| Galician | ```gl``` ||
+| Georgian | ```ka``` ||
+| German | ```de``` ||
+| Greek | ```el``` ||
+| Gujarati, Indian | ```gu``` ||
+| Hebrew | ```he``` ||
+| Hindi, Indian | ```hi``` ||
+| Hungarian | ```hu``` ||
+| Icelandic | ```is``` ||
+| Ido | ```io``` ||
+| Indonesian | ```id``` ||
 
 If you disable or not configure this setting, user can choose preferred language from 7-Zip's settings and we will not enforce user to use specific language.
