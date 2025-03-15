@@ -8,8 +8,8 @@
       <string id="7-ZipSettingCategory">7-Zip</string>
 
 	  <!-- Set language -->
-      <string id="SetLanguage">Set language</string>
-      <string id="SetLanguage_help">Set and enforce language of the 7-Zip.
+      <string id="Lang">Set language</string>
+      <string id="Lang_help">Set and enforce language of the 7-Zip.
 
 If you want to set language, enable this policy and set prefferred language. If user changes preferred language to something else from 7-Zip's settings, language will be enforced back to preferred language next time when device's policy refresh cycle starts. 
 
@@ -19,9 +19,9 @@ If you disable or not configure this setting, user can choose preferred language
       </string>
     </stringTable>
     <presentationTable>      
-      <presentation id="SetLanguage_Pres">
+      <presentation id="Lang_Pres">
         <text>Set language</text>
-        <textBox refId="SetLanguage">
+        <textBox refId="Lang">
           <label>Language:</label>
         </textBox>
       </presentation>
