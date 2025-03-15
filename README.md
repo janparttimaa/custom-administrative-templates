@@ -23,6 +23,7 @@ Here you can see OMA-URI information of the settings that are part of these ADMX
 
 #### Description (DoNotInstallAntivirus)
 - Friendly name of the setting: Do not offer Antivirus program installation
+
 During installation of Adobe Digital Edition, the installer might ask you to install antivirus product (e.g. Norton, Symantec etc.) or trial one of those products.
 
 **Recommended:** If you enable this setting, Adobe Digital Edition will not pop up and ask you to install antivirus product into endpoint device running 64-bit Microsoft Windows operating system. This request will be automatically declined. Enabling this policy is required and necessary when deploying Adobe Digital Edition to be available either via Intune Company Portal or Software Center to all users or selected users.
@@ -41,6 +42,7 @@ If you not configure this setting, Adobe Digital Edition might pop up and ask yo
 
 #### Description (Lang)
 - Friendly name of the setting: Set language
+
 Set and enforce language of the 7-Zip.
 
 If you want to set language, enable this policy and set prefferred language. If user changes preferred language to something else from 7-Zip's settings, language will be enforced back to preferred language next time when device's policy refresh cycle starts. 
