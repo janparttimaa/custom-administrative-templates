@@ -88,5 +88,17 @@ Please check language values in this table below:
 | Icelandic | ```is``` ||
 | Ido | ```io``` ||
 | Indonesian | ```id``` ||
+| Irish | ```ga``` ||
+| Italian | ```it``` ||
+| Japanese | ```ja``` ||
+| Kabyle | ```kab``` ||
+| Karakalpak - Latin | ```kaa``` ||
+| Kazakh | ```kk``` ||
+| Korean | ```ko``` ||
+| Kurdish | ```ku``` ||
+| Kurdish - Sorani | ```ku-ckb``` ||
+| Kyrgyz | ```ky``` ||
+| Latvian | ```lv``` ||
+| Ligurian | ```lij``` ||
 
 If you disable or not configure this setting, user can choose preferred language from 7-Zip's settings and we will not enforce user to use specific language.
