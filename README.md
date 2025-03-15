@@ -45,6 +45,8 @@ If you want to set language, enable this policy and set prefferred language. If 
 
 Please check language values in this table below:
 
-TBA
+| Language | Value | 
+|---------|---------|
+| English | - |
 
 If you disable or not configure this setting, user can choose preferred language from 7-Zip's settings and we will not enforce user to use specific language.
