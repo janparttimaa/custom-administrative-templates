@@ -48,6 +48,31 @@ Please check language values in this table below:
 | Language | Value | More information
 |---------|---------|---------|
 | English | ```-``` | This is default language. |
+| Afrikaans | ```af``` ||
+| Albanian | ```sq``` ||
+| Arabic | ```ar``` ||
+| Aragonese | ```an``` ||
+| Armenian | ```hy``` ||
+| Asturian | ```ast``` ||
+| Azerbaijani | ```az``` ||
+| Bangla | ```bn``` ||
+| Bashkir | ```ba``` ||
+| Basque | ```eu``` ||
+| Belarusian | ```be``` ||
+| Breton | ```br``` ||
+| Bulgarian | ```bg``` ||
+| Catalan | ```ca``` ||
+| Chinese Simplified | ```zh-cn``` ||
+| Chinese Traditional | ```zh-tw``` ||
+| Corsican | ```co``` ||
+| Croatian | ```hr``` ||
+| Czech | ```cs``` ||
+| Danish | ```da``` ||
+| Dutch | ```nl``` ||
+| Esperanto | ```eo``` ||
+| Estonian | ```et``` ||
+| Extremaduran | ```ext``` ||
+| Farsi | ```fa``` ||
 | Finnish | ```fi``` ||
 
 If you disable or not configure this setting, user can choose preferred language from 7-Zip's settings and we will not enforce user to use specific language.
