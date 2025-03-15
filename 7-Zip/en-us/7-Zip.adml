@@ -7,7 +7,7 @@
       <!-- General -->
       <string id="7-ZipSettingCategory">7-Zip</string>
 
-	  <!-- Set language -->
+	    <!-- Set language -->
       <string id="Lang">Set language</string>
       <string id="Lang_help">Set and enforce language of the 7-Zip.
 
