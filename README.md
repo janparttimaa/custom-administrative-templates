@@ -47,7 +47,7 @@ Please check language values in this table below:
 
 | Language | Value | 
 |---------|---------|
-| English | ```-``` |
+| **English** | ```-``` |
 | Finnish | ```fi``` |
 
 If you disable or not configure this setting, user can choose preferred language from 7-Zip's settings and we will not enforce user to use specific language.
