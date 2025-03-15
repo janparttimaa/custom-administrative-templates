@@ -22,7 +22,7 @@ Here you can see OMA-URI information of the settings that are part of these ADMX
 | ```DoNotInstallAntivirus``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/AdobeDigitalEditions~Policy~AdobeDigitalEditions/DoNotInstallAntivirus``` | String | ```<enabled/>```
 
 #### Description (DoNotInstallAntivirus)
-- Friendly name of the setting: Do not offer Antivirus program installation
+- **Friendly name of the setting:** Do not offer Antivirus program installation
 
 During installation of Adobe Digital Edition, the installer might ask you to install antivirus product (e.g. Norton, Symantec etc.) or trial one of those products.
 
@@ -41,7 +41,7 @@ If you not configure this setting, Adobe Digital Edition might pop up and ask yo
 | ```Lang``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/7-Zip~Policy~7-Zip/Lang``` | String | ```<enabled/> <data id="Lang" value="-"/>```
 
 #### Description (Lang)
-- Friendly name of the setting: Set language
+- **Friendly name of the setting:** Set language
 
 Set and enforce language of the 7-Zip.
 
