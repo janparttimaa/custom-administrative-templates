@@ -13,8 +13,8 @@
 			<parentCategory ref="7-Zip"/>
 			<supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
 			<elements>
-        		<text id="Lang" valueName="Lang" required="true" />
-      		</elements>
+        			<text id="Lang" valueName="Lang" required="true" />
+			</elements>
     	</policy>
   	</policies>
 </policyDefinitions>
