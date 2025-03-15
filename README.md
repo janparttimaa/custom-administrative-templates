@@ -38,7 +38,7 @@ If you not configure this setting, Adobe Digital Edition might pop up and ask yo
 |---------|---------|---------|---------|---------|
 | ```Lang``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/7-Zip~Policy~7-Zip/Lang``` | String | ```<enabled/> <data id="Lang" value="-"/>```
 
-#### Description (SetLanguage)
+#### Description (Lang)
 Set and enforce language of the 7-Zip.
 
 If you want to set language, enable this policy and set prefferred language. If user changes preferred language to something else from 7-Zip's settings, language will be enforced back to preferred language next time when device's policy refresh cycle starts. 
