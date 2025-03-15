@@ -21,14 +21,6 @@ Here you can see OMA-URI information of the settings that are part of these ADMX
 |---------|---------|---------|---------|---------|
 | ```DoNotInstallAntivirus``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/AdobeDigitalEditions~Policy~AdobeDigitalEditions/DoNotInstallAntivirus``` | String | ```<enabled/>```
 
-- **Friendly name of the setting:** Do not offer Antivirus program installation
-- **Registry Hive:** HKEY_LOCAL_MACHINE
-- **Registry Path:** SOFTWARE\Wow6432Node\Symantec\NPInstaller\DeclineCount\adobeebook
-- **Value Type:** REG_DWORD
-- **Value Name:** ns
-- **Enabled Value:** 3
-- **Disabled Value:** 0
-
 #### Description (DoNotInstallAntivirus)
 During installation of Adobe Digital Edition, the installer might ask you to install antivirus product (e.g. Norton, Symantec etc.) or trial one of those products.
 
@@ -41,18 +33,19 @@ If you disable this setting, Adobe Digital Edition will pop up and ask you to in
 
 If you not configure this setting, Adobe Digital Edition might pop up and ask you to install antivirus product depending what setting you have previously set. You can manually either accept or decline the request, if you get the request.
 
+#### Technical information
+- **Friendly name of the setting:** Do not offer Antivirus program installation
+- **Registry Hive:** HKEY_LOCAL_MACHINE
+- **Registry Path:** SOFTWARE\Wow6432Node\Symantec\NPInstaller\DeclineCount\adobeebook
+- **Value Type:** REG_DWORD
+- **Value Name:** ns
+- **Enabled Value:** 3
+- **Disabled Value:** 0
+
 ### 7-Zip
 | Name | Description | OMA-URI | Data type | Recommended Value 
 |---------|---------|---------|---------|---------|
 | ```Lang``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/7-Zip~Policy~7-Zip/Lang``` | String | ```<enabled/> <data id="Lang" value="-"/>```
-
-- **Friendly name of the setting:** Set language
-- **Registry Hive:** HKEY_CURRENT_USER
-- **Registry Path:** SOFTWARE\7-Zip
-- **Value Type:** REG_SZ
-- **Value Name:** Lang
-- **Enabled Value:** ```-```
-- **Disabled Value:** ```-```
 
 #### Description (Lang)
 Set and enforce language of the 7-Zip.
@@ -161,3 +154,12 @@ If you disable or not configure this setting, user can choose preferred language
 
 > [!NOTE]  
 > If you want to disable the setting via Intune, please make sure that value is then set to ```<disabled/>```
+
+#### Technical information
+- **Friendly name of the setting:** Set language
+- **Registry Hive:** HKEY_CURRENT_USER
+- **Registry Path:** SOFTWARE\7-Zip
+- **Value Type:** REG_SZ
+- **Value Name:** Lang
+- **Enabled Value:** ```-```
+- **Disabled Value:** ```-```
