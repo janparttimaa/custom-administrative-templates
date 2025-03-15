@@ -142,3 +142,6 @@ Please check language values in this table below:
 | Yoruba | ```yo``` ||
 
 If you disable or not configure this setting, user can choose preferred language from 7-Zip's settings and we will not enforce user to use specific language.
+
+> [!NOTE]  
+> If you want to disable the setting via Intune, please make sure that value is then set to ```<disabled/>```
