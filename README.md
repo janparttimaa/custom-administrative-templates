@@ -100,5 +100,16 @@ Please check language values in this table below:
 | Kyrgyz | ```ky``` ||
 | Latvian | ```lv``` ||
 | Ligurian | ```lij``` ||
+| Lithuanian | ```lt``` ||
+| Macedonian | ```mk``` ||
+| Malay | ```ms``` ||
+| Marathi | ```mr``` ||
+| Mongolian (MenkCode) | ```mng2``` ||
+| Mongolian (Unicode) | ```mng``` ||
+| Mongolian | ```mn``` ||
+| Nepali | ```ne``` ||
+| Norwegian Bokmal| ```nb``` ||
+| Norwegian Nynorsk| ```nn``` ||
+| Pashto| ```ps``` ||
 
 If you disable or not configure this setting, user can choose preferred language from 7-Zip's settings and we will not enforce user to use specific language.
