@@ -10,7 +10,7 @@
     </categories>
     <policies>
         <policy name="Lang" class ="User" displayName="$(string.Lang)" explainText="$(string.Lang_help)" presentation="$(presentation.Lang_Pres)" key="SOFTWARE\VideoLAN\VLC">
-		    <parentCategory ref="VLC"/>
+            <parentCategory ref="VLC"/>
             <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
             <elements>
                 <text id="Lang" valueName="Lang" required="true" />
