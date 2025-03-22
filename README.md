@@ -164,3 +164,33 @@ If you disable or not configure this setting, user can choose preferred language
 - **Value Name:** Lang
 - **Enabled Value:** ```-```
 - **Disabled Value:** ```-```
+
+### VLC
+| Name | Description | OMA-URI | Data type | Recommended Value 
+|---------|---------|---------|---------|---------|
+| ```Lang``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/VLC~Policy~VLC/Lang``` | String | ```<enabled/> <data id="Lang" value="en"/>```
+
+#### Description (Lang)
+Set and enforce language of the VLC.
+
+If you want to set language, enable this policy and set prefferred language. If user changes preferred language to something else from VLC's settings, language will be enforced back to preferred language next time when device's policy refresh cycle starts. 
+
+Please check language values in this table below:
+
+| Language | Value | More information
+|---------|---------|---------|
+| English | ```en``` | This is default language. |
+
+If you disable or not configure this setting, user can choose preferred language from VLC's settings and we will not enforce user to use specific language.
+
+> [!NOTE]  
+> If you want to disable the setting via Intune, please make sure that value is then set to ```<disabled/>```
+
+#### Technical information
+- **Friendly name of the setting:** Set language
+- **Registry Hive:** HKEY_CURRENT_USER
+- **Registry Path:** SOFTWARE\VideoLAN\VLC
+- **Value Type:** REG_SZ
+- **Value Name:** Lang
+- **Enabled Value:** ```en```
+- **Disabled Value:** ```en```
