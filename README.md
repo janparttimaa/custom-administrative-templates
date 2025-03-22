@@ -54,7 +54,7 @@ Set and enforce language of the 7-Zip.
 If you want to set language, enable this policy and set prefferred language. If user changes preferred language to something else from 7-Zip's settings, language will be enforced back to preferred language next time when device's policy refresh cycle starts. 
 
 Please check language values in this table below:
-_(List updated 22 March 2025)_
+<br>_(List updated 22 March 2025)_
 
 | Language | Value | More information
 |---------|---------|---------|
@@ -177,7 +177,7 @@ Set and enforce language of the VLC.
 If you want to set language, enable this policy and set prefferred language. If user changes preferred language to something else from VLC's settings, language will be enforced back to preferred language next time when device's policy refresh cycle starts. 
 
 Please check language values in this table below:
-_(List updated 22 March 2025)_
+<br>_(List updated 22 March 2025)_
 
 | Language | Value | More information
 |---------|---------|---------|
