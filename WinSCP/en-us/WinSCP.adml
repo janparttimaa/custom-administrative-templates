@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName>WinSCP</displayName>
+  <description>Group Policy Settings of WinSCP</description>
+  <resources>
+    <stringTable>
+      <!-- General -->
+      <string id="WinSCPSettingCategory">WinSCP</string>
+
+      <!-- [Updates] Automatic check period -->
+      <string id="Period">[Updates] Automatic check period</string>
+      <string id="Period_help">Set and enforce automatic check period for updates of the WinSCP.
+
+If you want to set automatic update period, enable this policy and set prefferred period. If user changes preferred period to something else from WinSCP's settings, period will be enforced back to preferred period next time when device's policy refresh cycle starts.
+
+- Value "Never" disables automatic update check. If you are centrally mass deploying WinSCP using e.g. Microsoft Intune or Configuration Manager, you should enable and choose this setting.
+- Value "Daily" checks updates once per day.
+- Value "Weekly" checks updates once per week.
+- Value "Monthly" checks updates once per month. 
+
+If you disable or not configure this setting, user can choose preferred period from WinSCP's settings and we will not enforce user to use specific period.
+      </string>
+      <string id="Never">Never</string>
+      <string id="Daily">Daily</string>
+      <string id="Weekly">Weekly</string>
+      <string id="Monthly">Monthly</string>
+
+      <!-- [Updates] Display information about update on startup -->
+      <string id="ShowOnStartup">[Updates] Display information about update on startup</string>
+      <string id="ShowOnStartup_help">Set and enforce setting "Display information about update on startup" for updates of the WinSCP.
+
+If you want to display information about pending software update on the startup of WinSCP, enable this policy. If user disbales the setting from WinSCP's settings, setting will be enforced back to be enabled next time when device's policy refresh cycle starts.
+
+If you disable this setting, user cannot see pending software update on the startup of WinSCP.  If you are centrally mass deploying WinSCP using e.g. Microsoft Intune or Configuration Manager, you should disable this setting.
+
+If you not configure this setting, user can choose preferred choice from WinSCP's settings and we will not enforce user to use specific value of the setting.
+      </string>
+
+      <!-- [Updates] Check for beta versions -->
+      <string id="BetaVersions">[Updates] Check for beta versions</string>
+      <string id="BetaVersions_help">Set and enforce setting "Check for beta versions" of the WinSCP.
+
+If you want to check beta versions of the WinSCP or makes sure that checking beta versions are entirely disabled, enable this policy and choose preferred value. If user change the preferred setting and value from WinSCP's settings, setting and value will be enforced back to be preffered setting and value next time when device's policy refresh cycle starts.
+
+- Value "Auto" makes WinSCP check for beta releases, only if you ever have used any beta release before. This option is available in stable releases only. Beta releases report newer beta releases always. 
+- Value "Off" disables check for beta releases. If you are centrally mass deploying WinSCP using e.g. Microsoft Intune or Configuration Manager, you should choose this setting. This is also recommended setting if you don't want to use beta releases.
+- Value "On" enables check for beta releases.
+
+If you disable or not configure this setting, user can choose preferred choice from WinSCP's settings and we will not enforce user to use specific value of the setting.
+      </string>
+      <string id="Auto">Auto</string>
+      <string id="Off">Off</string>
+      <string id="On">On</string>
+    </stringTable>
+
+    <presentationTable>
+    <!-- [Updates] Automatic check period -->      
+      <presentation id="Period_Pres">
+        <dropdownList refId="Period_Dropdown" noSort="true" defaultItem="0">Period:</dropdownList>
+      </presentation>
+    <!-- [Updates] Check for beta versions -->    
+      <presentation id="BetaVersions_Pres">
+        <dropdownList refId="BetaVersions_Dropdown" noSort="true" defaultItem="1">Value:</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>
