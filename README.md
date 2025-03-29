@@ -278,6 +278,14 @@ If you want to check beta versions of the WinSCP or makes sure that checking bet
 - Value "Off" disables check for beta releases. If you are centrally mass deploying WinSCP using e.g. Microsoft Intune or Configuration Manager, you should choose this setting. This is also recommended setting if you don't want to use beta releases.
 - Value "On" enables check for beta releases.
 
+Here are these values translated to numeric values for Intune-deployment:
+
+| Value (GPO) | Value (Intune) |
+|---------|---------|
+| Auto | 2 |
+| Off | 1 |
+| On | 0 |
+
 If you disable or not configure this setting, user can choose preferred choice from WinSCP's settings and we will not enforce user to use specific value of the setting.
 
 > [!NOTE]  
@@ -304,7 +312,16 @@ If you want to set automatic update period, enable this policy and set prefferre
 - Value "Never" disables automatic update check. If you are centrally mass deploying WinSCP using e.g. Microsoft Intune or Configuration Manager, you should enable and choose this setting.
 - Value "Daily" checks updates once per day.
 - Value "Weekly" checks updates once per week.
-- Value "Monthly" checks updates once per month. 
+- Value "Monthly" checks updates once per month.
+
+Here are these values translated to numeric values for Intune-deployment:
+
+| Value (GPO) | Value (Intune) |
+|---------|---------|
+| Never | 0 |
+| Daily | 1 |
+| Weekly | 7 |
+| Monthly | 30 |
 
 If you disable or not configure this setting, user can choose preferred period from WinSCP's settings and we will not enforce user to use specific period.
 
