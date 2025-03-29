@@ -10,9 +10,10 @@ Here you can see OMA-URI information for released ADMX-templates, that can be de
 
 | ADMX-template | OMA-URI |
 |---------------|---------|
-| Adobe Digital Editions     | ```./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/AdobeDigitalEditions/Policy/AdobeDigitalEditionsAdmx``` |
-| 7-Zip     | ```./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/7-Zip/Policy/7-ZipAdmx``` |
-| VLC     | ```./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/VLC/Policy/VLCAdmx``` |
+| Adobe Digital Editions | ```./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/AdobeDigitalEditions/Policy/AdobeDigitalEditionsAdmx``` |
+| 7-Zip | ```./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/7-Zip/Policy/7-ZipAdmx``` |
+| VLC | ```./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/VLC/Policy/VLCAdmx``` |
+| WinSCP | ```./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/WinSCP/Policy/WinSCPAdmx``` |
 
 ## OMA-URI of settings
 Here you can see OMA-URI information of the settings that are part of these ADMX-templates, that can be deployed via Intune using ingestion with ingested ADMX-templates.
