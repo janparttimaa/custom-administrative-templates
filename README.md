@@ -265,8 +265,8 @@ If you disable or not configure this setting, user can choose preferred language
 ### WinSCP
 | Name | Description | OMA-URI | Data type |  Possible Values
 |---------|---------|---------|---------|---------|
-| ```BetaVersions``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/WinSCP~Policy~WinSCP/BetaVersions``` | String | ```<enabled/> <data id="BetaVersions_Dropdown" value="Auto"/>```<br><br>```<enabled/> <data id="BetaVersions_Dropdown" value="Off"/>```<br><br>```<enabled/> <data id="BetaVersions_Dropdown" value="On"/>```<br><br>```<disabled/>```
-| ```Period``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/WinSCP~Policy~WinSCP/Period``` | String | ```<enabled/> <data id="Period_Dropdown" value="Never"/>```<br><br>```<enabled/> <data id="Period_Dropdown" value="Daily"/>```<br><br>```<enabled/> <data id="Period_Dropdown" value="Weekly"/>```<br><br>```<enabled/> <data id="Period_Dropdown" value="Monthly"/>```<br><br>```<disabled/>```
+| ```BetaVersions``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/WinSCP~Policy~WinSCP/BetaVersions``` | String | ```<enabled/> <data id="BetaVersions_Dropdown" value="2"/>```<br><br>```<enabled/> <data id="BetaVersions_Dropdown" value="1"/>```<br><br>```<enabled/> <data id="BetaVersions_Dropdown" value="0"/>```<br><br>```<disabled/>```
+| ```Period``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/WinSCP~Policy~WinSCP/Period``` | String | ```<enabled/> <data id="Period_Dropdown" value="0"/>```<br><br>```<enabled/> <data id="Period_Dropdown" value="1"/>```<br><br>```<enabled/> <data id="Period_Dropdown" value="7"/>```<br><br>```<enabled/> <data id="Period_Dropdown" value="30"/>```<br><br>```<disabled/>```
 | ```ShowOnStartup``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/WinSCP~Policy~WinSCP/ShowOnStartup``` | String | ```<enabled/>```<br><br>```<disabled/>```
 
 #### Description (BetaVersions)
