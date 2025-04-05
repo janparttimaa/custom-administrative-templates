@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+    <policyNamespaces>
+	    <target prefix="iManage" namespace="iManage.Policies.iManage"/>
+	    <using prefix="windows" namespace="Microsoft.Policies.Windows"/>
+    </policyNamespaces>
+    <resources minRequiredRevision="1.0" />
+    <categories>
+        <category name="iManage" displayName="$(string.iManageSettingCategory)"/>
+    </categories>
+    <policies>
+        <policy name="Selected_Update_Channel" class ="Machine" displayName="$(string.Selected_Update_Channel)" explainText="$(string.Selected_Update_Channel_help)" presentation="$(presentation.Selected_Update_Channel_Pres)" key="SOFTWARE\iManage\AgentServices\AutoUpdate">
+        <parentCategory ref="iManage"/>
+        <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+        <elements>
+            <text id="Selected_Update_Channel" valueName="Selected Update Channel" required="true" />
+        </elements>
+        </policy>
+        <policy name="Auto_Download_Update" class="User" displayName="$(string.Auto_Download_Update)" explainText="$(string.Auto_Download_Update_help)" key="SOFTWARE\iManage\WorkAgent\AutoUpdate" valueName="Auto Download Update">
+        <parentCategory ref="iManage" />
+        <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+        <enabledValue>
+            <decimal value="1" />
+        </enabledValue>
+        <disabledValue>
+            <decimal value="0" />
+        </disabledValue>
+        </policy>
+    </policies>
+</policyDefinitions>
