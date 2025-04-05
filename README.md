@@ -409,6 +409,9 @@ Please check available values for auto update channel in this table below:
 
 If you disable or not configuring this setting, user can itself select preferred update channel from iManage Work Agent settings.
 
+> [!NOTE]  
+> If you want to disable the setting via Intune, please make sure that value is then set to ```<disabled/>```
+
 #### Technical information
 - **Friendly name of the setting:** Automatically download and install updates
 - **Registry Hive:** HKEY_LOCAL_MACHINE
