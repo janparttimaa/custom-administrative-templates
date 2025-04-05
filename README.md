@@ -372,7 +372,7 @@ If you not configure this setting, user can choose preferred choice from WinSCP'
  
 > [!NOTE]  
 > iManage mandates, that following additional settings needs to configured, especially when using iManage Drive: <br><br>
-> <img src= "img/iManageAdditionalSettings.png" alt="Screenshot from Microsoft Intune of additional settings for iManage" style="border: 2px solid grey;">
+> <kbd><img src= "img/iManageAdditionalSettings.png" alt="Screenshot from Microsoft Intune of additional settings for iManage" style="border: 2px solid grey;"> </kbd>
  
 #### Description (Auto Download Update)
 You can specify whether updates should be downloaded and installed automatically. This setting ensures that if there are any updates, they're automatically downloaded and installed on the user's device. This provides a seamless and quicker installation experience for users.
