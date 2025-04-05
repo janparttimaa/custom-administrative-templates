@@ -371,7 +371,7 @@ If you not configure this setting, user can choose preferred choice from WinSCP'
 | ```Selected Update Channel``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/iManage~Policy~iManage/SelectedUpdateChannel``` | String | ```<enabled/> <data id="SelectedUpdateChannel" value="release"/>```
  
 > [!NOTE]  
-> iManage mandates, that following additional settings needs to configured, especially when using iManage Drive: <br><br>
+> iManage mandates, that following additional settings needs to be configured, especially when using iManage Drive: <br><br>
 > <kbd><img src= "img/iManageAdditionalSettings.png" alt="Screenshot from Microsoft Intune of additional settings for iManage"> </kbd>
  
 #### Description (Auto Download Update)
