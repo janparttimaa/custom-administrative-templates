@@ -399,13 +399,13 @@ Please check available values for auto update channel in this table below:
 
 | Channel | Value | More information
 |---------|---------|---------|
-| Release Work 10 / Release Work 10 with Drive | ```release``` | **- This is recommended channel.**<br>- This channel is supported to iManage Work 10 and iManage Drive. |
-| Coming Soon Work 10 / Coming Soon Work 10 with Drive | ```coming_soon``` | - This channel is supported to iManage Work 10 and iManage Drive.  |
-| Release Work 10 with DeskSite | ```release_compatibility``` | - This channel is only supported to iManage Work 10.  |
-| Release Work 10 with FileSite | ```release_compatibility_fs``` | - This channel is only supported to iManage Work 10.  |
-| Release Work 10.7.1 | ```release_1071``` | - This channel is only supported to iManage Work 10.  |
-| Coming Soon Work 10 with DeskSite | ```coming_soon_compatibility``` | - This channel is only supported to iManage Work 10.  |
-| Coming Soon Work 10 with FileSite | ```coming_soon_compatibility_fs``` | - This channel is only supported to iManage Work 10. |
+| Release Work 10 / Release Work 10 with Drive | ```release``` | **<li> This is recommended channel.**<br><li> This channel is supported to iManage Work 10 and iManage Drive. |
+| Coming Soon Work 10 / Coming Soon Work 10 with Drive | ```coming_soon``` | <li>> This channel is supported to iManage Work 10 and iManage Drive.  |
+| Release Work 10 with DeskSite | ```release_compatibility``` | <li> This channel is only supported to iManage Work 10.  |
+| Release Work 10 with FileSite | ```release_compatibility_fs``` | <li> This channel is only supported to iManage Work 10.  |
+| Release Work 10.7.1 | ```release_1071``` | <li> This channel is only supported to iManage Work 10.  |
+| Coming Soon Work 10 with DeskSite | ```coming_soon_compatibility``` | <li> This channel is only supported to iManage Work 10.  |
+| Coming Soon Work 10 with FileSite | ```coming_soon_compatibility_fs``` | <li> This channel is only supported to iManage Work 10. |
 
 If you disable or not configuring this setting, user can itself select preferred update channel from iManage Work Agent settings.
 
