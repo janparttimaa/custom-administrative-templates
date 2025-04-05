@@ -8,8 +8,8 @@
       <string id="iManageSettingCategory">iManage</string>
 
       <!-- Auto Update Channel -->
-      <string id="Selected_Update_Channel">Auto Update Channel</string>
-      <string id="Selected_Update_Channel_help">Setting auto update channel to iManage.
+      <string id="SelectedUpdateChannel">Auto Update Channel</string>
+      <string id="SelectedUpdateChannel_help">Setting auto update channel to iManage.
 
 iManage Work Agent provides the ability to switch between the update channels. Depending on how they are configured in your environment, you may be able to see and select different update channels. To use this feature and select preferred update channel to all users, enable this policy and select preferred update channel.
 
@@ -19,8 +19,8 @@ If you disable or not configuring this setting, user can itself select preferred
       </string>
 
       <!-- Automatically download and install updates -->
-      <string id="Auto_Download_Update">Automatically download and install updates</string>
-      <string id="Auto_Download_Update_help">You can specify whether updates should be downloaded and installed automatically. This setting ensures that if there are any updates, they're automatically downloaded and installed on the user's device. This provides a seamless and quicker installation experience for users.
+      <string id="AutoDownloadUpdate">Automatically download and install updates</string>
+      <string id="AutoDownloadUpdate_help">You can specify whether updates should be downloaded and installed automatically. This setting ensures that if there are any updates, they're automatically downloaded and installed on the user's device. This provides a seamless and quicker installation experience for users.
 
 If you enable this policy, The "Automatically download and install updates" option is selected by default on the "Update Settings" screen of iManage Agent Services and users cannot disable it.
 
@@ -29,8 +29,8 @@ If you not configure this setting, user can manage itself this setting adn we ar
     </stringTable>
     <presentationTable>
     <!-- Auto Update Channel -->      
-      <presentation id="Selected_Update_Channel_Pres">
-        <textBox refId="Selected_Update_Channel">
+      <presentation id="SelectedUpdateChannel_Pres">
+        <textBox refId="SelectedUpdateChannel">
           <label>Version:</label>
         </textBox>
       </presentation>

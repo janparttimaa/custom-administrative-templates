@@ -9,14 +9,14 @@
         <category name="iManage" displayName="$(string.iManageSettingCategory)"/>
     </categories>
     <policies>
-        <policy name="Selected_Update_Channel" class ="Machine" displayName="$(string.Selected_Update_Channel)" explainText="$(string.Selected_Update_Channel_help)" presentation="$(presentation.Selected_Update_Channel_Pres)" key="SOFTWARE\iManage\AgentServices\AutoUpdate">
+        <policy name="SelectedUpdateChannel" class ="Machine" displayName="$(string.SelectedUpdateChannel)" explainText="$(string.SelectedUpdateChannel_help)" presentation="$(presentation.SelectedUpdateChannel_Pres)" key="SOFTWARE\iManage\AgentServices\AutoUpdate">
         <parentCategory ref="iManage"/>
         <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
         <elements>
-            <text id="Selected_Update_Channel" valueName="Selected Update Channel" required="true" />
+            <text id="SelectedUpdateChannel" valueName="Selected Update Channel" required="true" />
         </elements>
         </policy>
-        <policy name="Auto_Download_Update" class="User" displayName="$(string.Auto_Download_Update)" explainText="$(string.Auto_Download_Update_help)" key="SOFTWARE\iManage\WorkAgent\AutoUpdate" valueName="Auto Download Update">
+        <policy name="AutoDownloadUpdate" class="User" displayName="$(string.AutoDownloadUpdate)" explainText="$(string.AutoDownloadUpdate_help)" key="SOFTWARE\iManage\WorkAgent\AutoUpdate" valueName="Auto Download Update">
         <parentCategory ref="iManage" />
         <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
         <enabledValue>
