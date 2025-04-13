@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+	<policyNamespaces>
+		<target prefix="Acrobat DC" namespace="Adobe.Policies.AcrobatDC"/>
+		<using prefix="windows" namespace="Microsoft.Policies.Windows"/>
+	</policyNamespaces>
+	<supersededAdm fileName="AcrobatDC.adm"/>
+    <resources minRequiredRevision="1.0"/>
+	<supportedOn>
+		<definitions>
+			<definition name="AcrobatDC" displayName="$(string.AcrobatDC)"/>
+		</definitions>
+	</supportedOn>
+	<categories>
+		<!--Storage for Category Definitions-->
+		<category name="Cat_Adobe_Acrobat_DC" displayName="$(string.Cat_Adobe_Acrobat_DC)"/>
+		<category name="Cat_Preferences" displayName="$(string.Cat_Preferences)">
+			<parentCategory ref="Cat_Adobe_Acrobat_DC"/>
+		</category>
+		<category name="Cat_Forms" displayName="$(string.Cat_Forms)">
+			<parentCategory ref="Cat_Preferences"/>
+		</category>
+		<category name="Cat_General" displayName="$(string.Cat_General)">
+			<parentCategory ref="Cat_Preferences"/>
+		</category>
+		<category name="Cat_Security" displayName="$(string.Cat_Security)">
+			<parentCategory ref="Cat_Preferences"/>
+		</category>
+		<category name="Cat_SecurityEnhanced" displayName="$(string.Cat_SecurityEnhanced)">
+			<parentCategory ref="Cat_Preferences"/>
+		</category>
+		<category name="Cat_JavaScript" displayName="$(string.Cat_JavaScript)">
+			<parentCategory ref="Cat_Preferences"/>
+		</category>
+		<category name="Cat_TrustManager" displayName="$(string.Cat_TrustManager)">
+			<parentCategory ref="Cat_Preferences"/>
+		</category>
+		<category name="Cat_UpdaterAndHelp" displayName="$(string.Cat_UpdaterAndHelp)">
+			<parentCategory ref="Cat_Preferences"/>
+		</category>
+		<category name="Cat_MicrosoftPurviewInformationProtection" displayName="$(string.Cat_MicrosoftPurviewInformationProtection)">
+			<parentCategory ref="Cat_Security"/>
+		</category>
+		<category name="Cat_EmailAccounts" displayName="$(string.Cat_EmailAccounts)">
+			<parentCategory ref="Cat_Preferences"/>
+		</category>
+	</categories>
+	<policies>
+	
+		<!-- Machine Policies Starts Here -->
+		<!-- General - Disable PDF handler switching -->
+		<policy name="bDisablePDFHandlerSwitching" class="Machine" displayName="$(string.Policy_bDisablePDFHandlerSwitching)" explainText="$(string.Explain_bDisablePDFHandlerSwitching)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" valueName="bDisablePDFHandlerSwitching">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- Updater and Help - Enable automatic updates -->
+		<policy name="bUpdater" class="Machine" displayName="$(string.Policy_bUpdater)" explainText="$(string.Explain_bUpdater)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" valueName="bUpdater">
+			<parentCategory ref="Cat_UpdaterAndHelp"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Show the "Send Feedback" icon -->
+		<policy name="bToggleShareFeedback" class="Machine" displayName="$(string.Policy_bToggleShareFeedback)" explainText="$(string.Explain_bToggleShareFeedback)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" valueName="bToggleShareFeedback">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Show messages when I launch Acrobat -->
+		<policy name="bShowMsgAtLaunch" class="Machine" displayName="$(string.Policy_bShowMsgAtLaunch)" explainText="$(string.Explain_bShowMsgAtLaunch)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cIPM" valueName="bShowMsgAtLaunch">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+		
+		<!-- Forms - Auto Complete -->
+		<policy name="bAutoFill" class="Machine" displayName="$(string.Policy_bAutoFill)" explainText="$(string.Explain_bAutoFill)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" valueName="bAutoFill">
+			<parentCategory ref="Cat_Forms"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Disable FTE, Welcome tour/page feature -->
+		<policy name="bToggleFTE" class="Machine" displayName="$(string.Policy_bToggleFTE)" explainText="$(string.Explain_bToggleFTE)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" valueName="bToggleFTE">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Disable What's New experience -->
+		<policy name="bWhatsNewExp" class="Machine" displayName="$(string.Policy_bWhatsNewExp)" explainText="$(string.Explain_bWhatsNewExp)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" valueName="bWhatsNewExp">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Sign-in and sign-out Help menu item -->
+		<policy name="bSuppressSignOut" class="Machine" displayName="$(string.Policy_bSuppressSignOut)" explainText="$(string.Explain_bSuppressSignOut)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" valueName="bSuppressSignOut">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Disable preferences synchronization -->
+		<policy name="bTogglePrefsSync" class="Machine" displayName="$(string.Policy_bTogglePrefsSync)" explainText="$(string.Explain_bTogglePrefsSync)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" valueName="bTogglePrefsSync">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- Security (Enhanced) - Allows certified documents to bypass all the security restrictions that may be bypassed by other privileged locations -->
+		<policy name="bEnableCertificateBasedTrust" class="Machine" displayName="$(string.Policy_bEnableCertificateBasedTrust)" explainText="$(string.Explain_bEnableCertificateBasedTrust)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" valueName="bEnableCertificateBasedTrust">
+			<parentCategory ref="Cat_SecurityEnhanced"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - SharePoint and Office 365 integration features -->
+		<policy name="bDisableSharePointFeatures" class="Machine" displayName="$(string.Policy_bDisableSharePointFeatures)" explainText="$(string.Explain_bDisableSharePointFeatures)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cSharePoint" valueName="bDisableSharePointFeatures">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- Security (Enhanced) - Enable Protected Mode at startup -->
+		<policy name="bProtectedMode" class="Machine" displayName="$(string.Policy_bProtectedMode)" explainText="$(string.Explain_bProtectedMode)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" valueName="bProtectedMode">
+			<parentCategory ref="Cat_SecurityEnhanced"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- Security (Enhanced) - Enhanced Security: Browser Mode -->
+		<policy name="bEnhancedSecurityInBrowser" class="Machine" displayName="$(string.Policy_bEnhancedSecurityInBrowser)" explainText="$(string.Explain_bEnhancedSecurityInBrowser)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" valueName="bEnhancedSecurityInBrowser">
+			<parentCategory ref="Cat_SecurityEnhanced"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- Security (Enhanced) - Enhanced Security: Standalone Mode -->
+		<policy name="bEnhancedSecurityStandalone" class="Machine" displayName="$(string.Policy_bEnhancedSecurityStandalone)" explainText="$(string.Explain_bEnhancedSecurityStandalone)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" valueName="bEnhancedSecurityStandalone">
+			<parentCategory ref="Cat_SecurityEnhanced"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Disable Document Cloud service access -->
+		<policy name="bToggleAdobeDocumentServices" class="Machine" displayName="$(string.Policy_bToggleAdobeDocumentServices)" explainText="$(string.Explain_bToggleAdobeDocumentServices)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices" valueName="bToggleAdobeDocumentServices">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Disable all in-product and desktop notifications -->
+		<policy name="bToggleNotifications" class="Machine" displayName="$(string.Policy_bToggleNotifications)" explainText="$(string.Explain_bToggleNotifications)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices" valueName="bToggleNotifications">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Show "Send a Copy" button from the Fill & Sign tool in Acrobat and Reader -->
+		<policy name="bToggleSendACopy" class="Machine" displayName="$(string.Policy_bToggleSendACopy)" explainText="$(string.Explain_bToggleSendACopy)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices" valueName="bToggleSendACopy" >
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Hide Signature tab -->
+		<policy name="bToggleManageSign" class="Machine" displayName="$(string.Policy_bToggleManageSign)" explainText="$(string.Explain_bToggleManageSign)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices" valueName="bToggleManageSign">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Disable Adobe Send for Signature (Acrobat Sign) -->
+		<policy name="bToggleAdobeSign" class="Machine" displayName="$(string.Policy_bToggleAdobeSign)" explainText="$(string.Explain_bToggleAdobeSign)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices" valueName="bToggleAdobeSign">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- Security (Enhanced) - Protected View -->
+		<policy name="iProtectedView" class="Machine" displayName="$(string.Policy_iProtectedView)" explainText="$(string.Explain_iProtectedView)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" presentation="$(presentation.Policy_iProtectedView)">
+			<parentCategory ref="Cat_SecurityEnhanced"/>
+			<supportedOn ref="AcrobatDC"/>
+			<elements>
+				<enum id="Policy_DropList_Element_iProtectedView" valueName="iProtectedView" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" required="true">
+					<item displayName="$(string.Policy_DropList_Select_Disable_iProtectedView)">
+						<value>
+							<decimal value="0"/>
+						</value>
+					</item>
+					<item displayName="$(string.Policy_DropList_Select_Enable_iProtectedView_UnsafeOnly)">
+						<value>
+							<decimal value="1"/>
+						</value>
+					</item>
+					<item displayName="$(string.Policy_DropList_Select_Enable_iProtectedView_AllFiles)">
+						<value>
+							<decimal value="2"/>
+						</value>
+					</item>
+				</enum>
+			</elements>
+		</policy>
+
+		<!-- Microsoft Purview Information Protection - Enable MPIP support -->
+		<policy name="bMIPLabelling" class="Machine" displayName="$(string.Policy_bMIPLabelling)" explainText="$(string.Explain_bMIPLabelling)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" valueName="bMIPLabelling">
+			<parentCategory ref="Cat_MicrosoftPurviewInformationProtection"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- Microsoft Purview Information Protection - MPIP: Enable Default and Mandatory labelling in Acrobat -->
+		<policy name="bMIPCheckPolicyOnDocSave" class="Machine" displayName="$(string.Policy_bMIPCheckPolicyOnDocSave)" explainText="$(string.Explain_bMIPCheckPolicyOnDocSave)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" valueName="bMIPCheckPolicyOnDocSave">
+			<parentCategory ref="Cat_MicrosoftPurviewInformationProtection"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Enable Modern Viewer -->
+		<policy name="bEnableAV2Enterprise" class="Machine" displayName="$(string.Policy_bEnableAV2Enterprise)" explainText="$(string.Explain_bEnableAV2Enterprise)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices" valueName="bEnableAV2Enterprise">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Disable cloud storage connectors -->
+		<policy name="bToggleWebConnectors" class="Machine" displayName="$(string.Policy_bToggleWebConnectors)" explainText="$(string.Explain_bToggleWebConnectors)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices" valueName="bToggleWebConnectors">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Enable connection to the Box cloud -->
+		<policy name="bBoxConnectorEnabled" class="Machine" displayName="$(string.Policy_bBoxConnectorEnabled)" explainText="$(string.Explain_bBoxConnectorEnabled)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices" valueName="bBoxConnectorEnabled">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Enable connection to the Dropbox cloud -->
+		<policy name="bDropboxConnectorEnabled" class="Machine" displayName="$(string.Policy_bDropboxConnectorEnabled)" explainText="$(string.Explain_bDropboxConnectorEnabled)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices" valueName="bDropboxConnectorEnabled">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Enable connection to the OneDrive cloud -->
+		<policy name="bOneDriveConnectorEnabled" class="Machine" displayName="$(string.Policy_bOneDriveConnectorEnabled)" explainText="$(string.Explain_bOneDriveConnectorEnabled)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices" valueName="bOneDriveConnectorEnabled">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Enable connection to the Google Drive cloud  -->
+		<policy name="bGoogleDriveConnectorEnabled" class="Machine" displayName="$(string.Policy_bGoogleDriveConnectorEnabled)" explainText="$(string.Explain_bGoogleDriveConnectorEnabled)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices" valueName="bGoogleDriveConnectorEnabled">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- User Policies Starts Here -->
+		<!-- General - Display splash screen at launch -->
+		<policy name="bDisplayAboutDialog" class="User" displayName="$(string.Policy_bDisplayAboutDialog)" explainText="$(string.Explain_bDisplayAboutDialog)" key="Software\Adobe\Adobe Acrobat\DC\Originals" valueName="bDisplayAboutDialog">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- JavaScript - Enable Acrobat JavaScript -->
+		<policy name="bEnableJS" class="User" displayName="$(string.Policy_bEnableJS)" explainText="$(string.Explain_bEnableJS)" key="Software\Adobe\Adobe Acrobat\DC\JSPrefs" valueName="bEnableJS">
+			<parentCategory ref="Cat_JavaScript"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- Security - Ask before installing checkbox -->
+		<policy name="bAskBeforeInstalling" class="User" displayName="$(string.Policy_bAskBeforeInstalling)" explainText="$(string.Explain_bAskBeforeInstalling)" key="Software\Adobe\Adobe Acrobat\DC\Security\cDigSig\cAdobeDownload" valueName="bAskBeforeInstalling">
+			<parentCategory ref="Cat_Security"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- Trust Manager - Load security settings from a server -->
+		<policy name="bLoadSettingsFromURL" class="User" displayName="$(string.Policy_bLoadSettingsFromURL)" explainText="$(string.Explain_bLoadSettingsFromURL)" key="Software\Adobe\Adobe Acrobat\DC\Security\cDigSig\cAdobeDownload" valueName="bLoadSettingsFromURL">
+			<parentCategory ref="Cat_TrustManager"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- Security (Enhanced) - Automatically trust sites for Win OS security zones -->
+		<policy name="bTrustOSTrustedSites" class="User" displayName="$(string.Policy_bTrustOSTrustedSites)" explainText="$(string.Explain_bTrustOSTrustedSites)" key="Software\Adobe\Adobe Acrobat\DC\TrustManager" valueName="bTrustOSTrustedSites">
+			<parentCategory ref="Cat_SecurityEnhanced"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- Security (Enhanced) - Automatically trust documents with valid certification -->
+		<policy name="bTrustCertifiedDocuments" class="User" displayName="$(string.Policy_bTrustCertifiedDocuments)" explainText="$(string.Explain_bTrustCertifiedDocuments)" key="Software\Adobe\Adobe Acrobat\DC\TrustManager" valueName="bTrustCertifiedDocuments">
+			<parentCategory ref="Cat_SecurityEnhanced"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- Trust Manager - Allow opening of non-PDF file attachments with external applications -->
+		<policy name="bAllowOpenFile" class="User" displayName="$(string.Policy_bAllowOpenFile)" explainText="$(string.Explain_bAllowOpenFile)" key="Software\Adobe\Adobe Acrobat\DC\Originals" valueName="bAllowOpenFile">
+			<parentCategory ref="Cat_TrustManager"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- Email Accounts - Always send files as a link (sign in required) -->
+		<policy name="bLastAttachLinkMode" class="User" displayName="$(string.Policy_bLastAttachLinkMode)" explainText="$(string.Explain_bLastAttachLinkMode)" key="SOFTWARE\Adobe\Adobe Acrobat\DC\UnifiedShare" valueName="bLastAttachLinkMode">
+			<parentCategory ref="Cat_EmailAccounts"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- Forms - Show border hover color for fields -->
+		<policy name="bRuntimeHighlight" class="User" displayName="$(string.Policy_bRuntimeHighlight)" explainText="$(string.Explain_bRuntimeHighlight)" key="SOFTWARE\Adobe\Adobe Acrobat\DC\FormsPrefs\cRuntimeBGIdleColor" valueName="bRuntimeHighlight">
+			<parentCategory ref="Cat_Forms"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+	</policies>
+</policyDefinitions>

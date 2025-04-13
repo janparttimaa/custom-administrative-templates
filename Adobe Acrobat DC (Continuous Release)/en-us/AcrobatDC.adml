@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xsi:schemaLocation="" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+
+	<displayName>Adobe Acrobat DC ADMX File</displayName>
+	<description>ADMX File for Adobe Acrobat DC</description>
+	<resources>
+		<stringTable>
+			<!--Storage for String Definitions-->
+			<string id="AcrobatDC">Adobe Acrobat DC (Continuous Release)</string>
+			<string id="Cat_Adobe_Acrobat_DC">Adobe Acrobat DC</string>
+			<string id="Cat_Preferences">Preferences</string>
+			<string id="Cat_Forms">Forms</string>
+			<string id="Cat_General">General</string>
+			<string id="Cat_Security">Security</string>
+			<string id="Cat_SecurityEnhanced">Security (Enhanced)</string>
+			<string id="Cat_MicrosoftPurviewInformationProtection">Microsoft Purview Information Protection</string>
+			<string id="Cat_TrustManager">Trust Manager</string>
+			<string id="Cat_UpdaterAndHelp">Updater and Help</string>
+			<string id="Cat_JavaScript">JavaScript</string>
+			<string id="Cat_EmailAccounts">Email Accounts</string>
+
+			<string id="Policy_bDisablePDFHandlerSwitching">Disable PDF handler switching</string>
+			<string id="Explain_bDisablePDFHandlerSwitching">Disables the ability to change the specified default handler (PDF viewer). 
+
+When Reader and Acrobat are installed on the same machine or earlier versions of Acrobat already exist, you can choose which viewer is the default for PDF files. While Acrobat is the more capable, feature rich application, Reader X has a built in Protected Mode which is more secure (For security details, see the Application Security Guide).
+
+This feature is a Adobe PDF handler-only feature: It does not enable switching to and from non-Adobe products and may or may not change the handling of other Acrobat supported formats; for example, it changes FDF and XDP, but not XFA or PDX.
+
+Administrators interested in security may want to make Reader the default PDF viewer. Version X products will be able to switch between any product type and version back to 9.x.
+
+For more information, see the PDF Ownership knowledge base article: https://kb2.adobe.com/cps/874/cpsid_87424.html
+
+Note that UI configuration does not set any key in HKCU. Instead, changing the setting via the UI invokes the installer which sets the key in HKLM. The default application behavior varies depending on what is installed. A value of 1 disables the user's ability to change the default handler. 
+
+Possible values:
+- Enabled: Don't allow the user to change the default viewer.
+- Disabled: Allow the user to change the default viewer.
+
+GUI mapping:
+Edit &gt; Preferences &gt; General &gt; Select Default PDF Handler
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_12191</string>
+			<string id="Policy_bUpdater">Enable automatic updates</string>
+			<string id="Explain_bUpdater">Enable both updates to the product's web-plugin components as well as all services.		
+
+Possible values:
+- Enabled: Enables automatic updates. Users cannot disable those.
+- Disabled: Disable automatic updates. It also removes update feature from "Help" &gt; "Check for Updates..." and disables the user interface items from "Preferences" &gt; "Updater and Help" &gt; "Check for updates".
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/Updater-Win.html#idkeyname_1_29757</string>
+			<string id="Policy_bToggleShareFeedback">Show the "Send Feedback" icon</string>
+			<string id="Explain_bToggleShareFeedback">Specifies whether to show the Send Feedback icon.
+
+By default, the UI displays a feedback icon so that users can easily send feedback to Adobe with one click.
+
+Possible values: 
+- Enabled: Show the icon.
+- Disabled: Hide the icon.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_10671</string>
+			<string id="Policy_bShowMsgAtLaunch">Show messages when I launch Acrobat</string>
+			<string id="Explain_bShowMsgAtLaunch">Specifies whether to show messages from Adobe when the product launches.  
+
+Possible values:
+- Enabled: Show messages from Adobe when the product launches.
+- Disabled: Don't show messages from Adobe when the product launches.
+ 
+GUI mapping:
+Preferences &gt; General &gt; Show me messages when I launch Acrobat.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/IPM.html#idkeyname_1_15543</string>
+			<string id="Policy_bAutoFill">Auto Complete</string>
+			<string id="Explain_bAutoFill">Locks the auto-fill functionality on or off and disables the corresponding user interface item.  
+
+Possible values:
+- Enabled: Enable and lock auto-fill. 
+- Disabled: Disable and lock auto-fill. 
+ 
+GUI mapping: 
+Preferences &gt; Forms &gt; Auto Complete drop down list.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FormPrefs.html#idkeyname_1_14080</string>
+			<string id="Policy_bToggleFTE">Disable FTE, Welcome tour/page feature</string>
+			<string id="Explain_bToggleFTE">Disables First Time Experience (FTE, Welcome tour/page) feature.
+
+The first time experience (FTE) feature displays help content and tips when the application starts and also controls access to the Welcome Tour and Welcome page.
+
+Possible values: 
+- Enabled: Disable FTE features. 
+- Disabled: Enable FTE features.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_10559</string>
+			<string id="Policy_bWhatsNewExp">Disable What's New experience</string>
+			<string id="Explain_bWhatsNewExp">This policy setting provides you possibility to either disable or enable What's New experience.
+
+This feature was phased in incrementally over 2022. When enabled, the default user on first launch will see a What's New screen as well as a See new features notication. These UI items appear once.
+
+Possible values: 
+- Enabled: What's New experience is disabled. 
+- Disabled: What's New experience is enabled.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_8750</string>
+			<string id="Policy_bSuppressSignOut">Sign-in and sign-out Help menu item</string>
+			<string id="Explain_bSuppressSignOut">This policy setting provides you possibility to either disable or enable sign-in and sign-out Help menu item.
+
+Possible values: 
+- Enabled: Disable the Help menu item. 
+- Disabled: Don't disable the menu item.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_10403</string>
+			<string id="Policy_bTogglePrefsSync">Disable preferences synchronization</string>
+			<string id="Explain_bTogglePrefsSync">This preference disables and locks a new feature which synchronizes desktop preferences across devices on which the user is signed in with an Adobe ID. For more details about what preferences sync, see the Admin Guide: https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/planning.html#preferences-synchronization
+
+Possible values: 
+- Enabled: Disable preferences synchronization. 
+- Disabled: Enable preferences synchronization.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_9582</string>
+			<string id="Policy_bEnableCertificateBasedTrust">Allow certified documents to bypass all the security restrictions that may be bypassed by other privileged locations</string>
+			<string id="Explain_bEnableCertificateBasedTrust">This lockable counterpart to "Automatically trust documents with valid certification" policy setting allows certified documents to bypass all the security restrictions that may be bypassed by other privileged locations. The exception is that this level of trust does not apply when the PDF is viewed in Protected View.
+
+Possible values: 
+- Enabled: Do make certified documents equivalent to privileged locations (trusted).
+- Disabled: Don't make certified documents equivalent to privileged locations.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/TrustManager.html#idkeyname_1_29196</string>
+			<string id="Policy_bDisableSharePointFeatures">Disables the SharePoint and Office 365 integration features</string>
+			<string id="Explain_bDisableSharePointFeatures">Controls the application's ability to detect that a file came from a Sharepoint server, disables the check-out prompt, and removes the SharePoint specific menu items.
+
+Possible values: 
+- Enabled: Disable SharePoint and Office 365 integration. 
+- Disabled: Don't disable SharePoint and Office 365 integration.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/Workflows.html#idkeyname_1_32085</string>
+			<string id="Policy_bProtectedMode">Enable Protected Mode at startup</string>
+			<string id="Explain_bProtectedMode">Protected Mode should be enabled to protect user systems and data.
+
+Possible values: 
+- Enabled: Do enable protected mode. 
+- Disabled: Don't enable protected mode.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/Privileged.html#idkeyname_1_17971</string>
+			<string id="Policy_bEnhancedSecurityInBrowser">Enhanced Security: Browser Mode</string>
+			<string id="Explain_bEnhancedSecurityInBrowser">Toggles enhanced security when the application is running in the browser.
+
+Possible values: 
+- Enabled: Enable enhanced security in the browser.
+- Disabled: Disable enhanced security in the browser.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/TrustManager.html#idkeyname_1_27749</string>
+			<string id="Policy_bEnhancedSecurityStandalone">Enhanced Security: Standalone Mode</string>
+			<string id="Explain_bEnhancedSecurityStandalone">Toggles enhanced security for the standalone application.
+
+Possible values: 
+- Enabled: Enable enhanced security in the standalone application.
+- Disabled: Disable enhanced security in the standalone application.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/TrustManager.html#idkeyname_1_27798</string>
+			<string id="Policy_bToggleAdobeDocumentServices">Disable Document Cloud service access</string>
+			<string id="Explain_bToggleAdobeDocumentServices">This setting does not affect Adobe Send for Signature (Acrobat Sign), preference synchronization, or third party connectors. For the base release, it also did not disable Send and Track (Share); however, it does control Send and Track with the July, 2015 release. For Acrobat Reader, this preference removes Create PDF, Export PDF, Organize, and Combine even if the ID has a subscription to those services. 
+
+Possible values: 
+- Enabled: Disable Document Cloud services.
+- Disabled: Enable Document Cloud services.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_9204</string>
+			<string id="Policy_bToggleNotifications">Disable all in-product and desktop notifications</string>
+			<string id="Explain_bToggleNotifications">When Disabled, feature-specific notifications are managed via the related service preference. When Enabled, this preference disables all notifications irrespective of the values of all other keys.
+
+Possible values: 
+- Enabled: Disable all desktop notifications.
+- Disabled: Enable desktop notifications.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_9698</string>
+			<string id="Policy_bToggleSendACopy">Show "Send a Copy" button from the Fill and Sign tool in Acrobat and Reader</string>
+			<string id="Explain_bToggleSendACopy">Specifies whether to hide the "Send a Copy" button from the Fill and Sign tool in Acrobat and Reader.
+
+Possible values: 
+- Enabled: Show the button.
+- Disabled: Hide the button.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_9255</string>
+			<string id="Policy_bToggleManageSign">Hide Signature tab</string>
+			<string id="Explain_bToggleManageSign">Specifies whether to remove the Signature tab from the Home page's left-hand pane, notifications, and sign tracking cards.
+When set to 'Enabled' the signature tab is hidden, the user will not see any agreements received or sent for signature, and all Acrobat Sign notifications are disabled on the desktop. It also removes signature-related cards under the To Do list.
+
+Possible values: 
+- Enabled: Hide the Signature tab.
+- Disabled: Show the Signature tab.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_9348</string>
+			<string id="Policy_bToggleAdobeSign">Disable Adobe Send for Signature (Acrobat Sign)</string>
+			<string id="Explain_bToggleAdobeSign">Note that the Oct. 2018 Continuous track release renames "Send for Signature" as "Acrobat Sign". Continuous track installs should also set "Hide Signature tab" -policy . Preference behavior has not changed, but the UI to which it applies varies across product versions.
+
+Possible values: 
+- Enabled: Disable Adobe Send for Signature (Acrobat Sign).
+- Disabled: Enable Adobe Send for Signature (Acrobat Sign).
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_9392</string>
+			<string id="Policy_iProtectedView">Protected View</string>
+			<string id="Explain_iProtectedView">Specifies whether to use Protected View never (default), for files from an untrusted location (recommended), or always.
+			
+The PV preferences were implemented in Acrobat 10.1 and are supported in Reader with 11.0. 
+Possible values include, when enabling the policy:
+- (default) Disable Protected View.
+- (recommended) Enable Protected View for unsafe locations only
+- Enable Protected View for all files.
+
+Note that the Customization Wizard 11 created the preference in an incorrect location at HKLM\SOFTWARE\Policies\Adobe\(product name)\(version)\TrustManager. This bug is fixed in the Wizard DC.
+
+GUI Mapping: 
+Preferences &gt; Security (Enhanced) &gt; Protected View radio buttons.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/TrustManager.html#idkeyname_1_29091</string>
+
+			<string id="Policy_DropList_Select_Disable_iProtectedView">Disable Protected View</string>
+			<string id="Policy_DropList_Select_Enable_iProtectedView_UnsafeOnly">Enable Protected View for unsafe locations</string>
+			<string id="Policy_DropList_Select_Enable_iProtectedView_AllFiles">Enable Protected View for all files</string>
+			<string id="Policy_bMIPLabelling">Enable MPIP support</string>
+			<string id="Explain_bMIPLabelling">More information:
+https://helpx.adobe.com/enterprise/kb/mpip-support-acrobat.html
+
+Possible values:
+- Enabled: MPIP support enabled.
+- Disabled: MPIP support disabled.</string>
+			<string id="Policy_bMIPCheckPolicyOnDocSave">MPIP: Enable Default and Mandatory labelling in Acrobat</string>
+			<string id="Explain_bMIPCheckPolicyOnDocSave">More information: 
+https://helpx.adobe.com/enterprise/kb/mpip-support-acrobat.html
+
+Possible values:
+- Enabled: Default and Mandatory labelling in Acrobat is enabled.
+- Disabled: Default and Mandatory labelling in Acrobat is disabled.</string>
+			<string id="Policy_bEnableAV2Enterprise">Enable Modern Viewer</string>
+			<string id="Explain_bEnableAV2Enterprise">The new app UI is rolling out in phases over 2023. As of June, 25% of users will see the updated user interface.
+
+Possible values:
+- Enabled: Show the Modern Viewer.
+- Disabled: Don't show the Modern Viewer.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_8799</string>
+			<string id="Policy_bToggleWebConnectors">Disable cloud storage connectors</string>
+			<string id="Explain_bToggleWebConnectors">Only supported on the Continuous track. Allows controlling in-product access to third party services for file storage. Dropbox support began with the Oct. 13, 2015 release. May 9, 2016: The preference now controls all the third-party connectors, including Box, OneDrive, and Dropbox (not SharePoint).
+
+Possible values:
+- Enabled: Disable 3rd party connectors.
+- Disabled: Enable 3rd party connectors.
+
+This preference disables 3rd party web connectors and their entry points from the product's UI, including in the Home view's left hand pane and under Add Account as well as custom Open/Save dialogs. If Document Cloud is also disabled, Open and Save dialogs revert to platform dialogs.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_9921</string>
+			<string id="Policy_bBoxConnectorEnabled">Enable connection to the Box cloud</string>
+			<string id="Explain_bBoxConnectorEnabled">Overrides "Disable cloud storage connectors" policy. Only supported on the Continuous track.
+
+Possible values:
+- Enabled: Enable connection to Box.
+- Disabled: Disable connection to Box.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_9966</string>
+			<string id="Policy_bOneDriveConnectorEnabled">Enable connection to the OneDrive cloud</string>
+			<string id="Explain_bOneDriveConnectorEnabled">Overrides "Disable cloud storage connectors" policy. Only supported on the Continuous track.
+
+Possible values:
+- Enabled: Enable connection to OneDrive.
+- Disabled: Disable connection to OneDrive.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_10066</string>
+			<string id="Policy_bDropboxConnectorEnabled">Enable connection to the Dropbox cloud</string>
+			<string id="Explain_bDropboxConnectorEnabled">Overrides "Disable cloud storage connectors" policy. Only supported on the Continuous track.
+
+Possible values:
+- Enabled: Enable connection to Dropbox.
+- Disabled: Disable connection to Dropbox.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_10016</string>
+			<string id="Policy_bGoogleDriveConnectorEnabled">Enable connection to the Google Drive cloud</string>
+			<string id="Explain_bGoogleDriveConnectorEnabled">Overrides "Disable cloud storage connectors" policy. Only supported on the Continuous track.
+
+Possible values:
+- Enabled: Enable connection to Google Drive.
+- Disabled: Disable connection to Google Drive.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_10116</string>
+
+			<!-- User Policies Starts Here -->
+			<string id="Policy_bDisplayAboutDialog">Display splash screen at launch</string>
+			<string id="Explain_bDisplayAboutDialog">Specifies whether or not to display the startup splash screen at every launch.
+
+Possible values: 
+- Enabled: Display the startup splash screen at every launch.
+- Disabled: Don't display the startup splash screen. 
+
+GUI mapping:
+Splash screen
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/Originals.html#idkeyname_1_16914</string>
+			<string id="Policy_bEnableJS">Enable Acrobat JavaScript</string>
+			<string id="Explain_bEnableJS">Toggles JavaScript execution on and off globally; when off, the PDF cannot execute JavaScript.
+
+When the user's ability to create privileged locations is not disabled and locked, end users can bypass disabled JS by choosing Trust once or Trust Always via the Options button on the Yellow Message Bar. Admins can disable and lock JS execution by setting bDisableJavaScript to 0 in HKLM.
+
+Possible values:
+- Enabled: Acrobat JavaScript is enabled.
+- Disabled: Acrobat JavaScript is disabled.
+
+GUI mapping: 
+Preferences &gt; JavaScript &gt; JavaScript panel &gt; Enable Acrobat JavaScript
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/JSPrefs.html#idkeyname_1_15664</string>
+			<string id="Policy_bAskBeforeInstalling">Ask before installing checkbox</string>
+			<string id="Explain_bAskBeforeInstalling">Specifies whether trust anchors should be imported silently or Acrobat should ask permission from the user.
+
+Possible values: 
+- Enabled: Enable and Install silently.
+- Disabled: Enable and Ask before installing.
+
+GUI mapping: 
+Preferences &gt; Security &gt; Security Settings panel &gt; Ask before installing checkbox
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/Security.html#idkeyname_1_18903</string>
+			<string id="Policy_bLoadSettingsFromURL">Load security settings from a server</string>
+			<string id="Explain_bLoadSettingsFromURL">Specifies whether or not trust anchors should be periodically downloaded from Adobe.
+
+Possible values:
+- Enabled: Do load settings from an URL.
+- Disabled: Don't load settings from an URL.
+
+GUI mapping:
+Preferences &gt; Security &gt; Security Settings panel &gt; Load security settings from a server
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/Security.html#idkeyname_1_21258</string>
+			<string id="Policy_bTrustOSTrustedSites">Automatically trust sites for Win OS security zones</string>
+			<string id="Explain_bTrustOSTrustedSites">Elevates locations that Internet Explorer trusts to privileged locations so that they may bypass security restrictions.
+
+Prior to 10.1.1 and 9.4.7, trust was granted to Trusted Sites. With 10.1.2 and 9.5 and later, trust also includes Local Intranet zones. This setting essentially makes IE trust operate as if they were privileged locations. The feature can be disabled with bDisableOSTrustedSites.
+
+Possible values:
+- Enabled: Do automatically trust Windows OS zones.
+- Disabled: Don't automatically trust Windows OS zones.
+
+GUI mapping:
+Edit &gt; Preferences &gt; Security (Enhanced) &gt; Automatically trust sites for my Win OS security zones
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/TrustManager.html#idkeyname_1_27955</string>
+			<string id="Policy_bTrustCertifiedDocuments">Automatically trust documents with valid certification</string>
+			<string id="Explain_bTrustCertifiedDocuments">This setting allows certified documents to bypass all the security restrictions that may be bypassed by other privileged locations. The exception is that this level of trust does not apply when the PDF is viewed in Protected View. To lock this setting, set "Allow certified documents to bypass all the security restrictions that may be bypassed by other privileged locations".
+
+Possible values:
+- Enabled: Do make certified documents equivalent to privileged locations (trusted).
+- Disabled: Don't make certified documents equivalent to privileged locations.
+
+GUI mapping:
+Edit &gt; Preferences &gt; Security (Enhanced) &gt; Automatically trust documents with valid certification
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/TrustManager.html#idkeyname_1_29152</string>
+			<string id="Policy_bAllowOpenFile">Allow opening of non-PDF file attachments with external applications</string>
+			<string id="Explain_bAllowOpenFile">Specifies whether to open non-PDF attachments in their native application.
+
+Possible values:
+- Enabled: Allow opening of non-PDF file attachments with external applications.
+- Disabled: Deny opening of non-PDF file attachments with external applications.
+
+GUI mapping:
+Edit &gt; Preferences &gt; Trust Manager &gt; Attachment panel &gt; Allow opening of Non-PDF file attachments with external applications
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/Originals.html#idkeyname_1_17848</string>
+		<string id="Policy_bLastAttachLinkMode">Always send files as a link (sign in required)</string>
+		<string id="Explain_bLastAttachLinkMode">GUI mapping:
+Edit &gt; Preferences &gt; Email Accounts &gt; Send file by email settings &gt; Always send files as a link (sign in required)</string>
+		<string id="Policy_bRuntimeHighlight">Show border hover color for fields</string>
+		<string id="Explain_bRuntimeHighlight">Specifies whether to highlight fields during data entry.
+
+Possible values:
+- Enabled: Shows a border on field hover.
+- Disabled: Disables field border hover color.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FormPrefs.html#idkeyname_1_14248</string>
+		</stringTable>
+		<presentationTable>
+		<!--Storage for Presentation Definitions-->
+			<presentation id="Policy_iProtectedView">
+				<dropdownList refId="Policy_DropList_Element_iProtectedView">Protected View</dropdownList>
+			</presentation>
+		</presentationTable>
+	</resources>
+</policyDefinitionResources>
