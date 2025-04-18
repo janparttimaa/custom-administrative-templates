@@ -15,8 +15,8 @@ Here you can see OMA-URI information of the settings that are part of this ADMX-
 ### Preferences
 | Name | Description | OMA-URI | Data type | Recommended Value 
 |---------|---------|---------|---------|---------|
-| ```bShowKeyboardSelectionCursor``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_Accessibility/bShowKeyboardSelectionCursor``` | String | ```<enabled/>```
-| ```bLastAttachLinkMode``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_EmailAccounts/bLastAttachLinkMode``` | String | ```<enabled/>```
+| ```bShowKeyboardSelectionCursor``` | [See below](#bShowKeyboardSelectionCursor) | ```./User/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_Accessibility/bShowKeyboardSelectionCursor``` | String | ```<enabled/>```
+| ```bLastAttachLinkMode``` | [See below](#bLastAttachLinkMode) | ```./User/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_EmailAccounts/bLastAttachLinkMode``` | String | ```<enabled/>```
 | ```bAutoFill``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_Forms/bAutoFill``` | String | ```<enabled/>```
 | ```bRuntimeHighlight``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_Forms/bRuntimeHighlight``` | String | ```<enabled/>```
 | ```bBoxConnectorEnabled``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_General/bBoxConnectorEnabled``` | String | ```<enabled/>```
