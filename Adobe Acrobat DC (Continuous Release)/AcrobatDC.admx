@@ -45,7 +45,7 @@
 			<parentCategory ref="Cat_Preferences"/>
 		</category>
 		<category name="Cat_NGL" displayName="$(string.Cat_NGL)">
-			<parentCategory ref="Cat_Preferences"/>
+			<parentCategory ref="Cat_Adobe_Acrobat_DC"/>
 		</category>
 	</categories>
 	<policies>
@@ -410,22 +410,13 @@
         </policy>
 
 		<!-- Next Generation Licensing (NGL) - Enable External Browser Authentication  -->
-        <policy name="EnableExternalBrowserAuth" class ="Machine" displayName="$(string.Policy_EnableExternalBrowserAuth)" explainText="$(string.Explain_EnableExternalBrowserAuth)" presentation="$(presentation.EnableExternalBrowserAuth)" key="SOFTWARE\Policies\Adobe\NGL\Config"
+        <policy name="EnableExternalBrowserAuth" class ="Machine" displayName="$(string.Policy_EnableExternalBrowserAuth)" explainText="$(string.Explain_EnableExternalBrowserAuth)" presentation="$(presentation.Policy_EnableExternalBrowserAuth)" key="SOFTWARE\Policies\Adobe\NGL\Config">
 			<parentCategory ref="Cat_NGL"/>
 			<supportedOn ref="AcrobatDC"/>
         	<elements>
             	<text id="EnableExternalBrowserAuth" valueName="EnableExternalBrowserAuth" required="true" />
         	</elements>
 		</policy>
-
-		<!-- Next Generation Licensing (NGL) - Enable Social Providers  -->
-		<policy name="enabled_social_providers" class="Machine" displayName="$(string.Policy_enabled_social_providers)" key="SOFTWARE\Policies\Adobe\NGL\AuthInfo" explainText="$(string.Explain_enabled_social_providers)" presentation="$(presentation.Policy_enabled_social_providers)">
-			<parentCategory ref="Cat_NGL"/>
-			<supportedOn ref="AcrobatDC"/>
-      		<elements>
-        		<multiText id="enabled_social_providers" valueName="enabled_social_providers" maxLength="16384"/>
-      		</elements>
-    	</policy>
 
 		<!-- User Policies Starts Here -->
 		<!-- General - Display splash screen at launch -->

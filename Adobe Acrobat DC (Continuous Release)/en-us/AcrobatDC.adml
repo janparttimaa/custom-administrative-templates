@@ -415,12 +415,11 @@ https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FormPrefs.htm
 Example value:
 example.com</string>
 		<string id="Policy_EnableExternalBrowserAuth">Enable External Browser Authentication</string>
-		<string id="Explain_EnableExternalBrowserAuth">If you want to enable it, select "Enable" and put value 1 to the text box.</string>
+		<string id="Explain_EnableExternalBrowserAuth">If you want to enable it, select "Enable" and put value 1 to the value box.</string>
 		<string id="Policy_enabled_social_providers">Enable Social Providers</string>
 		<string id="Explain_enabled_social_providers">Specify do you want to provide users possibility to sign into Adobe-products e.g. Adobe Acrobat DC using user's third party personal acocunts from e.g. Facebook and Google.
 
-If you want to block this possibility, enable this policy and set following value to text box:
-00,00,00,00
+If you want to block this possibility, enable this policy and leave value field blank.
 </string>
 		</stringTable>
 		<presentationTable>
@@ -437,9 +436,6 @@ If you want to block this possibility, enable this policy and set following valu
         		<textBox refId="EnableExternalBrowserAuth">
           			<label>Value:</label>
         		</textBox>
-      		</presentation>
-			<presentation id="Policy_enabled_social_providers">
-        		<multiTextBox refId="enabled_social_providers" />
       		</presentation>
 		</presentationTable>
 	</resources>
