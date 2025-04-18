@@ -55,7 +55,7 @@ Here you can see OMA-URI information of the settings that are part of this ADMX-
 | ```bUpdater``` | [See below](#bUpdater) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_UpdaterAndHelp/bUpdater``` | String | ```<enabled/>```<br>```<disabled/>```
 
 ### Next Generation Licensing (NGL)
-| Name | Description | OMA-URI | Data type | Recommended Value 
+| Name | Description | OMA-URI | Data type | Available Values 
 |---------|---------|---------|---------|---------|
 | ```EnableExternalBrowserAuth``` | [See below](#EnableExternalBrowserAuth) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_NGL/EnableExternalBrowserAuth``` | String | ```<enabled/>```<br>```<disabled/>```
 | ```login_domain``` | [See below](#login_domain) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_NGL/login_domain``` | String | ```<enabled/>```<br>```<disabled/>```
