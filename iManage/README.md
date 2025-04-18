@@ -2,7 +2,7 @@
 
 This repository includes custom Administrative Templates for iManage that can be used on your on-prem environment or Microsoft Intune.
 
-## OMA-URI of ADMX-templates
+## OMA-URI of ADMX-template
 Here you can see OMA-URI information for released ADMX-template, that can be deployed via Intune using ingestion.
 
 | ADMX-template | OMA-URI |
