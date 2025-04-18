@@ -1,7 +1,7 @@
 # Adobe Acrobat DC (Continuous Release)
 
 > [!NOTE]  
-> These ADMX and ADML templates on this repository are forked and further developed from [original templates](https://www.adobe.com/devnet-docs/acrobatetk/tools/DesktopDeployment/gpo.html) provided by Adobe. This is because:
+> These ADMX and ADML templates on this repository are forked and further developed from [original templates](https://www.adobe.com/devnet-docs/acrobatetk/tools/DesktopDeployment/gpo.html) provided by Adobe. This is because of these reasons:
 > - Adobe's original templates covers only few settings.
 > - Adobe's original templates  are not actively updated and developed by Adobe.
 > - Adobe's original templates are not suitable for Intune-deployment using ingestion.
