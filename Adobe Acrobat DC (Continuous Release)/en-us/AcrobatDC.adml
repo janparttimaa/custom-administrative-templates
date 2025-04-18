@@ -415,9 +415,7 @@ https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FormPrefs.htm
 Example value:
 example.com</string>
 		<string id="Policy_EnableExternalBrowserAuth">Enable External Browser Authentication</string>
-		<string id="Explain_EnableExternalBrowserAuth">Possible values:
-- Enabled: External Browser Authentication is enabled.
-- Disabled: External Browser Authentication is disabled.</string>
+		<string id="Explain_EnableExternalBrowserAuth">If you want to enable it, select "Enable" and put value 1 to the text box.</string>
 		<string id="Policy_enabled_social_providers">Enable Social Providers</string>
 		<string id="Explain_enabled_social_providers">Specify do you want to provide users possibility to sign into Adobe-products e.g. Adobe Acrobat DC using user's third party personal acocunts from e.g. Facebook and Google.
 
@@ -430,15 +428,18 @@ If you want to block this possibility, enable this policy and set following valu
 			<presentation id="Policy_iProtectedView">
 				<dropdownList refId="Policy_DropList_Element_iProtectedView">Protected View</dropdownList>
 			</presentation>
-      		<presentation id="Policy.login_domain">
+      		<presentation id="Policy_login_domain">
         		<textBox refId="login_domain">
           			<label>Login Domain:</label>
         		</textBox>
       		</presentation>
-			<presentation id="Policy_enabled_social_providers">
-        		<multiText refId="enabled_social_providers">
+			<presentation id="Policy_EnableExternalBrowserAuth">
+        		<textBox refId="EnableExternalBrowserAuth">
           			<label>Value:</label>
-        		</multiText>
+        		</textBox>
+      		</presentation>
+			<presentation id="Policy_enabled_social_providers">
+        		<multiTextBox refId="enabled_social_providers" />
       		</presentation>
 		</presentationTable>
 	</resources>

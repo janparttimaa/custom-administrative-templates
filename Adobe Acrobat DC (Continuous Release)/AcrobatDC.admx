@@ -401,7 +401,7 @@
 		</policy>
 
 		<!-- Next Generation Licensing (NGL) - Login Domain  -->
-        <policy name="login_domain" class ="Machine" displayName="$(string.Policy_login_domain)" explainText="$(string.Explain_login_domain)" presentation="$(presentation.Policy.login_domain)" key="SOFTWARE\Policies\Adobe\NGL\AuthInfo">
+        <policy name="login_domain" class ="Machine" displayName="$(string.Policy_login_domain)" explainText="$(string.Explain_login_domain)" presentation="$(presentation.Policy_login_domain)" key="SOFTWARE\Policies\Adobe\NGL\AuthInfo">
 			<parentCategory ref="Cat_NGL"/>
 			<supportedOn ref="AcrobatDC"/>
         	<elements>
@@ -410,15 +410,12 @@
         </policy>
 
 		<!-- Next Generation Licensing (NGL) - Enable External Browser Authentication  -->
-        <policy name="EnableExternalBrowserAuth" class ="Machine" displayName="$(string.Policy_EnableExternalBrowserAuth)" explainText="$(string.Explain_EnableExternalBrowserAuth)" key="SOFTWARE\Policies\Adobe\NGL\Config" valueName="EnableExternalBrowserAuth">
+        <policy name="EnableExternalBrowserAuth" class ="Machine" displayName="$(string.Policy_EnableExternalBrowserAuth)" explainText="$(string.Explain_EnableExternalBrowserAuth)" presentation="$(presentation.EnableExternalBrowserAuth)" key="SOFTWARE\Policies\Adobe\NGL\Config"
 			<parentCategory ref="Cat_NGL"/>
 			<supportedOn ref="AcrobatDC"/>
-			<enabledValue>
-				<decimal value="1"/>
-			</enabledValue>
-			<disabledValue>
-				<decimal value="0"/>
-			</disabledValue>
+        	<elements>
+            	<text id="EnableExternalBrowserAuth" valueName="EnableExternalBrowserAuth" required="true" />
+        	</elements>
 		</policy>
 
 		<!-- Next Generation Licensing (NGL) - Enable Social Providers  -->
