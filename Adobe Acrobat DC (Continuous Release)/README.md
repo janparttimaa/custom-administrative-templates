@@ -1,5 +1,8 @@
 # Adobe Acrobat DC (Continuous Release)
 
+> [!NOTE]  
+> These ADMX and ADML templates are forked and further developed from [original templates](https://www.adobe.com/devnet-docs/acrobatetk/tools/DesktopDeployment/gpo.html) provided by Adobe as the original templates covers only few settings and templates are not suitable for Intune-deployment using ingestion.
+
 This repository includes custom Administrative Templates for Adobe Acrobat DC (Continuous Release) that can be used on your on-prem environment or Microsoft Intune.
 
 ## OMA-URI of ADMX-template
