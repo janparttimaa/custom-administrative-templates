@@ -57,8 +57,8 @@ Here you can see OMA-URI information of the settings that are part of this ADMX-
 ### Next Generation Licensing (NGL)
 | Name | Description | OMA-URI | Data type | Available Values 
 |---------|---------|---------|---------|---------|
-| ```EnableExternalBrowserAuth``` | [See below](#EnableExternalBrowserAuth) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_NGL/EnableExternalBrowserAuth``` | String | ```<enabled/>```<br>```<disabled/>```
-| ```login_domain``` | [See below](#login_domain) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_NGL/login_domain``` | String | ```<enabled/>```<br>```<disabled/>```
+| ```EnableExternalBrowserAuth``` | [See below](#EnableExternalBrowserAuth) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_NGL/EnableExternalBrowserAuth``` | String | ```<enabled/> <data id="EnableExternalBrowserAuth" value="1"/>```<br>```<disabled/>```
+| ```login_domain``` | [See below](#login_domain) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_NGL/login_domain``` | String | ```<enabled/> <data id="login_domain" value="example.com"/>```<br>```<disabled/>```
 
 ### Descriptions
 More details of the settings can be found this chapter.
