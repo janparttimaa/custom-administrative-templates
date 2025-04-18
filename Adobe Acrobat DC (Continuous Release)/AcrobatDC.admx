@@ -44,6 +44,9 @@
 		<category name="Cat_EmailAccounts" displayName="$(string.Cat_EmailAccounts)">
 			<parentCategory ref="Cat_Preferences"/>
 		</category>
+		<category name="Cat_NGL" displayName="$(string.Cat_NGL)">
+			<parentCategory ref="Cat_Preferences"/>
+		</category>
 	</categories>
 	<policies>
 	
@@ -396,6 +399,36 @@
 				<decimal value="0"/>
 			</disabledValue>
 		</policy>
+
+		<!-- Next Generation Licensing (NGL) - Login Domain  -->
+        <policy name="login_domain" class ="Machine" displayName="$(string.Policy_login_domain)" explainText="$(string.Explain_login_domain)" presentation="$(presentation.Policy.login_domain)" key="SOFTWARE\Policies\Adobe\NGL\AuthInfo">
+			<parentCategory ref="Cat_NGL"/>
+			<supportedOn ref="AcrobatDC"/>
+        	<elements>
+            	<text id="login_domain" valueName="login_domain" required="true" />
+        	</elements>
+        </policy>
+
+		<!-- Next Generation Licensing (NGL) - Enable External Browser Authentication  -->
+        <policy name="EnableExternalBrowserAuth" class ="Machine" displayName="$(string.Policy_EnableExternalBrowserAuth)" explainText="$(string.Explain_EnableExternalBrowserAuth)" key="SOFTWARE\Policies\Adobe\NGL\Config" valueName="EnableExternalBrowserAuth">
+			<parentCategory ref="Cat_NGL"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- Next Generation Licensing (NGL) - Enable Social Providers  -->
+		<policy name="enabled_social_providers" class="Machine" displayName="$(string.Policy_enabled_social_providers)" key="SOFTWARE\Policies\Adobe\NGL\AuthInfo" explainText="$(string.Explain_enabled_social_providers)" presentation="$(presentation.Policy_enabled_social_providers)">
+			<parentCategory ref="Cat_NGL"/>
+			<supportedOn ref="AcrobatDC"/>
+      		<elements>
+        		<multiText id="enabled_social_providers" valueName="enabled_social_providers" maxLength="16384"/>
+      		</elements>
+    	</policy>
 
 		<!-- User Policies Starts Here -->
 		<!-- General - Display splash screen at launch -->
