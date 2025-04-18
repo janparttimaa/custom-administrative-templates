@@ -50,8 +50,8 @@ Here you can see OMA-URI information of the settings that are part of this ADMX-
 | ```bTrustCertifiedDocuments``` | [See below](#bTrustCertifiedDocuments) | ```./User/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_SecurityEnhanced/bTrustCertifiedDocuments``` | String | ```<enabled/>```
 | ```bTrustOSTrustedSites``` | [See below](#bTrustOSTrustedSites) | ```./User/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_SecurityEnhanced/bTrustOSTrustedSites``` | String | ```<enabled/>```
 | ```iProtectedView``` | [See below](#iProtectedView) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_SecurityEnhanced/iProtectedView``` | String | ```<enabled/>```
-| ```bAllowOpenFile``` | [See below](#bAllowOpenFile) | ```./User/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_TrustManager\bAllowOpenFile``` | String | ```<enabled/>```
-| ```bLoadSettingsFromURL``` | [See below](#bLoadSettingsFromURL) | ```./User/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_TrustManager\bLoadSettingsFromURL``` | String | ```<enabled/>```
+| ```bAllowOpenFile``` | [See below](#bAllowOpenFile) | ```./User/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_TrustManager/bAllowOpenFile``` | String | ```<enabled/>```
+| ```bLoadSettingsFromURL``` | [See below](#bLoadSettingsFromURL) | ```./User/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_TrustManager/bLoadSettingsFromURL``` | String | ```<enabled/>```
 | ```bUpdater``` | [See below](#bUpdater) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_UpdaterAndHelp/bUpdater``` | String | ```<enabled/>```
 
 ### Next Generation Licensing (NGL)
