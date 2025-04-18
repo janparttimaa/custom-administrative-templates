@@ -8,7 +8,12 @@ This repository includes some custom Administrative Templates that can be used o
 ## Applications
 | Application | Custom Administrative Templates (ADMX & ADML) |
 |---------------|---------|
+| 7-Zip | [Hyperlink](./7-Zip) |
 | Adobe Acrobat DC (Continuous Release) | [Hyperlink](./Adobe%20Acrobat%20DC%20(Continuous%20Release)) |
+| Adobe Digital Editions | [Hyperlink](./Adobe%20Digital%20Editions) |
+| iManage | [Hyperlink](./iManage) |
+| VLC | [Hyperlink](./VLC) |
+| WinSCP | [Hyperlink](./WinSCP)  |
 
 ## OMA-URI of ADMX-templates
 Here you can see OMA-URI information for released ADMX-templates, that can be deployed via Intune using ingestion.
@@ -20,7 +25,6 @@ Here you can see OMA-URI information for released ADMX-templates, that can be de
 | VLC | ```./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/VLC/Policy/VLCAdmx``` |
 | WinSCP | ```./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/WinSCP/Policy/WinSCPAdmx``` |
 | iManage | ```./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/iManage/Policy/iManageAdmx``` |
-| Adobe Acrobat DC (Continuous Release) | ```./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/AdobeAcrobatDC/Policy/AdobeAcrobatDCAdmx``` |
 
 ## OMA-URI of settings
 Here you can see OMA-URI information of the settings that are part of these ADMX-templates, that can be deployed via Intune using ingestion with ingested ADMX-templates.
