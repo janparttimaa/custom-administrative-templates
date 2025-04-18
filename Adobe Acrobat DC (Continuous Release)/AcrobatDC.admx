@@ -44,6 +44,9 @@
 		<category name="Cat_EmailAccounts" displayName="$(string.Cat_EmailAccounts)">
 			<parentCategory ref="Cat_Preferences"/>
 		</category>
+		<category name="Cat_Accessibility" displayName="$(string.Cat_Accessibility)">
+			<parentCategory ref="Cat_Preferences"/>
+		</category>
 		<category name="Cat_NGL" displayName="$(string.Cat_NGL)">
 			<parentCategory ref="Cat_Adobe_Acrobat_DC"/>
 		</category>
@@ -518,6 +521,17 @@
 		<!-- Forms - Show border hover color for fields -->
 		<policy name="bRuntimeHighlight" class="User" displayName="$(string.Policy_bRuntimeHighlight)" explainText="$(string.Explain_bRuntimeHighlight)" key="SOFTWARE\Adobe\Adobe Acrobat\DC\FormsPrefs\cRuntimeBGIdleColor" valueName="bRuntimeHighlight">
 			<parentCategory ref="Cat_Forms"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+		<!-- Accessibility - Always display the keyboard selection cursor -->
+		<policy name="bShowKeyboardSelectionCursor" class="User" displayName="$(string.Policy_bShowKeyboardSelectionCursor)" explainText="$(string.Explain_bShowKeyboardSelectionCursor)" key="SOFTWARE\Adobe\Adobe Acrobat\DC\Access" valueName="bShowKeyboardSelectionCursor">
+			<parentCategory ref="Cat_Accessibility"/>
 			<supportedOn ref="AcrobatDC"/>
 			<enabledValue>
 				<decimal value="1"/>

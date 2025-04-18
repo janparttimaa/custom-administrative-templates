@@ -18,6 +18,7 @@
 			<string id="Cat_UpdaterAndHelp">Updater and Help</string>
 			<string id="Cat_JavaScript">JavaScript</string>
 			<string id="Cat_EmailAccounts">Email Accounts</string>
+			<string id="Cat_Accessibility">Accessibility</string>
 			<string id="Cat_NGL">Next Generation Licensing (NGL)</string>
 
 			<string id="Policy_bDisablePDFHandlerSwitching">Disable PDF handler switching</string>
@@ -409,6 +410,18 @@ Possible values:
 
 More information:
 https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FormPrefs.html#idkeyname_1_14248</string>
+			<string id="Policy_bShowKeyboardSelectionCursor">Always display the keyboard selection cursor</string>
+			<string id="Explain_bShowKeyboardSelectionCursor">Specifies whether the keyboard selection cursor should always be active in the document. Select this option if you use a screen magnifier.
+
+Possible values:
+- Enabled: Always show the cursor.
+- Disabled: Don't show the cursor.
+
+GUI mapping:
+Edit &gt; Preferences &gt; Access &gt; Other Accessibility Options &gt; Always display the keyboard selection cursor
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/Access.html#idkeyname_1_575</string>
 		<string id="Policy_login_domain">Login Domain</string>
 		<string id="Explain_login_domain">Specify login domain, that will be use, when signing into Adobe-products e.g. Adobe Acrobat DC.
 
