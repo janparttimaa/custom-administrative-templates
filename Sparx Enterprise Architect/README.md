@@ -9,8 +9,8 @@ This repository includes custom Administrative Templates for Sparx Enterprise Ar
 > - **On-Prem:** "Registry" section from Group Policy Management Editor.
 > - **Cloud (Intune):**
 >   - **Option 1:** [Remediations](https://learn.microsoft.com/en-us/intune/intune-service/fundamentals/remediations) -feature from Intune.
->   - **Option 2:** Deploy PowerShell-script, that will implement "AutoCheckoutEx" with needed value as an application and add AutoCheckoutEx" with needed value to detection method.
->   - **Option 3:** Wrap Sparx Enterprise Architect installer to [PSAppDeployToolkit](https://psappdeploytoolkit.com/). For post-installation section import "AutoCheckoutEx" with needed value. Remember to add "AutoCheckoutEx" and needed value to detection method when deploying Sparx Enterprise Architect as an application.
+>   - **Option 2:** From Intune, deploy PowerShell-script, that will implement "AutoCheckoutEx" with needed value as an application and add AutoCheckoutEx" with needed value to detection method.
+>   - **Option 3:** Wrap Sparx Enterprise Architect installer to [PSAppDeployToolkit](https://psappdeploytoolkit.com/). For post-installation section import "AutoCheckoutEx" with needed value. Remember to add "AutoCheckoutEx" and needed value to detection method when deploying Sparx Enterprise Architect as an application via Intune.
 
 Here you can see OMA-URI information for released ADMX-template, that can be deployed via Intune using ingestion.
 
