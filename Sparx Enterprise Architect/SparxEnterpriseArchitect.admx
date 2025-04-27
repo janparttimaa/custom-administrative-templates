@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+    <policyNamespaces>
+	    <target prefix="SparxEnterpriseArchitect" namespace="SparxEnterpriseArchitect.Policies.SparxEnterpriseArchitect"/>
+	    <using prefix="windows" namespace="Microsoft.Policies.Windows"/>
+    </policyNamespaces>
+    <resources minRequiredRevision="1.0" />
+    <categories>
+        <category name="SparxEnterpriseArchitect" displayName="$(string.SparxEnterpriseArchitectSettingCategory)"/>
+    </categories>
+    <policies>
+        <policy name="SKT" class="User" displayName="$(string.Policy_SKT)" explainText="$(string.Explain_SKT)" key="SOFTWARE\Sparx Systems\EA64\EA\OPTIONS" valueName="SKT">
+        <parentCategory ref="SparxEnterpriseArchitect" />
+        <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+        <enabledValue>
+            <decimal value="1" />
+        </enabledValue>
+        <disabledValue>
+            <decimal value="0" />
+        </disabledValue>
+        </policy>
+        <policy name="JET4" class="User" displayName="$(string.Policy_JET4)" explainText="$(string.Explain_JET4)" key="SOFTWARE\Sparx Systems\EA64\EA\OPTIONS" valueName="JET4">
+        <parentCategory ref="SparxEnterpriseArchitect" />
+        <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+        <enabledValue>
+            <decimal value="1" />
+        </enabledValue>
+        <disabledValue>
+            <decimal value="0" />
+        </disabledValue>
+        </policy>
+        <policy name="INIFILE_VERSION" class="User" displayName="$(string.Policy_INIFILE_VERSION)" explainText="$(string.Explain_INIFILE_VERSION)" key="SOFTWARE\Sparx Systems\EA64\EA\OPTIONS" valueName="INIFILE_VERSION">
+        <parentCategory ref="SparxEnterpriseArchitect" />
+        <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+        <enabledValue>
+            <decimal value="43" />
+        </enabledValue>
+        <disabledValue>
+            <decimal value="0" />
+        </disabledValue>
+        </policy>
+        <policy name="SSKSAddress" class="User" displayName="$(string.Policy_SSKSAddress)" explainText="$(string.Explain_SSKSAddress)" key="SOFTWARE\Sparx Systems\EA64\EA\OPTIONS" presentation="$(presentation.Policy_SSKSAddress)">
+        <parentCategory ref="SparxEnterpriseArchitect"/>
+        <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+        <elements>
+            <text id="SSKSAddress" valueName="SSKSAddress" required="true" />
+        </elements>
+        </policy>
+        <policy name="SSKSDisplayAddress" class="User" displayName="$(string.Policy_SSKSDisplayAddress)" explainText="$(string.Explain_SSKSDisplayAddress)" key="SOFTWARE\Sparx Systems\EA64\EA\OPTIONS" presentation="$(presentation.Policy_SSKSDisplayAddress)">
+        <parentCategory ref="SparxEnterpriseArchitect"/>
+        <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+        <elements>
+            <text id="SSKSDisplayAddress" valueName="SSKSDisplayAddress" required="true" />
+        </elements>
+        </policy>
+        <policy name="SSKSPassword" class="User" displayName="$(string.Policy_SSKSPassword)" explainText="$(string.Explain_SSKSPassword)" key="SOFTWARE\Sparx Systems\EA64\EA\OPTIONS" presentation="$(presentation.Policy_SSKSPassword)">
+        <parentCategory ref="SparxEnterpriseArchitect"/>
+        <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+        <elements>
+            <text id="SSKSPassword" valueName="SSKSPassword" />
+        </elements>
+        </policy>
+    </policies>
+</policyDefinitions>

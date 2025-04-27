@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName>Sparx Enterprise Architect</displayName>
+  <description>Group Policy Settings of Sparx Enterprise Architect</description>
+  <resources>
+    <stringTable>
+      <!-- General -->
+      <string id="SparxEnterpriseArchitectSettingCategory">Sparx Enterprise Architect</string>
+
+      <!-- Enable SKT for zero config client support -->
+      <string id="Policy_SKT">Enable SKT for zero config client support</string>
+      <string id="Explain_SKT">If you are configuring zero config client support, you need to enable this setting for enabling SKT. Enabling this setting is required.
+
+More information:
+https://sparxsystems.com/enterprise_architect_user_guide/17.0/getting_started/zero_config_support.html</string>
+
+      <!-- Enable JET4 for zero config client support -->
+      <string id="Policy_JET4">Enable JET4 for zero config client support</string>
+      <string id="Explain_JET4">If you are configuring zero config client support, you need to enable this setting for enabling JET4. Enabling this setting is required.
+
+More information:
+https://sparxsystems.com/enterprise_architect_user_guide/17.0/getting_started/zero_config_support.html</string>
+
+      <!-- Enable appropriate INIFILE_VERSION value for zero config client support -->
+      <string id="Policy_INIFILE_VERSION">Enable appropriate INIFILE_VERSION value for zero config client support</string>
+      <string id="Explain_INIFILE_VERSION">If you are configuring zero config client support, you need to enable this setting for enabling appropriate INIFILE_VERSION.
+
+Hint:
+Enable this setting (that is required) as this will apply following registry value below.
+"INIFILE_VERSION"=dword:00000043
+
+More information:
+https://sparxsystems.com/enterprise_architect_user_guide/17.0/getting_started/zero_config_support.html</string>
+
+      <!-- Configure SSKSAddress for zero config client support -->
+      <string id="Policy_SSKSAddress">Configure SSKSAddress for zero config client support</string>
+      <string id="Explain_SSKSAddress">If you are configuring zero config client support, you need to configure this setting. Enabling and configuring SSKSAddress is required.
+
+Hint:
+Configure same value, that you have configured to setting "Configure SSKSDisplayAddress for zero config client support".
+
+More information:
+https://sparxsystems.com/enterprise_architect_user_guide/17.0/getting_started/zero_config_support.html</string>
+
+      <!-- Configure SSKSDisplayAddress for zero config client support -->
+      <string id="Policy_SSKSDisplayAddress">Configure SSKSDisplayAddress for zero config client support</string>
+      <string id="Explain_SSKSDisplayAddress">If you are configuring zero config client support, you need to configure this setting. Enabling and configuring SSKSDisplayAddress is required.
+
+Hint:
+Configure same value, that you have configured to setting "Configure SSKSAddress for zero config client support".
+
+More information:
+https://sparxsystems.com/enterprise_architect_user_guide/17.0/getting_started/zero_config_support.html</string>
+
+      <!-- Configure SSKSPassword for zero config client support -->
+      <string id="Policy_SSKSPassword">Configure SSKSPassword for zero config client support</string>
+      <string id="Explain_SSKSPassword">If you are configuring zero config client support, you need to configure this setting. Enabling this setting is required.
+
+Hint:
+Enable this setting and keep value empty.
+
+More information:
+https://sparxsystems.com/enterprise_architect_user_guide/17.0/getting_started/zero_config_support.html</string>
+    </stringTable>
+    <presentationTable>
+    <!-- Configure SSKSAddress for zero config client support -->
+      <presentation id="Policy_SSKSAddress">
+        <textBox refId="SSKSAddress">
+          <label>SSKSAddress:</label>
+        </textBox>
+      </presentation>
+    <!-- Configure SSKSDisplayAddress for zero config client support -->
+      <presentation id="Policy_SSKSDisplayAddress">
+        <textBox refId="SSKSDisplayAddress">
+          <label>SSKSDisplayAddress:</label>
+        </textBox>
+      </presentation>
+    <!-- Configure SSKSPassword for zero config client support -->
+      <presentation id="Policy_SSKSPassword">
+        <textBox refId="SSKSPassword">
+          <label>SSKSPassword:</label>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>
