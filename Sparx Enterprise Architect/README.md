@@ -2,6 +2,8 @@
 
 This repository includes custom Administrative Templates for Sparx Enterprise Architect that can be used on your on-prem environment or Microsoft Intune.
 
+In this documentation and the ADMX-template, we are focusing only for [Zero Config Client Support](https://sparxsystems.com/enterprise_architect_user_guide/17.0/getting_started/zero_config_support.html).
+
 ## OMA-URI of ADMX-template
 
 > [!IMPORTANT]  
