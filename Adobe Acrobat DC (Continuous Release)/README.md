@@ -59,6 +59,7 @@ Here you can see OMA-URI information of the settings that are part of this ADMX-
 | ```bAllowOpenFile``` | [See below](#bAllowOpenFile) | ```./User/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_TrustManager/bAllowOpenFile``` | String | ```<enabled/>```<br>```<disabled/>```
 | ```bLoadSettingsFromURL``` | [See below](#bLoadSettingsFromURL) | ```./User/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_TrustManager/bLoadSettingsFromURL``` | String | ```<enabled/>```<br>```<disabled/>```
 | ```bUpdater``` | [See below](#bUpdater) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_UpdaterAndHelp/bUpdater``` | String | ```<enabled/>```<br>```<disabled/>```
+| ```cServices-bUpdater``` | [See below](#cServices-bUpdater) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_General/cServices-bUpdater``` | String | ```<enabled/>```<br>```<disabled/>```
 
 ### Next Generation Licensing (NGL)
 | Name | Description | OMA-URI | Data type | Available Values 
@@ -831,19 +832,45 @@ https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/Security.html
 - **Disabled Value:** 0
 
 #### bUpdater
-Enable both updates to the product's web-plugin components as well as all services.		
+Enables the Updater and keep associated user interface item or disables the Updater and removes associated user interface items.
+
+DC Continuous track web and desktop updates are released in tandem to ensure cloud and desktop features and functionality remain synchronized and compatible. Failure to update desktop components while leaving services enabled may lead to an unsupported configuration. In other words, set both "Enable automatic updates" and "Enable the Updater and keep associated user interface items" to the same value.
 
 Possible values:
-- Enabled: Enables automatic updates. Users cannot disable those.
-- Disabled: Disable automatic updates. It also removes update feature from "Help" &gt; "Check for Updates..." and disables the user interface items from "Preferences" &gt; "Updater and Help" &gt; "Check for updates".
+- Enabled: No effect.
+- Disabled: Disables and locks the Updater.
+
+GUI mapping:
+Setting set to "Disabled" disables the user interface items Preferences &gt; Updater and Help &gt; Check for updates.
 
 More information:
 https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/Updater-Win.html#idkeyname_1_29757
 
 ##### Technical information
-- **Friendly name of the setting:** Enable automatic updates
+- **Friendly name of the setting:** Enable the Updater and keep associated user interface items
 - **Registry Hive:** HKEY_LOCAL_MACHINE
 - **Registry Path:** SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
+- **Value Type:** REG_DWORD
+- **Value Name:** bUpdater
+- **Enabled Value:** 1
+- **Disabled Value:** 0
+
+#### cServices-bUpdater
+Enable or disable both updates to the product's web-plugin components as well as all services.		
+
+DC Continuous track web and desktop updates are released in tandem to ensure cloud and desktop features and functionality remain synchronized and compatible. Failure to update desktop components while leaving services enabled may lead to an unsupported configuration. In other words, set both "Enable automatic updates" and "Enable the Updater and keep associated user interface items" to the same value.
+
+Possible values:
+- Enabled: Enable services.
+- Disabled: It disables both updates to the product's web-plugin components as well as all services without exception, including any sign-in screen.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_9154
+
+##### Technical information
+- **Friendly name of the setting:** Enable automatic updates
+- **Registry Hive:** HKEY_LOCAL_MACHINE
+- **Registry Path:** SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices
 - **Value Type:** REG_DWORD
 - **Value Name:** bUpdater
 - **Enabled Value:** 1
