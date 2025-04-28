@@ -35,7 +35,7 @@
 		<category name="Cat_TrustManager" displayName="$(string.Cat_TrustManager)">
 			<parentCategory ref="Cat_Preferences"/>
 		</category>
-		<category name="Cat_UpdaterAndHelp" displayName="$(string.Cat_UpdaterAndHelp)">
+		<category name="Cat_Updater" displayName="$(string.Cat_Updater)">
 			<parentCategory ref="Cat_Preferences"/>
 		</category>
 		<category name="Cat_MicrosoftPurviewInformationProtection" displayName="$(string.Cat_MicrosoftPurviewInformationProtection)">
@@ -66,9 +66,9 @@
 			</disabledValue>
 		</policy>
 
-		<!-- Updater and Help - Enable the Updater and keep associated user interface items -->
+		<!-- Updater - Enable automatic updates -->
 		<policy name="bUpdater" class="Machine" displayName="$(string.Policy_bUpdater)" explainText="$(string.Explain_bUpdater)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" valueName="bUpdater">
-			<parentCategory ref="Cat_UpdaterAndHelp"/>
+			<parentCategory ref="Cat_Updater"/>
 			<supportedOn ref="AcrobatDC"/>
 			<enabledValue>
 				<decimal value="1"/>
@@ -78,9 +78,9 @@
 			</disabledValue>
 		</policy>
 
-		<!-- General - Enable automatic updates -->
-		<policy name="cServices-bUpdater" class="Machine" displayName="$(string.Policy_cServices-bUpdater)" explainText="$(string.Explain_cServices-bUpdater)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices" valueName="bUpdater">
-			<parentCategory ref="Cat_General"/>
+		<!-- Updater - Online Service Updates -->
+		<policy name="UpdaterCloud" class="Machine" displayName="$(string.Policy_UpdaterCloud)" explainText="$(string.Explain_UpdaterCloud)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices" valueName="bUpdater">
+			<parentCategory ref="Cat_Updater"/>
 			<supportedOn ref="AcrobatDC"/>
 			<enabledValue>
 				<decimal value="1"/>

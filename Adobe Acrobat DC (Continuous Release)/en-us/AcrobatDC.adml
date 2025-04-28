@@ -15,7 +15,7 @@
 			<string id="Cat_SecurityEnhanced">Security (Enhanced)</string>
 			<string id="Cat_MicrosoftPurviewInformationProtection">Microsoft Purview Information Protection</string>
 			<string id="Cat_TrustManager">Trust Manager</string>
-			<string id="Cat_UpdaterAndHelp">Updater and Help</string>
+			<string id="Cat_Updater">Updater</string>
 			<string id="Cat_JavaScript">JavaScript</string>
 			<string id="Cat_EmailAccounts">Email Accounts</string>
 			<string id="Cat_Accessibility">Accessibility</string>
@@ -43,25 +43,25 @@ Edit &gt; Preferences &gt; General &gt; Select Default PDF Handler
 
 More information:
 https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_12191</string>
-			<string id="Policy_cServices-bUpdater">Enable automatic updates</string>
-			<string id="Explain_cServices-bUpdater">Enable or disable both updates to the product's web-plugin components as well as all services.		
+			<string id="Policy_UpdaterCloud">Online Service Updates</string>
+			<string id="Explain_UpdaterCloud">Enable or disable both updates to the product's web-plugin components as well as all services.		
 
-DC Continuous track web and desktop updates are released in tandem to ensure cloud and desktop features and functionality remain synchronized and compatible. Failure to update desktop components while leaving services enabled may lead to an unsupported configuration. In other words, set both "Enable automatic updates" and "Enable the Updater and keep associated user interface items" to the same value.
+DC Continuous track web and desktop updates are released in tandem to ensure cloud and desktop features and functionality remain synchronized and compatible. Failure to update desktop components while leaving services enabled may lead to an unsupported configuration. In other words, set both "Enable automatic updates" and "Online Service Updates" to the same value.
 
 Possible values:
-- Enabled: Enable services.
-- Disabled: It disables both updates to the product's web-plugin components as well as all services without exception, including any sign-in screen.
+- Enabled: Enable services. To clarify, this setting keep updates also enabled.
+- Disabled: Disable services and service component updates. To clarify, this disables both updates to the product's web-plugin components as well as all services without exception, including any sign-in screen.
 
 More information:
 https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_9154</string>
-			<string id="Policy_bUpdater">Enable the Updater and keep associated user interface items</string>
-			<string id="Explain_bUpdater">Enables the Updater and keep associated user interface item or disables the Updater and removes associated user interface items.
+			<string id="Policy_bUpdater">Enable automatic updates</string>
+			<string id="Explain_bUpdater">Enables or disables automatic updates.
 
-DC Continuous track web and desktop updates are released in tandem to ensure cloud and desktop features and functionality remain synchronized and compatible. Failure to update desktop components while leaving services enabled may lead to an unsupported configuration. In other words, set both "Enable automatic updates" and "Enable the Updater and keep associated user interface items" to the same value.
+DC Continuous track web and desktop updates are released in tandem to ensure cloud and desktop features and functionality remain synchronized and compatible. Failure to update desktop components while leaving services enabled may lead to an unsupported configuration. In other words, set both "Enable automatic updates" and "Online Service Updates" to the same value.
 
 Possible values:
-- Enabled: No effect.
-- Disabled: Disables and locks the Updater.
+- Enabled: No effect. To clarify, this keep automatic updates enabled.
+- Disabled: Disables and locks the Updater. To clarify, this disables automatic updates.
 
 GUI mapping:
 Setting set to "Disabled" disables the user interface items Preferences &gt; Updater and Help &gt; Check for updates.
