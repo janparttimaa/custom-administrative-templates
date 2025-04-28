@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xsi:schemaLocation="" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.1" schemaVersion="1.0" xsi:schemaLocation="" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
 
 	<displayName>Adobe Acrobat DC ADMX File</displayName>
 	<description>ADMX File for Adobe Acrobat DC</description>
@@ -43,12 +43,28 @@ Edit &gt; Preferences &gt; General &gt; Select Default PDF Handler
 
 More information:
 https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_12191</string>
-			<string id="Policy_bUpdater">Enable automatic updates</string>
-			<string id="Explain_bUpdater">Enable both updates to the product's web-plugin components as well as all services.		
+			<string id="Policy_cServices-bUpdater">Enable automatic updates</string>
+			<string id="Explain_cServices-bUpdater">Enable or disable both updates to the product's web-plugin components as well as all services.		
+
+DC Continuous track web and desktop updates are released in tandem to ensure cloud and desktop features and functionality remain synchronized and compatible. Failure to update desktop components while leaving services enabled may lead to an unsupported configuration. In other words, set both "Enable automatic updates" and "Enable the Updater and keep associated user interface items" to the same value.
 
 Possible values:
-- Enabled: Enables automatic updates. Users cannot disable those.
-- Disabled: Disable automatic updates. It also removes update feature from "Help" &gt; "Check for Updates..." and disables the user interface items from "Preferences" &gt; "Updater and Help" &gt; "Check for updates".
+- Enabled: Enable services.
+- Disabled: It disables both updates to the product's web-plugin components as well as all services without exception, including any sign-in screen.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_9154</string>
+			<string id="Policy_bUpdater">Enable the Updater and keep associated user interface items</string>
+			<string id="Explain_bUpdater">Enables the Updater and keep associated user interface item or disables the Updater and removes associated user interface items.
+
+DC Continuous track web and desktop updates are released in tandem to ensure cloud and desktop features and functionality remain synchronized and compatible. Failure to update desktop components while leaving services enabled may lead to an unsupported configuration. In other words, set both "Enable automatic updates" and "Enable the Updater and keep associated user interface items" to the same value.
+
+Possible values:
+- Enabled: No effect.
+- Disabled: Disables and locks the Updater.
+
+GUI mapping:
+Setting set to "Disabled" disables the user interface items Preferences &gt; Updater and Help &gt; Check for updates.
 
 More information:
 https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/Updater-Win.html#idkeyname_1_29757</string>

@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.1" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
 	<policyNamespaces>
 		<target prefix="Acrobat DC" namespace="Adobe.Policies.AcrobatDC"/>
 		<using prefix="windows" namespace="Microsoft.Policies.Windows"/>
 	</policyNamespaces>
 	<supersededAdm fileName="AcrobatDC.adm"/>
-    <resources minRequiredRevision="1.0"/>
+    <resources minRequiredRevision="1.1"/>
 	<supportedOn>
 		<definitions>
 			<definition name="AcrobatDC" displayName="$(string.AcrobatDC)"/>
@@ -66,9 +66,21 @@
 			</disabledValue>
 		</policy>
 
-		<!-- Updater and Help - Enable automatic updates -->
+		<!-- Updater and Help - Enable the Updater and keep associated user interface items -->
 		<policy name="bUpdater" class="Machine" displayName="$(string.Policy_bUpdater)" explainText="$(string.Explain_bUpdater)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" valueName="bUpdater">
 			<parentCategory ref="Cat_UpdaterAndHelp"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Enable automatic updates -->
+		<policy name="cServices-bUpdater" class="Machine" displayName="$(string.Policy_cServices-bUpdater)" explainText="$(string.Explain_cServices-bUpdater)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices" valueName="bUpdater">
+			<parentCategory ref="Cat_General"/>
 			<supportedOn ref="AcrobatDC"/>
 			<enabledValue>
 				<decimal value="1"/>
