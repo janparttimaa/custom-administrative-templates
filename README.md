@@ -12,5 +12,6 @@ This repository includes some custom Administrative Templates that can be used o
 | Adobe Acrobat DC (Continuous Release) | [Hyperlink](./Adobe%20Acrobat%20DC%20(Continuous%20Release)) |
 | Adobe Digital Editions | [Hyperlink](./Adobe%20Digital%20Editions) |
 | iManage | [Hyperlink](./iManage) |
+| Sparx Enterprise Architect | [Hyperlink](./Sparx%20Enterprise%20Architect) |
 | VLC | [Hyperlink](./VLC) |
 | WinSCP | [Hyperlink](./WinSCP)  |
