@@ -641,7 +641,7 @@ https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/Security.html
 ##### Technical information
 - **Friendly name of the setting:** Ask before installing checkbox
 - **Registry Hive:** HKEY_CURRENT_USER
-- **Registry Path:** Software\Adobe\Adobe Acrobat\DC\Security\cDigSig\cAdobeDownload
+- **Registry Path:** Software\Adobe\Adobe Acrobat\DC\Security\cDigSig\cCustomDownload
 - **Value Type:** REG_DWORD
 - **Value Name:** bAskBeforeInstalling
 - **Enabled Value:** 1

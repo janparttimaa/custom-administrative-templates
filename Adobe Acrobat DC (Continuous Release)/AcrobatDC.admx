@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.2" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.3" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
 	<policyNamespaces>
 		<target prefix="Acrobat DC" namespace="Adobe.Policies.AcrobatDC"/>
 		<using prefix="windows" namespace="Microsoft.Policies.Windows"/>
 	</policyNamespaces>
 	<supersededAdm fileName="AcrobatDC.adm"/>
-    <resources minRequiredRevision="1.2"/>
+    <resources minRequiredRevision="1.3"/>
 	<supportedOn>
 		<definitions>
 			<definition name="AcrobatDC" displayName="$(string.AcrobatDC)"/>
@@ -531,7 +531,7 @@
 		</policy>
 
 		<!-- Security - Ask before installing checkbox -->
-		<policy name="bAskBeforeInstalling" class="User" displayName="$(string.Policy_bAskBeforeInstalling)" explainText="$(string.Explain_bAskBeforeInstalling)" key="Software\Adobe\Adobe Acrobat\DC\Security\cDigSig\cAdobeDownload" valueName="bAskBeforeInstalling">
+		<policy name="bAskBeforeInstalling" class="User" displayName="$(string.Policy_bAskBeforeInstalling)" explainText="$(string.Explain_bAskBeforeInstalling)" key="Software\Adobe\Adobe Acrobat\DC\Security\cDigSig\cCustomDownload" valueName="bAskBeforeInstalling">
 			<parentCategory ref="Cat_Security"/>
 			<supportedOn ref="AcrobatDC"/>
 			<enabledValue>
