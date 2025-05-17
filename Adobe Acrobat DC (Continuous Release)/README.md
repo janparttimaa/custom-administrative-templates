@@ -6,6 +6,14 @@
 > - Adobe's original templates  are not actively updated and developed by Adobe.
 > - Adobe's original templates are not suitable for Intune-deployment using ingestion as they do not offer OMA-URI values.
 
+> [!IMPORTANT]  
+> Unfortunately you cannot set "enabled_social_providers" using this ADMX-template. Instead you need to use another methods. Some of these methods are listed below:
+> - **On-Prem:** "Registry" section from Group Policy Management Editor.
+> - **Cloud (Intune):**
+>   - **Option 1:** [Remediations](https://learn.microsoft.com/en-us/intune/intune-service/fundamentals/remediations) -feature from Intune.
+>   - **Option 2:** From Intune, deploy PowerShell-script, that will implement "enabled_social_providers" with needed value as an application and add "enabled_social_providers" with needed value to detection method.
+>   - **Option 3:** Wrap Adobe Acrobat installer to [PSAppDeployToolkit](https://psappdeploytoolkit.com/). For post-installation section, import "enabled_social_providers" with needed value. Remember to add "enabled_social_providers" and needed value to detection method when deploying Adobe Acrobat as an application via Intune.
+
 This repository includes custom Administrative Templates for Adobe Acrobat DC (Continuous Release) that can be used on your on-prem environment or Microsoft Intune.
 
 ## OMA-URI of ADMX-template
