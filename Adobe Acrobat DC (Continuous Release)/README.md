@@ -65,7 +65,7 @@ Here you can see OMA-URI information of the settings that are part of this ADMX-
 | ```bDontShowMsgWhenViewingDoc``` | [See below](#bDontShowMsgWhenViewingDoc) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_General/bDontShowMsgWhenViewingDoc``` | String | ```<enabled/>```<br>```<disabled/>```
 | ```bAllowUserToChangeMsgPrefs``` | [See below](#bAllowUserToChangeMsgPrefs) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_General/bAllowUserToChangeMsgPrefs``` | String | ```<enabled/>```<br>```<disabled/>```
 | ```bDisableWebmail``` | [See below](#bDisableWebmail) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_General/bDisableWebmail``` | String | ```<enabled/>```<br>```<disabled/>```
-| ```bShowWelcomeScreen"``` | [See below](#bShowWelcomeScreen") | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_General/bShowWelcomeScreen"``` | String | ```<enabled/>```<br>```<disabled/>```
+| ```bShowWelcomeScreen``` | [See below](#bShowWelcomeScreen) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_General/bShowWelcomeScreen``` | String | ```<enabled/>```<br>```<disabled/>```
 
 ### Next Generation Licensing (NGL)
 | Name | Description | OMA-URI | Data type | Available Values 
