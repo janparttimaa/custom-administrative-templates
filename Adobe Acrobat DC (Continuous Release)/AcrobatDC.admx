@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.1" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.2" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
 	<policyNamespaces>
 		<target prefix="Acrobat DC" namespace="Adobe.Policies.AcrobatDC"/>
 		<using prefix="windows" namespace="Microsoft.Policies.Windows"/>
 	</policyNamespaces>
 	<supersededAdm fileName="AcrobatDC.adm"/>
-    <resources minRequiredRevision="1.1"/>
+    <resources minRequiredRevision="1.2"/>
 	<supportedOn>
 		<definitions>
 			<definition name="AcrobatDC" displayName="$(string.AcrobatDC)"/>
@@ -163,7 +163,7 @@
 		</policy>
 
 		<!-- General - Disable preferences synchronization -->
-		<policy name="bTogglePrefsSync" class="Machine" displayName="$(string.Policy_bTogglePrefsSync)" explainText="$(string.Explain_bTogglePrefsSync)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" valueName="bTogglePrefsSync">
+		<policy name="bTogglePrefsSync" class="Machine" displayName="$(string.Policy_bTogglePrefsSync)" explainText="$(string.Explain_bTogglePrefsSync)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices" valueName="bTogglePrefsSync">
 			<parentCategory ref="Cat_General"/>
 			<supportedOn ref="AcrobatDC"/>
 			<enabledValue>
@@ -344,7 +344,7 @@
 		</policy>
 
 		<!-- General - Enable Modern Viewer -->
-		<policy name="bEnableAV2Enterprise" class="Machine" displayName="$(string.Policy_bEnableAV2Enterprise)" explainText="$(string.Explain_bEnableAV2Enterprise)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices" valueName="bEnableAV2Enterprise">
+		<policy name="bEnableAV2Enterprise" class="Machine" displayName="$(string.Policy_bEnableAV2Enterprise)" explainText="$(string.Explain_bEnableAV2Enterprise)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" valueName="bEnableAV2Enterprise">
 			<parentCategory ref="Cat_General"/>
 			<supportedOn ref="AcrobatDC"/>
 			<enabledValue>
@@ -405,6 +405,78 @@
 
 		<!-- General - Enable connection to the Google Drive cloud  -->
 		<policy name="bGoogleDriveConnectorEnabled" class="Machine" displayName="$(string.Policy_bGoogleDriveConnectorEnabled)" explainText="$(string.Explain_bGoogleDriveConnectorEnabled)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices" valueName="bGoogleDriveConnectorEnabled">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Disable upsell -->
+		<policy name="bAcroSuppressUpsell" class="Machine" displayName="$(string.Policy_bAcroSuppressUpsell)" explainText="$(string.Explain_bAcroSuppressUpsell)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" valueName="bAcroSuppressUpsell">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- Security (Enhanced) - Enable the AppContainer sandbox -->
+		<policy name="bEnableProtectedModeAppContainer" class="Machine" displayName="$(string.Policy_bEnableProtectedModeAppContainer)" explainText="$(string.Explain_bEnableProtectedModeAppContainer)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown" valueName="bEnableProtectedModeAppContainer">
+			<parentCategory ref="Cat_SecurityEnhanced"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Show messages from Adobe when a document opens -->
+		<policy name="bDontShowMsgWhenViewingDoc" class="Machine" displayName="$(string.Policy_bDontShowMsgWhenViewingDoc)" explainText="$(string.Explain_bDontShowMsgWhenViewingDoc)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cIPM" valueName="bDontShowMsgWhenViewingDoc">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Allow users to change settings "Show messages from Adobe when the product launches" and "Show messages from Adobe when a document opens" -->
+		<policy name="bAllowUserToChangeMsgPrefs" class="Machine" displayName="$(string.Policy_bAllowUserToChangeMsgPrefs)" explainText="$(string.Explain_bAllowUserToChangeMsgPrefs)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cIPM" valueName="bAllowUserToChangeMsgPrefs">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Disable WebMail -->
+		<policy name="bDisableWebmail" class="Machine" displayName="$(string.Policy_bDisableWebmail)" explainText="$(string.Explain_bDisableWebmail)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cWebmailProfiles" valueName="bDisableWebmail">
+			<parentCategory ref="Cat_General"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- General - Show Welcome screen -->
+		<policy name="bShowWelcomeScreen" class="Machine" displayName="$(string.Policy_bShowWelcomeScreen)" explainText="$(string.Explain_bShowWelcomeScreen)" key="SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cWelcomeScreen" valueName="bShowWelcomeScreen">
 			<parentCategory ref="Cat_General"/>
 			<supportedOn ref="AcrobatDC"/>
 			<enabledValue>
@@ -541,6 +613,7 @@
 				<decimal value="0"/>
 			</disabledValue>
 		</policy>
+
 		<!-- Accessibility - Always display the keyboard selection cursor -->
 		<policy name="bShowKeyboardSelectionCursor" class="User" displayName="$(string.Policy_bShowKeyboardSelectionCursor)" explainText="$(string.Explain_bShowKeyboardSelectionCursor)" key="SOFTWARE\Adobe\Adobe Acrobat\DC\Access" valueName="bShowKeyboardSelectionCursor">
 			<parentCategory ref="Cat_Accessibility"/>

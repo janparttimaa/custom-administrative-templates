@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.1" schemaVersion="1.0" xsi:schemaLocation="" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.2" schemaVersion="1.0" xsi:schemaLocation="" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
 
 	<displayName>Adobe Acrobat DC ADMX File</displayName>
 	<description>ADMX File for Adobe Acrobat DC</description>
@@ -324,6 +324,71 @@ Possible values:
 
 More information:
 https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_10116</string>
+			<string id="Policy_bAcroSuppressUpsell">Disable upsell</string>
+			<string id="Explain_bAcroSuppressUpsell">Products that don't provide the full set of features by default provide the user the opportunity to upgrade. For example, Reader users can purchase additional tools and features, and Acrobat Standard users can upgrade to Acrobat Professional.
+
+Possible values:
+- Enabled: Disable upsell.
+- Disabled: Don't disable upsell.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_11881</string>
+			<string id="Policy_bEnableProtectedModeAppContainer">Enable the AppContainer sandbox</string>
+			<string id="Explain_bEnableProtectedModeAppContainer">Specifies whether to enable the AppContainer sandbox.
+
+Possible values:
+- Enabled: Enable Microsoft's AppContainer sandbox.
+- Disabled: Microsoft's AppContainer sandbox.
+
+GUI mapping:
+Preferences &gt; Security (Enhanced) &gt; Sandbox Protections &gt; Run in AppContainer
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/Privileged.html#idkeyname_1_18172</string>
+			<string id="Policy_bDontShowMsgWhenViewingDoc">Show messages from Adobe when a document opens</string>
+			<string id="Explain_bDontShowMsgWhenViewingDoc">This preference also controls messages in the right-hand pane for 12.x and later products as well as the "Learn More" link, including the "Start Free Trial" message promoting Acrobat.
+
+Possible values:
+- Enabled: Show messages from Adobe when a document opens.
+- Disabled: Don't show messages from Adobe when a document opens.
+
+GUI mapping:
+Preferences &gt; General &gt; Don't show messages while viewing a document
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/IPM.html#idkeyname_1_15499</string>
+			<string id="Policy_bAllowUserToChangeMsgPrefs">Allow users to change settings "Show messages from Adobe when the product launches" and "Show messages from Adobe when a document opens"</string>
+			<string id="Explain_bAllowUserToChangeMsgPrefs">Possible values:
+- Enabled: Allows users to change the settings. This has the same affect as this key not existing at all.
+- Disabled: Locks the feature so end users can't change the settings.
+
+GUI mapping:
+Preferences &gt; General &gt; product messaging settings (see above)
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/IPM.html#idkeyname_1_15590</string>
+			<string id="Policy_bDisableWebmail">Disable WebMail</string>
+			<string id="Explain_bDisableWebmail">Specifies whether to disable WebMail.
+
+If this preference is not present and and the FeatureLockDown preference "bSendMailShareRedirection" is set to 1, the email icon opens the classic dialogue so the user can select an Outlook or webmail profile. If both "bSendMailShareRedirection" and "Disable WebMail - (Enabled)"" are present, then the app opens new mail items with a PDF attached.
+			
+Possible values:
+- Enabled: The email icon opens the Share pane.
+- Disabled: Change the default email icon behavior to automatically attach the file to an email as described above.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/WebMail.html#idkeyname_1_30845</string>
+			<string id="Policy_bShowWelcomeScreen">Show the welcome screen</string>
+			<string id="Explain_bShowWelcomeScreen">For pre-DC products, disables the Welcome screen on application startup.
+
+Deprecated for 12.x and later products (See "Disable FTE, Welcome tour/page feature").
+			
+Possible values:
+- Enabled: Show the welcome screen.
+- Disabled: Don't show the welcome screen.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/AVGeneral.html#idkeyname_1_6137</string>
 
 			<!-- User Policies Starts Here -->
 			<string id="Policy_bDisplayAboutDialog">Display splash screen at launch</string>

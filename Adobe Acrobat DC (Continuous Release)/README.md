@@ -60,6 +60,12 @@ Here you can see OMA-URI information of the settings that are part of this ADMX-
 | ```bLoadSettingsFromURL``` | [See below](#bLoadSettingsFromURL) | ```./User/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_TrustManager/bLoadSettingsFromURL``` | String | ```<enabled/>```<br>```<disabled/>```
 | ```bUpdater``` | [See below](#bUpdater) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_Updater/bUpdater``` | String | ```<enabled/>```<br>```<disabled/>```
 | ```UpdaterCloud``` | [See below](#UpdaterCloud) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_Updater/UpdaterCloud``` | String | ```<enabled/>```<br>```<disabled/>```
+| ```bAcroSuppressUpsell``` | [See below](#bAcroSuppressUpsell) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_General/bAcroSuppressUpsell``` | String | ```<enabled/>```<br>```<disabled/>```
+| ```bEnableProtectedModeAppContainer``` | [See below](#bEnableProtectedModeAppContainer) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_SecurityEnhanced/bEnableProtectedModeAppContainer``` | String | ```<enabled/>```<br>```<disabled/>```
+| ```bDontShowMsgWhenViewingDoc``` | [See below](#bDontShowMsgWhenViewingDoc) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_General/bDontShowMsgWhenViewingDoc``` | String | ```<enabled/>```<br>```<disabled/>```
+| ```bAllowUserToChangeMsgPrefs``` | [See below](#bAllowUserToChangeMsgPrefs) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_General/bAllowUserToChangeMsgPrefs``` | String | ```<enabled/>```<br>```<disabled/>```
+| ```bDisableWebmail``` | [See below](#bDisableWebmail) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_General/bDisableWebmail``` | String | ```<enabled/>```<br>```<disabled/>```
+| ```bShowWelcomeScreen"``` | [See below](#bShowWelcomeScreen") | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_General/bShowWelcomeScreen"``` | String | ```<enabled/>```<br>```<disabled/>```
 
 ### Next Generation Licensing (NGL)
 | Name | Description | OMA-URI | Data type | Available Values 
@@ -269,7 +275,7 @@ https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDo
 ##### Technical information
 - **Friendly name of the setting:** Enable Modern Viewer
 - **Registry Hive:** HKEY_LOCAL_MACHINE
-- **Registry Path:** SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices
+- **Registry Path:** SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
 - **Value Type:** REG_DWORD
 - **Value Name:** bEnableAV2Enterprise
 - **Enabled Value:** 1
@@ -465,7 +471,7 @@ https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDo
 ##### Technical information
 - **Friendly name of the setting:** Disable preferences synchronization
 - **Registry Hive:** HKEY_LOCAL_MACHINE
-- **Registry Path:** SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
+- **Registry Path:** SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices
 - **Value Type:** REG_DWORD
 - **Value Name:** bTogglePrefsSync
 - **Enabled Value:** 1
@@ -873,6 +879,131 @@ https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDo
 - **Registry Path:** SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cServices
 - **Value Type:** REG_DWORD
 - **Value Name:** bUpdater
+- **Enabled Value:** 1
+- **Disabled Value:** 0
+
+#### bAcroSuppressUpsell
+Products that don't provide the full set of features by default provide the user the opportunity to upgrade. For example, Reader users can purchase additional tools and features, and Acrobat Standard users can upgrade to Acrobat Professional.
+
+Possible values:
+- Enabled: Disable upsell.
+- Disabled: Don't disable upsell.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/FeatureLockDown.html#idkeyname_1_11881
+
+##### Technical information
+- **Friendly name of the setting:** Disable upsell
+- **Registry Hive:** HKEY_LOCAL_MACHINE
+- **Registry Path:** SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
+- **Value Type:** REG_DWORD
+- **Value Name:** bAcroSuppressUpsell
+- **Enabled Value:** 1
+- **Disabled Value:** 0
+
+#### bEnableProtectedModeAppContainer
+Specifies whether to enable the AppContainer sandbox.
+
+Possible values:
+- Enabled: Enable Microsoft's AppContainer sandbox.
+- Disabled: Disable Microsoft's AppContainer sandbox.
+
+GUI mapping:
+Preferences &gt; Security (Enhanced) &gt; Sandbox Protections &gt; Run in AppContainer
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/Privileged.html#idkeyname_1_18172
+
+##### Technical information
+- **Friendly name of the setting:** Enable the AppContainer sandbox
+- **Registry Hive:** HKEY_LOCAL_MACHINE
+- **Registry Path:** SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown
+- **Value Type:** REG_DWORD
+- **Value Name:** bEnableProtectedModeAppContainer
+- **Enabled Value:** 1
+- **Disabled Value:** 0
+
+#### bDontShowMsgWhenViewingDoc
+This preference also controls messages in the right-hand pane for 12.x and later products as well as the "Learn More" link, including the "Start Free Trial" message promoting Acrobat.
+
+Possible values:
+- Enabled: Show messages from Adobe when a document opens.
+- Disabled: Don't show messages from Adobe when a document opens.
+
+GUI mapping:
+Preferences &gt; General &gt; Don't show messages while viewing a document
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/IPM.html#idkeyname_1_15499
+
+##### Technical information
+- **Friendly name of the setting:** Show messages from Adobe when a document opens
+- **Registry Hive:** HKEY_LOCAL_MACHINE
+- **Registry Path:** SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cIPM
+- **Value Type:** REG_DWORD
+- **Value Name:** bDontShowMsgWhenViewingDoc
+- **Enabled Value:** 1
+- **Disabled Value:** 0
+
+#### bAllowUserToChangeMsgPrefs
+Possible values:
+- Enabled: Allows users to change the settings. This has the same affect as this key not existing at all.
+- Disabled: Locks the feature so end users can't change the settings.
+
+GUI mapping:
+Preferences &gt; General &gt; product messaging settings (see above)
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/IPM.html#idkeyname_1_15590
+
+##### Technical information
+- **Friendly name of the setting:** Allow users to change settings "Show messages from Adobe when the product launches" and "Show messages from Adobe when a document opens"
+- **Registry Hive:** HKEY_LOCAL_MACHINE
+- **Registry Path:** SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cIPM
+- **Value Type:** REG_DWORD
+- **Value Name:** bAllowUserToChangeMsgPrefs
+- **Enabled Value:** 1
+- **Disabled Value:** 0
+
+#### bDisableWebmail
+Specifies whether to disable WebMail.
+
+If this preference is not present and and the FeatureLockDown preference "bSendMailShareRedirection" is set to 1, the email icon opens the classic dialogue so the user can select an Outlook or webmail profile. If both "bSendMailShareRedirection" and "Disable WebMail - (Enabled)" are present, then the app opens new mail items with a PDF attached.
+			
+Possible values:
+- Enabled: The email icon opens the Share pane.
+- Disabled: Change the default email icon behavior to automatically attach the file to an email as described above.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/WebMail.html#idkeyname_1_30845
+
+##### Technical information
+- **Friendly name of the setting:** Disable WebMail
+- **Registry Hive:** HKEY_LOCAL_MACHINE
+- **Registry Path:** SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cWebmailProfiles
+- **Value Type:** REG_DWORD
+- **Value Name:** bDisableWebmail
+- **Enabled Value:** 1
+- **Disabled Value:** 0
+
+#### bShowWelcomeScreen
+For pre-DC products, disables the Welcome screen on application startup.
+
+Deprecated for 12.x and later products (See "Disable FTE, Welcome tour/page feature").
+			
+Possible values:
+- Enabled: Show the welcome screen.
+- Disabled: Don't show the welcome screen.
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/AVGeneral.html#idkeyname_1_6137
+
+##### Technical information
+- **Friendly name of the setting:** Show the welcome screen
+- **Registry Hive:** HKEY_LOCAL_MACHINE
+- **Registry Path:** SOFTWARE\Policies\Adobe\Adobe Acrobat\DC\FeatureLockdown\cWelcomeScreen
+- **Value Type:** REG_DWORD
+- **Value Name:** bShowWelcomeScreen
 - **Enabled Value:** 1
 - **Disabled Value:** 0
 
