@@ -30,6 +30,8 @@ If you not configure this setting, user can manage itself this setting adn we ar
       <!-- Form Icon Installed -->
       <string id="FormIconInstalled">Form Icon Installed (NT-166095)</string>
       <string id="FormIconInstalled_help">Setting this setting to "Disabled" will resolve issue NT-166095.
+
+      More information: https://help.imanage.com/hc/en-us/articles/37930333123867-NT-166095-With-Microsoft-Office-version-2504-filed-emails-display-yellow-envelopes-instead-of-green-checkmarks
       </string>
     </stringTable>
     <presentationTable>
