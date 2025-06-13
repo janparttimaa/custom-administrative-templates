@@ -26,6 +26,11 @@ If you enable this policy, The "Automatically download and install updates" opti
 
 If you not configure this setting, user can manage itself this setting adn we are not managing or enforcing it. 
       </string>
+
+      <!-- Form Icon Installed -->
+      <string id="FormIconInstalled">Form Icon Installed (NT-166095)</string>
+      <string id="FormIconInstalled_help">Setting this setting to "Disabled" will resolve issue NT-166095.
+      </string>
     </stringTable>
     <presentationTable>
     <!-- Auto Update Channel -->      
