@@ -24,7 +24,7 @@ If you disable or not configuring this setting, user can itself select preferred
 
 If you enable this policy, The "Automatically download and install updates" option is selected by default on the "Update Settings" screen of iManage Agent Services and users cannot disable it.
 
-If you not configure this setting, user can manage itself this setting adn we are not managing or enforcing it. 
+If you not configure this setting, user can manage itself this setting and we are not managing or enforcing it. 
       </string>
 
       <!-- Form Icon Installed (NT-166095) -->
