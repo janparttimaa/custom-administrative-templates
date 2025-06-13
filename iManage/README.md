@@ -30,7 +30,7 @@ You can specify whether updates should be downloaded and installed automatically
 
 If you enable this policy, The "Automatically download and install updates" option is selected by default on the "Update Settings" screen of iManage Agent Services and users cannot disable it.
 
-If you not configure this setting, user can manage itself this setting adn we are not managing or enforcing it.
+If you not configure this setting, user can manage itself this setting and we are not managing or enforcing it.
 
 > [!NOTE]  
 > If you want to disable the setting via Intune, please make sure that value is then set to ```<disabled/>```
