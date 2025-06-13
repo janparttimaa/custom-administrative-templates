@@ -15,6 +15,7 @@ Here you can see OMA-URI information of the settings that are part of this ADMX-
 | Name | Description | OMA-URI | Data type |  Recommended Value
 |---------|---------|---------|---------|---------|
 | ```Auto Download Update``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/iManage~Policy~iManage/AutoDownloadUpdate``` | String | ```<enabled/>```
+| ```FormIconInstalled``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/iManage~Policy~iManage/FormIconInstalled``` | String |  ```<disabled/>```
 | ```Selected Update Channel``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/iManage~Policy~iManage/SelectedUpdateChannel``` | String | ```<enabled/> <data id="SelectedUpdateChannel" value="release"/>```
 
 > [!NOTE]  
@@ -40,6 +41,21 @@ If you not configure this setting, user can manage itself this setting adn we ar
 - **Registry Path:** SOFTWARE\iManage\WorkAgent\AutoUpdate
 - **Value Type:** REG_DWORD
 - **Value Name:** Auto Download Update
+- **Enabled Value:** 1
+- **Disabled Value:** 0
+
+#### FormIconInstalled
+Configuring this setting to "Disabled" will resolve issue NT-166095.
+
+More information:
+https://help.imanage.com/hc/en-us/articles/37930333123867-NT-166095-With-Microsoft-Office-version-2504-filed-emails-display-yellow-envelopes-instead-of-green-checkmarks
+
+##### Technical information
+- **Friendly name of the setting:** Form Icon Installed (NT-166095)
+- **Registry Hive:** HKEY_CURRENT_USER
+- **Registry Path:** SOFTWARE\iManage\Work\10.0\EMM
+- **Value Type:** REG_DWORD
+- **Value Name:** FormIconInstalled
 - **Enabled Value:** 1
 - **Disabled Value:** 0
 
