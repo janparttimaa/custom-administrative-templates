@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName>Docker Desktop</displayName>
+  <description>Group Policy Settings of Docker Deskto</description>
+  <resources>
+    <stringTable>
+      <!-- General -->
+      <string id="DockerDesktopSettingCategory">Docker Desktop</string>
+      
+      <!-- Enforce sign-in -->
+      <string id="Policy_AllowedOrgs">Enforce sign-in</string>
+      <string id="Explain_AllowedOrgs">If you want to enforce sign-in you need to enable this setting and define allowed organizations.</string>
+    </stringTable>
+    <presentationTable>
+    <!-- Enforce sign-in -->
+      <presentation id="Policy_AllowedOrgs">
+        <multiTextBox refId="AllowedOrgs" />
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>
