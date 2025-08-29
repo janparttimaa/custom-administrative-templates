@@ -11,6 +11,7 @@ This repository includes some custom Administrative Templates that can be used o
 | 7-Zip | [Hyperlink](./7-Zip) |
 | Adobe Acrobat DC (Continuous Release) | [Hyperlink](./Adobe%20Acrobat%20DC%20(Continuous%20Release)) |
 | Adobe Digital Editions | [Hyperlink](./Adobe%20Digital%20Editions) |
+| Docker Destop | [Hyperlink](./Docker%20Desktop) |
 | iManage | [Hyperlink](./iManage) |
 | Sparx Enterprise Architect | [Hyperlink](./Sparx%20Enterprise%20Architect) |
 | VLC | [Hyperlink](./VLC) |
