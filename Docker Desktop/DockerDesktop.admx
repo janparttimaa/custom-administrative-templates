@@ -9,6 +9,7 @@
         <category name="DockerDesktop" displayName="$(string.DockerDesktopSettingCategory)"/>
     </categories>
     <policies>
+        <!-- Enforce sign-in -->
         <policy name="AllowedOrgs" class ="Machine" displayName="$(string.Policy_AllowedOrgs)" explainText="$(string.Explain_AllowedOrgs)" key="SOFTWARE\Policies\Docker\Docker Desktop" presentation="$(presentation.Policy_AllowedOrgs)">
         <parentCategory ref="DockerDesktop"/>
         <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
