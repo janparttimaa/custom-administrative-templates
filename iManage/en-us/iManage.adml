@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.1" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
   <displayName>iManage</displayName>
   <description>Group Policy Settings of iManage</description>
   <resources>
     <stringTable>
-      <!-- General -->
+      <!-- iManage -->
       <string id="iManageSettingCategory">iManage</string>
+      <string id="iManageSupportedOn">iManage Work Desktop for Windows version 10.10.0 and later</string>
 
       <!-- Auto Update Channel -->
       <string id="SelectedUpdateChannel">Auto Update Channel</string>

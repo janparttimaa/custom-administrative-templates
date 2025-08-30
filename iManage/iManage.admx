@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.1" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
     <policyNamespaces>
 	    <target prefix="iManage" namespace="iManage.Policies.iManage"/>
 	    <using prefix="windows" namespace="Microsoft.Policies.Windows"/>
     </policyNamespaces>
-    <resources minRequiredRevision="1.0" />
+    <resources minRequiredRevision="1.1" />
+    <supportedOn>
+		<definitions>
+			<definition name="iManage" displayName="$(string.iManageSupportedOn)"/>
+		</definitions>
+	</supportedOn>
     <categories>
         <category name="iManage" displayName="$(string.iManageSettingCategory)"/>
     </categories>
     <policies>
         <policy name="SelectedUpdateChannel" class ="Machine" displayName="$(string.SelectedUpdateChannel)" explainText="$(string.SelectedUpdateChannel_help)" presentation="$(presentation.SelectedUpdateChannel_Pres)" key="SOFTWARE\iManage\AgentServices\AutoUpdate">
         <parentCategory ref="iManage"/>
-        <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+        <supportedOn ref="iManage"/>
         <elements>
             <text id="SelectedUpdateChannel" valueName="Selected Update Channel" required="true" />
         </elements>
         </policy>
         <policy name="AutoDownloadUpdate" class="User" displayName="$(string.AutoDownloadUpdate)" explainText="$(string.AutoDownloadUpdate_help)" key="SOFTWARE\iManage\WorkAgent\AutoUpdate" valueName="Auto Download Update">
         <parentCategory ref="iManage" />
-        <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+        <supportedOn ref="iManage" />
         <enabledValue>
             <decimal value="1" />
         </enabledValue>
@@ -28,7 +33,7 @@
         </policy>
         <policy name="FormIconInstalled" class="User" displayName="$(string.FormIconInstalled)" explainText="$(string.FormIconInstalled_help)" key="SOFTWARE\iManage\Work\10.0\EMM" valueName="FormIconInstalled">
         <parentCategory ref="iManage" />
-        <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+        <supportedOn ref="iManage" />
         <enabledValue>
             <decimal value="1" />
         </enabledValue>
