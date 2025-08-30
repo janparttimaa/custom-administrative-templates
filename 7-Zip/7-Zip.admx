@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.1" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
 	<policyNamespaces>
 		<target prefix="7-Zip" namespace="7-Zip.Policies.7-Zip"/>
 		<using prefix="windows" namespace="Microsoft.Policies.Windows"/>
   	</policyNamespaces>
-  	<resources minRequiredRevision="1.0" />
+  	<resources minRequiredRevision="1.1" />
+	<supportedOn>
+		<definitions>
+			<definition name="7-Zip" displayName="$(string.7-ZipSupportedOn)"/>
+		</definitions>
+	</supportedOn>
 	<categories>
     	<category name="7-Zip" displayName="$(string.7-ZipSettingCategory)"/>
   </categories>
 	<policies>
 		<policy name="Lang" class ="User" displayName="$(string.Lang)" explainText="$(string.Lang_help)" presentation="$(presentation.Lang_Pres)" key="SOFTWARE\7-Zip">
 			<parentCategory ref="7-Zip"/>
-			<supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+			<supportedOn ref="7-Zip"/>
 			<elements>
         			<text id="Lang" valueName="Lang" required="true" />
 			</elements>
