@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.1" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
 	<policyNamespaces>
 		<target prefix="AdobeDigitalEditions" namespace="Adobe.Policies.Adobe.Digital.Editions"/>
 		<using prefix="windows" namespace="Microsoft.Policies.Windows"/>
   	</policyNamespaces>
-  	<resources minRequiredRevision="1.0" />
+  	<resources minRequiredRevision="1.1" />
+	<supportedOn>
+		<definitions>
+			<definition name="AdobeDigitalEditions" displayName="$(string.AdobeDigitalEditionsSupportedOn)"/>
+		</definitions>
+	</supportedOn>
 	<categories>
     	<category name="AdobeDigitalEditions" displayName="$(string.AdobeDigitalEditionsSettingCategory)"/>
   </categories>
 	<policies>
 		<policy name="DoNotInstallAntivirus" class ="Machine" displayName="$(string.DoNotInstallAntivirus)" explainText="$(string.DoNotInstallAntivirus_help)" key="SOFTWARE\Wow6432Node\Symantec\NPInstaller\DeclineCount\adobeebook" valueName="ns">
 			<parentCategory ref="AdobeDigitalEditions"/>
-			<supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+			<supportedOn ref="AdobeDigitalEditions"/>
       		<enabledValue>
         		<decimal value="3"/>
       		</enabledValue>
