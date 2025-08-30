@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.1" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
   <displayName>VLC</displayName>
   <description>Group Policy Settings of VLC</description>
   <resources>
     <stringTable>
-      <!-- General -->
+      <!-- VLC -->
       <string id="VLCSettingCategory">VLC</string>
+      <string id="VLCSupportedOn">VLC</string>
 
       <!-- Set language -->
       <string id="Lang">Set language</string>

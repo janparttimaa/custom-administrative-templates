@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.1" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
     <policyNamespaces>
 	    <target prefix="VLC" namespace="VLC.Policies.VLC"/>
 	    <using prefix="windows" namespace="Microsoft.Policies.Windows"/>
     </policyNamespaces>
-    <resources minRequiredRevision="1.0" />
+    <resources minRequiredRevision="1.1" />
+    <supportedOn>
+	    <definitions>
+			<definition name="VLC" displayName="$(string.VLCSupportedOn)"/>
+	    </definitions>
+	</supportedOn>
     <categories>
         <category name="VLC" displayName="$(string.VLCSettingCategory)"/>
     </categories>
     <policies>
         <policy name="Lang" class ="User" displayName="$(string.Lang)" explainText="$(string.Lang_help)" presentation="$(presentation.Lang_Pres)" key="SOFTWARE\VideoLAN\VLC">
             <parentCategory ref="VLC"/>
-            <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+            <supportedOn ref="VLC"/>
             <elements>
                 <text id="Lang" valueName="Lang" required="true" />
             </elements>
