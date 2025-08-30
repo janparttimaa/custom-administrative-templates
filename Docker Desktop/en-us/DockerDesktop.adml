@@ -9,7 +9,11 @@
       
       <!-- Enforce sign-in -->
       <string id="Policy_AllowedOrgs">Enforce sign-in</string>
-      <string id="Explain_AllowedOrgs">If you want to enforce sign-in you need to enable this setting and define allowed organizations.</string>
+      <string id="Explain_AllowedOrgs">If you want to enforce sign-in you need to enable this setting and define allowed organizations.
+
+More information:
+https://docs.docker.com/enterprise/security/enforce-sign-in/
+    </string>
     </stringTable>
     <presentationTable>
     <!-- Enforce sign-in -->
