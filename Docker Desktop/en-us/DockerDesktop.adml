@@ -4,8 +4,9 @@
   <description>Group Policy Settings of Docker Desktop</description>
   <resources>
     <stringTable>
-      <!-- General -->
+      <!-- Docker Desktop -->
       <string id="DockerDesktopSettingCategory">Docker Desktop</string>
+      <string id="DockerDesktop">Docker Desktop version 4.36 and later</string>
       
       <!-- Enforce sign-in -->
       <string id="Policy_AllowedOrgs">Enforce sign-in</string>

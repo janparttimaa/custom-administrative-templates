@@ -5,6 +5,11 @@
 	    <using prefix="windows" namespace="Microsoft.Policies.Windows"/>
     </policyNamespaces>
     <resources minRequiredRevision="1.0" />
+    <supportedOn>
+		<definitions>
+			<definition name="DockerDesktop" displayName="$(string.DockerDesktopSupportedOn)"/>
+		</definitions>
+	</supportedOn>
     <categories>
         <category name="DockerDesktop" displayName="$(string.DockerDesktopSettingCategory)"/>
     </categories>
@@ -12,7 +17,7 @@
         <!-- Enforce sign-in -->
         <policy name="AllowedOrgs" class ="Machine" displayName="$(string.Policy_AllowedOrgs)" explainText="$(string.Explain_AllowedOrgs)" key="SOFTWARE\Policies\Docker\Docker Desktop" presentation="$(presentation.Policy_AllowedOrgs)">
         <parentCategory ref="DockerDesktop"/>
-        <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+        <supportedOn ref="DockerDesktop"/>
         <elements>
             <multiText id="AllowedOrgs" valueName="AllowedOrgs" required="true" />
         </elements>
