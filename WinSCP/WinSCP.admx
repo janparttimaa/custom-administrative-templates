@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.1" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
     <policyNamespaces>
 	    <target prefix="WinSCP" namespace="WinSCP.Policies.WinSCP"/>
 	    <using prefix="windows" namespace="Microsoft.Policies.Windows"/>
     </policyNamespaces>
-    <resources minRequiredRevision="1.0" />
+    <resources minRequiredRevision="1.1" />
+    <supportedOn>
+		<definitions>
+			<definition name="WinSCP" displayName="$(string.WinSCPSupportedOn)"/>
+	    </definitions>
+	</supportedOn>
     <categories>
         <category name="WinSCP" displayName="$(string.WinSCPSettingCategory)"/>
     </categories>
     <policies>
         <policy name="Period" class ="User" displayName="$(string.Period)" explainText="$(string.Period_help)" presentation="$(presentation.Period_Pres)" key="SOFTWARE\Martin Prikyl\WinSCP 2\Configuration\Interface\Updates">
         <parentCategory ref="WinSCP"/>
-        <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+        <supportedOn ref="WinSCP"/>
         <elements>
             <enum id="Period_Dropdown" valueName="Period">
             <item displayName="$(string.Never)">
@@ -39,7 +44,7 @@
         </policy>
         <policy name="ShowOnStartup" class="User" displayName="$(string.ShowOnStartup)" explainText="$(string.ShowOnStartup_help)" key="SOFTWARE\Martin Prikyl\WinSCP 2\Configuration\Interface\Updates" valueName="ShowOnStartup">
         <parentCategory ref="WinSCP" />
-        <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+        <supportedOn ref="WinSCP" />
         <enabledValue>
             <decimal value="1" />
         </enabledValue>
@@ -49,7 +54,7 @@
         </policy>
         <policy name="BetaVersions" class="User" displayName="$(string.BetaVersions)" explainText="$(string.BetaVersions_help)" presentation="$(presentation.BetaVersions_Pres)" key="SOFTWARE\Martin Prikyl\WinSCP 2\Configuration\Interface\Updates">
         <parentCategory ref="WinSCP" />
-        <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+        <supportedOn ref="WinSCP" />
         <elements>
             <enum id="BetaVersions_Dropdown" valueName="BetaVersions">
                 <item displayName="$(string.Auto)">

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.1" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
   <displayName>WinSCP</displayName>
   <description>Group Policy Settings of WinSCP</description>
   <resources>
     <stringTable>
-      <!-- General -->
+      <!-- WinSCP -->
       <string id="WinSCPSettingCategory">WinSCP</string>
+      <string id="WinSCPSupportedOn">WinSCP</string>
 
       <!-- [Updates] Automatic check period -->
       <string id="Period">[Updates] Automatic check period</string>
