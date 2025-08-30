@@ -6,7 +6,7 @@
     <stringTable>
       <!-- Adobe Digital Editions -->
       <string id="AdobeDigitalEditionsSettingCategory">Adobe Digital Editions</string>
-      <string id="DockerDesktopSupportedOn">Adobe Digital Editions</string>
+      <string id="AdobeDigitalEditionsSupportedOn">Adobe Digital Editions</string>
 
 	  <!-- Do not offer Antivirus program installation -->
       <string id="DoNotInstallAntivirus">Do not offer Antivirus program installation</string>
