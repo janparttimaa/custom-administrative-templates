@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.3" schemaVersion="1.0" xsi:schemaLocation="" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.4" schemaVersion="1.0" xsi:schemaLocation="" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
 
 	<displayName>Adobe Acrobat DC ADMX File</displayName>
 	<description>ADMX File for Adobe Acrobat DC</description>
@@ -19,6 +19,7 @@
 			<string id="Cat_JavaScript">JavaScript</string>
 			<string id="Cat_EmailAccounts">Email Accounts</string>
 			<string id="Cat_Accessibility">Accessibility</string>
+			<string id="Cat_Documents">Documents</string>
 			<string id="Cat_NGL">Next Generation Licensing (NGL)</string>
 
 			<string id="Policy_bDisablePDFHandlerSwitching">Disable PDF handler switching</string>
@@ -503,6 +504,20 @@ Edit &gt; Preferences &gt; Access &gt; Other Accessibility Options &gt; Always d
 
 More information:
 https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/Access.html#idkeyname_1_575</string>
+			<string id="Policy_bAlwaysUseFileNameAsDocTitle">Always use filename as document title</string>
+			<string id="Explain_bAlwaysUseFileNameAsDocTitle">Specifies whether to use the PDF file name as the display name in the application's title bar. 
+			
+PDF documents have an Initial View property that's set to "Document Title" by default. Enabling this preference overrides any document-level setting with the app-level setting.
+
+Possible values:
+- Enabled: Use file names for the PDF title.
+- Disabled: Don't use file names.
+
+GUI mapping:
+Edit &gt; Preferences &gt; Documents &gt; Always use filename as document title
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/AVGeneral.html#idkeyname_1_5367</string>
 		<string id="Policy_login_domain">Login Domain</string>
 		<string id="Explain_login_domain">Specify login domain, that will be use, when signing into Adobe-products e.g. Adobe Acrobat DC.
 

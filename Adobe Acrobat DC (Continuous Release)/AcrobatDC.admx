@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.3" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.4" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
 	<policyNamespaces>
 		<target prefix="Acrobat DC" namespace="Adobe.Policies.AcrobatDC"/>
 		<using prefix="windows" namespace="Microsoft.Policies.Windows"/>
 	</policyNamespaces>
 	<supersededAdm fileName="AcrobatDC.adm"/>
-    <resources minRequiredRevision="1.3"/>
+    <resources minRequiredRevision="1.4"/>
 	<supportedOn>
 		<definitions>
 			<definition name="AcrobatDC" displayName="$(string.AcrobatDC)"/>
@@ -45,6 +45,9 @@
 			<parentCategory ref="Cat_Preferences"/>
 		</category>
 		<category name="Cat_Accessibility" displayName="$(string.Cat_Accessibility)">
+			<parentCategory ref="Cat_Preferences"/>
+		</category>
+		<category name="Cat_Documents" displayName="$(string.Cat_Documents)">
 			<parentCategory ref="Cat_Preferences"/>
 		</category>
 		<category name="Cat_NGL" displayName="$(string.Cat_NGL)">
@@ -617,6 +620,18 @@
 		<!-- Accessibility - Always display the keyboard selection cursor -->
 		<policy name="bShowKeyboardSelectionCursor" class="User" displayName="$(string.Policy_bShowKeyboardSelectionCursor)" explainText="$(string.Explain_bShowKeyboardSelectionCursor)" key="SOFTWARE\Adobe\Adobe Acrobat\DC\Access" valueName="bShowKeyboardSelectionCursor">
 			<parentCategory ref="Cat_Accessibility"/>
+			<supportedOn ref="AcrobatDC"/>
+			<enabledValue>
+				<decimal value="1"/>
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0"/>
+			</disabledValue>
+		</policy>
+
+		<!-- Documents - Always use filename as document title -->
+		<policy name=" bAlwaysUseFileNameAsDocTitle" class="User" displayName="$(string.Policy_bAlwaysUseFileNameAsDocTitle)" explainText="$(string.Explain_bAlwaysUseFileNameAsDocTitle)" key="SOFTWARE\Adobe\Adobe Acrobat\DC\AVGeneral" valueName="bAlwaysUseFileNameAsDocTitle">
+			<parentCategory ref="Cat_Documents"/>
 			<supportedOn ref="AcrobatDC"/>
 			<enabledValue>
 				<decimal value="1"/>
