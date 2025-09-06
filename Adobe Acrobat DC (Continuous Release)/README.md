@@ -30,6 +30,7 @@ Here you can see OMA-URI information of the settings that are part of this ADMX-
 | Name | Description | OMA-URI | Data type | Available Values
 |---------|---------|---------|---------|---------|
 | ```bShowKeyboardSelectionCursor``` | [See below](#bShowKeyboardSelectionCursor) | ```./User/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_Accessibility/bShowKeyboardSelectionCursor``` | String | ```<enabled/>```<br>```<disabled/>```
+| ```bAlwaysUseFileNameAsDocTitle``` | [See below](#bAlwaysUseFileNameAsDocTitle) | ```./User/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_Documents/bAlwaysUseFileNameAsDocTitle``` | String | ```<enabled/>```<br>```<disabled/>```
 | ```bLastAttachLinkMode``` | [See below](#bLastAttachLinkMode) | ```./User/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_EmailAccounts/bLastAttachLinkMode``` | String | ```<enabled/>```<br>```<disabled/>```
 | ```bAutoFill``` | [See below](#bAutoFill) | ```./Device/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_Forms/bAutoFill``` | String | ```<enabled/>```<br>```<disabled/>```
 | ```bRuntimeHighlight``` | [See below](#bRuntimeHighlight) | ```./User/Vendor/MSFT/Policy/Config/AdobeAcrobatDC~Policy~Cat_Adobe_Acrobat_DC~Cat_Preferences~Cat_Forms/bRuntimeHighlight``` | String | ```<enabled/>```<br>```<disabled/>```
