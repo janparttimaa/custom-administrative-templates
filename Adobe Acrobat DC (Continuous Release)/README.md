@@ -106,6 +106,30 @@ https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/Access.html#i
 - **Enabled Value:** 1
 - **Disabled Value:** 0
 
+#### bAlwaysUseFileNameAsDocTitle
+Specifies whether to use the PDF file name as the display name in the application's title bar. 
+			
+PDF documents have an Initial View property that's set to "Document Title" by default. Enabling this preference overrides any document-level setting with the app-level setting.
+
+Possible values:
+- Enabled: Use file names for the PDF title.
+- Disabled: Don't use file names.
+
+GUI mapping:
+Edit &gt; Preferences &gt; Documents &gt; Always use filename as document title
+
+More information:
+https://www.adobe.com/devnet-docs/acrobatetk/tools/PrefRef/Windows/AVGeneral.html#idkeyname_1_5367
+
+##### Technical information
+- **Friendly name of the setting:** Always use filename as document title
+- **Registry Hive:** HKEY_CURRENT_USER
+- **Registry Path:** SOFTWARE\Adobe\Adobe Acrobat\DC\AVGeneral
+- **Value Type:** REG_DWORD
+- **Value Name:** bAlwaysUseFileNameAsDocTitle
+- **Enabled Value:** 1
+- **Disabled Value:** 0
+
 #### bLastAttachLinkMode
 GUI mapping:
 Edit &gt; Preferences &gt; Email Accounts &gt; Send file by email settings &gt; Always send files as a link (sign in required)
