@@ -14,7 +14,7 @@ Here you can see OMA-URI information of the settings that are part of this ADMX-
 
 | Name | Description | OMA-URI | Data type |  Recommended Value
 |---------|---------|---------|---------|---------|
-| ```AllowedOrgs``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/DockerDesktop~Policy~DockerDesktop/AllowedOrgs``` | String | ```<enabled/> <data id="AllowedOrgs" value="example.com&#xF000;example2.com&#xF000;example3.com&#xF000;example4.com"/>```
+| ```AllowedOrgs``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/DockerDesktop~Policy~DockerDesktop/AllowedOrgs``` | String | ```<enabled/> <data id="AllowedOrgs" value="examplecompany1&#xF000;examplecompany2&#xF000;examplecompany3&#xF000;examplecompany4"/>```
 
 ### Descriptions
 More details of the settings can be found this chapter.
@@ -38,10 +38,10 @@ https://docs.docker.com/enterprise/security/enforce-sign-in/
 - **Value Name:** AllowedOrgs
 - **Enabled Value:** 
 
-        example.com 
-        example2.com
-        example3.com
-        example4.com
+        examplecompany1
+        examplecompany2
+        examplecompany3
+        examplecompany4
 
 - **Disabled Value:** N/A
 
