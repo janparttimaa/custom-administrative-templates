@@ -14,13 +14,13 @@ Here you can see OMA-URI information of the settings that are part of this ADMX-
 
 | Name | Description | OMA-URI | Data type |  Recommended Value
 |---------|---------|---------|---------|---------|
-| ```AutoUpdateEnable``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/ClickShare~Policy~ClickShare/AutoUpdateEnable``` | String | ```<enabled/> <data id="AutoUpdateEnable" value="true"/>```
-| ```BetaProgramDisable``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/ClickShare~Policy~ClickShare/BetaProgramDisable``` | String | ```<enabled/>```
-| ```CalendarIntegrationEnabledByAdmin``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/ClickShare~Policy~ClickShare/CalendarIntegrationEnabledByAdmin``` | String | ```<enabled/> <data id="CalendarIntegrationEnabledByAdmin" value="false"/>```
-| ```ProductUsageAnalyticsDisable``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/ClickShare~Policy~ClickShare/ProductUsageAnalyticsDisable``` | String | ```<enabled/>```
-| ```CalendarIntegration``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/ClickShare~Policy~ClickShare/CalendarIntegration``` | String | ```<enabled/> <data id="CalendarIntegration" value="false"/>```
-| ```PresentSensePromotionShown``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/ClickShare~Policy~ClickShare/PresentSensePromotionShown``` | String | ```<enabled/> <data id="PresentSensePromotionShown" value="true"/>```
-| ```UltrasoundIntegration``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/ClickShare~Policy~ClickShare/UltrasoundIntegration``` | String | ```<enabled/> <data id="UltrasoundIntegration" value="false"/>```
+| ```AutoUpdateEnable``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/ClickShare~Policy~BarcoClickShare/AutoUpdateEnable``` | String | ```<enabled/> <data id="AutoUpdateEnable" value="true"/>```
+| ```BetaProgramDisable``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/ClickShare~Policy~BarcoClickShare/BetaProgramDisable``` | String | ```<enabled/>```
+| ```CalendarIntegrationEnabledByAdmin``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/ClickShare~Policy~BarcoClickShare/CalendarIntegrationEnabledByAdmin``` | String | ```<enabled/> <data id="CalendarIntegrationEnabledByAdmin" value="false"/>```
+| ```ProductUsageAnalyticsDisable``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/ClickShare~Policy~BarcoClickShare/ProductUsageAnalyticsDisable``` | String | ```<enabled/>```
+| ```CalendarIntegration``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/ClickShare~Policy~BarcoClickShare/CalendarIntegration``` | String | ```<enabled/> <data id="CalendarIntegration" value="false"/>```
+| ```PresentSensePromotionShown``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/ClickShare~Policy~BarcoClickShare/PresentSensePromotionShown``` | String | ```<enabled/> <data id="PresentSensePromotionShown" value="true"/>```
+| ```UltrasoundIntegration``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/ClickShare~Policy~BarcoClickShare/UltrasoundIntegration``` | String | ```<enabled/> <data id="UltrasoundIntegration" value="false"/>```
 
 ### Descriptions
 More details of the settings can be found this chapter.
