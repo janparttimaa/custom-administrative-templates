@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName>Barco ClickShare</displayName>
+  <description>Group Policy Settings of Barco ClickShare</description>
+  <resources>
+    <stringTable>
+      <!-- Barco ClickShare -->
+      <string id="BarcoClickShareSettingCategory">Barco ClickShare</string>
+      <string id="BarcoClickShareSupportedOn">Barco ClickShare version v4.46.0.4 and later</string>
+      
+      <!-- Enable automatic updates -->
+      <string id="Policy_AutoUpdateEnable">Enable automatic updates</string>
+      <string id="Explain_AutoUpdateEnable">To control if the app will be automatically updated or not.
+
+Possible values:
+- true: App will be automatically updated.
+- false: App will not be automatically updated.
+      </string>
+      <!-- Disable Beta Program -->
+      <string id="Policy_BetaProgramDisable">Disable Beta Program</string>
+      <string id="Explain_BetaProgramDisable">To control the “Beta Program” UI option.
+
+Options:
+- Enabled: No UI option for Beta Program in the app.
+- Disabled: UI option for Beta Program visible in the app.
+      </string>
+      <!-- Calendar integration enabled by Admin -->
+      <string id="Policy_CalendarIntegrationEnabledByAdmin">Calendar integration enabled by Admin</string>
+      <string id="Explain_CalendarIntegrationEnabledByAdmin">To turn on and off "Calendar Integration" and its UI option by Admin.
+
+Possible values:
+- true: Calendar integration is enabled.
+- false: Calendar integration is disabled.
+      </string>
+      <!-- Disable Product Usage Analytics -->
+      <string id="Policy_ProductUsageAnalyticsDisable">Disable Product Usage Analytics</string>
+      <string id="Explain_ProductUsageAnalyticsDisable">To turn on and off "Usage Statistics".
+
+Options:
+- Enabled: "Usage Statistics" is turned off.
+- Disabled: "Usage Statistics" is turned on.
+      </string>
+      <!-- Enable Calendar integration -->
+      <string id="Policy_CalendarIntegration">Enable Calendar integration</string>
+      <string id="Explain_CalendarIntegration">To turn on and off "Calendar Integration"
+
+Possible values:
+- true: Calendar integration is enabled.
+- false: Calendar integration is disabled.
+      </string>
+      <!-- Show Present Sense Promotion -->
+      <string id="Policy_PresentSensePromotionShown">Show Present Sense Promotion</string>
+      <string id="Explain_PresentSensePromotionShown">To show or hide present sense promotions.
+
+Possible values:
+- true: Present Sense Promotions are showing.
+- false: Present Sense Promotions are hidden.
+      </string>
+      <!-- Enable Ultrasound Integration -->
+      <string id="Policy_UltrasoundIntegration">Enable Ultrasound Integration</string>
+      <string id="Explain_UltrasoundIntegration">To enable or disable Ultrasound Integration.
+
+Possible values:
+- true: Ultrasound Integration is enabled.
+- false: Ultrasound Integration is disabled.
+      </string>
+    </stringTable>
+    <presentationTable>
+      <!-- Enable automatic updates -->
+      <presentation id="Policy_AutoUpdateEnable">
+        <text>Enable automatic updates</text>
+        <textBox refId="AutoUpdateEnable">
+          <label>Value:</label>
+        </textBox>
+      </presentation>
+      <!-- Calendar integration enabled by Admin -->
+      <presentation id="Policy_CalendarIntegrationEnabledByAdmin">
+        <text>Calendar integration enabled by Admin</text>
+        <textBox refId="CalendarIntegrationEnabledByAdmin">
+          <label>Value:</label>
+        </textBox>
+      </presentation>
+      <!-- Enable Calendar integration -->
+      <presentation id="Policy_CalendarIntegration">
+        <text>Enable Calendar integration</text>
+        <textBox refId="CalendarIntegration">
+          <label>Value:</label>
+        </textBox>
+      </presentation>
+      <!-- Show Present Sense Promotion -->
+      <presentation id="Policy_PresentSensePromotionShown">
+        <text>Show Present Sense Promotion</text>
+        <textBox refId="PresentSensePromotionShown">
+          <label>Value:</label>
+        </textBox>
+      </presentation>
+      <!-- Enable Ultrasound Inregration -->
+      <presentation id="Policy_UltrasoundIntegration">
+        <text>Enable Ultrasound Inregration</text>
+        <textBox refId="UltrasoundIntegration">
+          <label>Value:</label>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

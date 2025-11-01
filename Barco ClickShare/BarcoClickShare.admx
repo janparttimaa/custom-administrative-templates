@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+    <policyNamespaces>
+	    <target prefix="BarcoClickShare" namespace="Barco.Policies.ClickShare"/>
+	    <using prefix="windows" namespace="Microsoft.Policies.Windows"/>
+    </policyNamespaces>
+    <resources minRequiredRevision="1.0" />
+    <supportedOn>
+		<definitions>
+			<definition name="BarcoClickShare" displayName="$(string.BarcoClickShareSupportedOn)"/>
+		</definitions>
+	</supportedOn>
+    <categories>
+        <category name="BarcoClickShare" displayName="$(string.BarcoClickShareSettingCategory)"/>
+    </categories>
+    <policies>
+        <!-- Machine Policies -->
+        <!-- Enable automatic updates -->
+        <policy name="AutoUpdateEnable" class ="Machine" displayName="$(string.Policy_AutoUpdateEnable)" explainText="$(string.Explain_AutoUpdateEnable)" key="SOFTWARE\WOW6432Node\Barco\ClickShare Installer" presentation="$(presentation.Policy_AutoUpdateEnable)">
+        <parentCategory ref="BarcoClickShare"/>
+        <supportedOn ref="BarcoClickShare"/>
+        <elements>
+            <text id="AutoUpdateEnable" valueName="AutoUpdateEnable" required="true" />
+        </elements>
+        </policy>
+
+        <!-- Disable Beta Program -->
+        <policy name="BetaProgramDisable" class="Machine" displayName="$(string.Policy_BetaProgramDisable)" explainText="$(string.Explain_BetaProgramDisable)" key="SOFTWARE\WOW6432Node\Barco\ClickShare Installer" valueName="BetaProgramDisable">
+        <parentCategory ref="BarcoClickShare" />
+        <supportedOn ref="BarcoClickShare" />
+        <enabledValue>
+            <decimal value="1" />
+        </enabledValue>
+        <disabledValue>
+            <decimal value="0" />
+        </disabledValue>
+        </policy>
+
+        <!-- Calendar integration enabled by Admin -->
+        <policy name="CalendarIntegrationEnabledByAdmin" class ="Machine" displayName="$(string.Policy_CalendarIntegrationEnabledByAdmin)" explainText="$(string.Explain_CalendarIntegrationEnabledByAdmin)" key="SOFTWARE\WOW6432Node\Barco\ClickShare Installer" presentation="$(presentation.Policy_CalendarIntegrationEnabledByAdmin)">
+        <parentCategory ref="BarcoClickShare"/>
+        <supportedOn ref="BarcoClickShare"/>
+        <elements>
+            <text id="CalendarIntegrationEnabledByAdmin" valueName="CalendarIntegrationEnabledByAdmin" required="true" />
+        </elements>
+        </policy>
+
+        <!-- Disable Product Usage Analytics -->
+        <policy name="ProductUsageAnalyticsDisable" class="Machine" displayName="$(string.Policy_ProductUsageAnalyticsDisable)" explainText="$(string.Explain_ProductUsageAnalyticsDisable)" key="SOFTWARE\WOW6432Node\Barco\ClickShare Installer" valueName="ProductUsageAnalyticsDisable">
+        <parentCategory ref="BarcoClickShare" />
+        <supportedOn ref="BarcoClickShare" />
+        <enabledValue>
+            <decimal value="1" />
+        </enabledValue>
+        <disabledValue>
+            <decimal value="0" />
+        </disabledValue>
+        </policy>
+
+        <!-- User Policies -->
+        <!-- Enable Calendar integration -->
+        <policy name="CalendarIntegration" class ="User" displayName="$(string.Policy_CalendarIntegration)" explainText="$(string.Explain_CalendarIntegration)" key="SOFTWARE\Barco\ClickShare Client" presentation="$(presentation.Policy_CalendarIntegration)">
+        <parentCategory ref="BarcoClickShare"/>
+        <supportedOn ref="BarcoClickShare"/>
+        <elements>
+            <text id="CalendarIntegration" valueName="CalendarIntegration" required="true" />
+        </elements>
+        </policy>
+
+        <!-- Show Present Sense Promotion -->
+        <policy name="PresentSensePromotionShown" class ="User" displayName="$(string.Policy_PresentSensePromotionShown)" explainText="$(string.Explain_PresentSensePromotionShown)" key="SOFTWARE\Barco\ClickShare Client" presentation="$(presentation.Policy_PresentSensePromotionShown)">
+        <parentCategory ref="BarcoClickShare"/>
+        <supportedOn ref="BarcoClickShare"/>
+        <elements>
+            <text id="PresentSensePromotionShown" valueName="PresentSensePromotionShown" required="true" />
+        </elements>
+        </policy>
+
+        <!-- Enable Ultrasound Inregration -->
+        <policy name="UltrasoundIntegration" class ="User" displayName="$(string.Policy_UltrasoundIntegration)" explainText="$(string.Explain_UltrasoundIntegration)" key="SOFTWARE\Barco\ClickShare Client" presentation="$(presentation.Policy_UltrasoundIntegration)">
+        <parentCategory ref="BarcoClickShare"/>
+        <supportedOn ref="BarcoClickShare"/>
+        <elements>
+            <text id="UltrasoundIntegration" valueName="UltrasoundIntegration" required="true" />
+        </elements>
+        </policy>
+    </policies>
+</policyDefinitions>
