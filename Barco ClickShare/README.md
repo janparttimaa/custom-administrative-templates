@@ -19,7 +19,7 @@ Here you can see OMA-URI information of the settings that are part of this ADMX-
 | ```CalendarIntegrationEnabledByAdmin``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/ClickShare~Policy~ClickShare/CalendarIntegrationEnabledByAdmin``` | String | ```<enabled/> <data id="CalendarIntegrationEnabledByAdmin" value="false"/>```
 | ```ProductUsageAnalyticsDisable``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/ClickShare~Policy~ClickShare/ProductUsageAnalyticsDisable``` | String | ```<enabled/>```
 | ```CalendarIntegration``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/ClickShare~Policy~ClickShare/CalendarIntegration``` | String | ```<enabled/> <data id="CalendarIntegration" value="false"/>```
-| ```PresentSensePromotionShown``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/ClickShare~Policy~ClickShare/PresentSensePromotionShown``` | String | ```<enabled/> <data id="PresentSensePromotionShown" value="false"/>```
+| ```PresentSensePromotionShown``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/ClickShare~Policy~ClickShare/PresentSensePromotionShown``` | String | ```<enabled/> <data id="PresentSensePromotionShown" value="true"/>```
 | ```UltrasoundIntegration``` | (See below) | ```./User/Vendor/MSFT/Policy/Config/ClickShare~Policy~ClickShare/UltrasoundIntegration``` | String | ```<enabled/> <data id="UltrasoundIntegration" value="false"/>```
 
 ### Descriptions
@@ -139,20 +139,20 @@ https://www.barco.com/en/support/knowledge-base/3329-what-are-the-available-para
 > N/A in this context means that registry key is not existed.
 
 #### PresentSensePromotionShown
-To show or hide present sense promotions.
+To show or hide sense promotions.
 
 Possible values:
-- true: Present Sense Promotions are showing.
-- false: Present Sense Promotions are hidden.
+- true: Sense Promotions are hidden.
+- false: Sense Promotions are showing.
 
 More information:
 https://www.barco.com/en/support/knowledge-base/3329-what-are-the-available-parameters-for-the-clickshare-desktop-app-installer-msi
 
 > [!NOTE]
-> - If you want to hide sense promotions, please make sure that policy is enabled but the value must be set to ```"false"```
+> - If you want to show sense promotions, please make sure that policy is enabled but the value must be set to ```"false"```
 
 ##### Technical information
-- **Friendly name of the setting:** Show Present Sense Promotion
+- **Friendly name of the setting:** Don't show Sense Promotion
 - **Registry Hive:** HKEY_CURRENT_USER
 - **Registry Path:** SOFTWARE\Barco\ClickShare Client
 - **Value Type:** REG_SZ

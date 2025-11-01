@@ -48,13 +48,13 @@ Possible values:
 - true: Calendar integration is enabled.
 - false: Calendar integration is disabled.
       </string>
-      <!-- Show Present Sense Promotion -->
-      <string id="Policy_PresentSensePromotionShown">Show Present Sense Promotion</string>
-      <string id="Explain_PresentSensePromotionShown">To show or hide present sense promotions.
+      <!-- Don't show Sense Promotion -->
+      <string id="Policy_PresentSensePromotionShown">Don't show Sense Promotion</string>
+      <string id="Explain_PresentSensePromotionShown">To show or hide sense promotions.
 
 Possible values:
-- true: Present Sense Promotions are showing.
-- false: Present Sense Promotions are hidden.
+- true: Sense Promotions are hidden.
+- false: Sense Promotions are showing.
       </string>
       <!-- Enable Ultrasound Integration -->
       <string id="Policy_UltrasoundIntegration">Enable Ultrasound Integration</string>
