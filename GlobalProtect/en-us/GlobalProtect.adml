@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName>GlobalProtect</displayName>
+  <description>Group Policy Settings of GlobalProtect</description>
+  <resources>
+    <stringTable>
+      <!-- GlobalProtect -->
+      <string id="GlobalProtectSettingCategory">GlobalProtect</string>
+      <string id="GlobalProtectSupportedOn">GlobalProtect</string>
+
+      <!-- Portal Address -->
+      <string id="Portal">Portal Address</string>
+      <string id="Portal_help">This setting specifies the default portal IP address (or hostname).
+
+Example:
+vpn.example.com
+
+If you disable or not configure this setting, user can define default portal IP address (or hostname) and we are not enforcing it.
+
+More information: 
+https://github.com/janparttimaa/custom-administrative-templates 
+      </string>
+
+      <!-- Enable Prelogon -->
+      <string id="Prelogon">Enable Prelogon</string>
+      <string id="Prelogon_help">This setting enables GlobalProtect to initiate a VPN tunnel before a user logs in to the device and connects to the GlobalProtect portal.
+
+To enable prelogon from GlobalProtect-client, enable this setting and set following value number: 1
+
+If you want to disable prelogon, please disable this setting. 
+
+Please note, that setting this as "Not Configured" will not disable prelogon.
+
+More information: 
+https://github.com/janparttimaa/custom-administrative-templates  
+      </string>
+    </stringTable>
+    <presentationTable>
+    <!-- Portal Address -->      
+      <presentation id="Portal_Pres">
+        <textBox refId="Portal">
+          <label>Address:</label>
+        </textBox>
+      </presentation>
+
+    <!-- Enable Prelogon -->      
+      <presentation id="Prelogon_Pres">
+        <textBox refId="Prelogon">
+          <label>Value:</label>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

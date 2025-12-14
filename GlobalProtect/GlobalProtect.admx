@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+    <policyNamespaces>
+	    <target prefix="GlobalProtect" namespace="PaloAltoNetworks.Policies.GlobalProtect"/>
+	    <using prefix="windows" namespace="Microsoft.Policies.Windows"/>
+    </policyNamespaces>
+    <resources minRequiredRevision="1.0" />
+    <supportedOn>
+		<definitions>
+			<definition name="GlobalProtect" displayName="$(string.GlobalProtectSupportedOn)"/>
+		</definitions>
+	</supportedOn>
+    <categories>
+        <category name="GlobalProtect" displayName="$(string.GlobalProtectSettingCategory)"/>
+    </categories>
+    <policies>
+
+        <!-- Portal Address -->
+        <policy name="Portal" class ="Machine" displayName="$(string.Portal)" explainText="$(string.Portal_help)" presentation="$(presentation.Portal_Pres)" key="SOFTWARE\Palo Alto Networks\GlobalProtect\PanSetup">
+        <parentCategory ref="GlobalProtect"/>
+        <supportedOn ref="GlobalProtect"/>
+        <elements>
+            <text id="Portal" valueName="Portal" required="true" />
+        </elements>
+        </policy>
+
+        <!-- Enable Prelogon -->
+        <policy name="Prelogon" class ="Machine" displayName="$(string.Prelogon)" explainText="$(string.Prelogon_help)" presentation="$(presentation.Prelogon_Pres)" key="SOFTWARE\Palo Alto Networks\GlobalProtect\PanSetup">
+        <parentCategory ref="GlobalProtect"/>
+        <supportedOn ref="GlobalProtect"/>
+        <elements>
+            <text id="Prelogon" valueName="Prelogon" required="true" />
+        </elements>
+        </policy>
+        
+    </policies>
+</policyDefinitions>
