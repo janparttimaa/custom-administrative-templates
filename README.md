@@ -14,6 +14,7 @@ This repository includes some custom Administrative Templates that can be used o
 | Barco ClickShare | [Hyperlink](./Barco%20ClickShare) |
 | Citrix Workspace | [Hyperlink](./Citrix%20Workspace) |
 | Docker Destop | [Hyperlink](./Docker%20Desktop) |
+| GlobalProtect | [Hyperlink](./GlobalProtect) |
 | iManage | [Hyperlink](./iManage) |
 | Sparx Enterprise Architect | [Hyperlink](./Sparx%20Enterprise%20Architect) |
 | VLC | [Hyperlink](./VLC) |
