@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName>WinZip</displayName>
+  <description>Group Policy Settings of WinZip</description>
+  <resources>
+    <stringTable>
+      <!-- WinZip -->
+      <string id="WinZipSettingCategory">WinZip</string>
+      <string id="WinZipSupportedOn">WinZip</string>
+
+      <!-- [Applets] Prevent the duplicate file finder from being installed -->
+      <string id="InstallBGDD">[Applets] Prevent the duplicate file finder from being installed</string>
+      <string id="InstallBGDD_help">If you want to prevent duplicate file finder to be installed, enable this policy and set value 0.
+
+If you don't want to prevent duplicate file finder to be installed, enable this policy and set value 1.
+
+More information: 
+https://kb.corel.com/129410
+      </string>
+
+      <!-- [Software Updates] Suppress updater -->
+      <string id="AutoMode">[Software Updates] Suppress updater</string>
+      <string id="AutoMode_help">If you want to suppress updater, enable this policy and set value 0.
+
+If you don't want to suppress updater, enable this policy and set value 1.
+
+More information: 
+https://stealthpuppy.com/disabling-check-for-winzip-update/
+      </string>
+
+      <!-- [Software Updates] Completely disable "Check for Updates" -->
+      <string id="NoUpdateChecking">[Software Updates] Completely disable "Check for Updates"</string>
+      <string id="NoUpdateChecking_help">If you want to completely disable "Check for Updates", enable this policy and set value 1.
+
+If you don't want to disable "Check for Updates", enable this policy and set value 0.
+
+More information: 
+https://kb.winzip.com/en/130452
+https://stealthpuppy.com/disabling-check-for-winzip-update/
+      </string>
+      
+      <!-- [WinZip Emailer] Disable possibility to use personal email address -->
+      <string id="DisablePersonalContacts">[WinZip Emailer] Disable possibility to use personal email address</string>
+      <string id="DisablePersonalContacts_help">If you want to completely disable possibility to use personal email address on WinZip Emailer, enable this policy and set value 1.
+
+If you don't want to disable possibility to use personal email address on WinZip Email, enable this policy and set value 0.
+
+More information: 
+https://kb.corel.com/Attachments/kcs-189030/WZ27-Enterprise-Installation-and-Configuration-Guide.pdf
+      </string>
+    </stringTable>
+    <presentationTable>
+    <!-- [Applets] Prevent the duplicate file finder from being installed -->      
+      <presentation id="InstallBGDD_Pres">
+        <textBox refId="InstallBGDD">
+          <label>Value:</label>
+        </textBox>
+      </presentation>
+
+    <!-- [Software Updates] Suppress updater -->      
+      <presentation id="AutoMode_Pres">
+        <textBox refId="AutoMode">
+          <label>Value:</label>
+        </textBox>
+      </presentation>
+
+    <!-- [Software Updates] Completely disable "Check for Updates" -->      
+      <presentation id="NoUpdateChecking_Pres">
+        <textBox refId="NoUpdateChecking">
+          <label>Value:</label>
+        </textBox>
+      </presentation>
+
+    <!-- [WinZip Emailer] Disable possibility to use personal email address -->      
+      <presentation id="DisablePersonalContacts_Pres">
+        <textBox refId="DisablePersonalContacts">
+          <label>Value:</label>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

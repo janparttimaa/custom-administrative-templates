@@ -19,3 +19,4 @@ This repository includes some custom Administrative Templates that can be used o
 | Sparx Enterprise Architect | [Hyperlink](./Sparx%20Enterprise%20Architect) |
 | VLC | [Hyperlink](./VLC) |
 | WinSCP | [Hyperlink](./WinSCP)  |
+| WinZip | [Hyperlink](./WinZip)  |

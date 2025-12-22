@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+    <policyNamespaces>
+	    <target prefix="WinZip" namespace="CorelCorporation.Policies.WinZip"/>
+	    <using prefix="windows" namespace="Microsoft.Policies.Windows"/>
+    </policyNamespaces>
+    <resources minRequiredRevision="1.0" />
+    <supportedOn>
+		<definitions>
+			<definition name="WinZip" displayName="$(string.WinZipSupportedOn)"/>
+		</definitions>
+	</supportedOn>
+    <categories>
+        <category name="WinZip" displayName="$(string.WinZipSettingCategory)"/>
+    </categories>
+    <policies>
+
+        <!-- [Applets] Prevent the duplicate file finder from being installed -->
+        <policy name="InstallBGDD" class ="Machine" displayName="$(string.InstallBGDD)" explainText="$(string.InstallBGDD_help)" presentation="$(presentation.InstallBGDD_Pres)" key="SOFTWARE\Nico Mak Computing\WinZip\Policies">
+        <parentCategory ref="WinZip"/>
+        <supportedOn ref="WinZip"/>
+        <elements>
+            <text id="InstallBGDD" valueName="InstallBGDD" required="true" />
+        </elements>
+        </policy>
+
+        <!-- [Software Updates] Suppress updater -->
+        <policy name="AutoMode" class ="Both" displayName="$(string.AutoMode)" explainText="$(string.AutoMode_help)" presentation="$(presentation.AutoMode_Pres)" key="SOFTWARE\Nico Mak Computing\WinZip\UpdateCheck">
+        <parentCategory ref="WinZip"/>
+        <supportedOn ref="WinZip"/>
+        <elements>
+            <text id="AutoMode" valueName="AutoMode" required="true" />
+        </elements>
+        </policy>
+
+        <!-- [Software Updates] Completely disable "Check for Updates" -->
+        <policy name="NoUpdateChecking" class ="Both" displayName="$(string.NoUpdateChecking)" explainText="$(string.NoUpdateChecking_help)" presentation="$(presentation.NoUpdateChecking_Pres)" key="SOFTWARE\Nico Mak Computing\WinZip\UpdateCheck">
+        <parentCategory ref="WinZip"/>
+        <supportedOn ref="WinZip"/>
+        <elements>
+            <text id="NoUpdateChecking" valueName="NoUpdateChecking" required="true" />
+        </elements>
+        </policy>
+
+        <!-- [WinZip Emailer] Disable possibility to use personal email address -->
+        <policy name="DisablePersonalContacts" class ="Machine" displayName="$(string.DisablePersonalContacts)" explainText="$(string.DisablePersonalContacts_help)"  presentation="$(presentation.DisablePersonalContacts_Pres)" key="SOFTWARE\Nico Mak Computing\WinZip\Policies">
+        <parentCategory ref="WinZip"/>
+        <supportedOn ref="WinZip"/>
+        <elements>
+            <text id="DisablePersonalContacts" valueName="DisablePersonalContacts" required="true" />
+        </elements>
+        </policy>
+        
+    </policies>
+</policyDefinitions>
