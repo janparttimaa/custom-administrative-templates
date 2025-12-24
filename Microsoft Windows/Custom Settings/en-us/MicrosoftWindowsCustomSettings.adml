@@ -1,31 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.1" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
   <displayName>Windows Custom Group Policy Settings</displayName>
   <description>Various Custom Group Policy Settings for Windows 10 and later</description>
   <resources>
     <stringTable>
       <!-- General -->
-      <string id="WindowsCustomSettingCategory">Windows - Custom Settings</string>
+      <string id="MicrosoftWindowsCustomSettingsSettingCategory">Windows - Custom Settings</string>
 
-      <!-- Block AADWorkplaceJoin -->
-      <string id="BlockAADWorkplaceJoin">BlockAADWorkplaceJoin</string>
-      <string id="BlockAADWorkplaceJoin_help">This setting block users from adding more work accounts (Microsoft Entra registered) on corporate Windows 10/11 devices.
+      <!-- Hide file name extensions -->
+      <string id="HideFileExt">Hide file name extensions</string>
+      <string id="HideFileExt_help">This setting controls whether file name extensions are displayed in File Explorer.
 
-If you enable this setting, users cannot add more work accounts.
+- Enabled: File name extensions are hidden in File Explorer.
+- Disabled: File name extensions are visible in File Explorer.
 
-If you disable or do not configure this setting, users can add more work accounts.
+If a user changes this setting manually, the policy will revert the value to the administrator-specified configuration.
 
-More information: https://learn.microsoft.com/en-us/entra/identity/devices/faq#how-can-i-block-users-from-adding-more-work-accounts--microsoft-entra-registered--on-my-corporate-windows-10-11-devices
-      </string>
-      <!-- Internet Explorer: Do not save encrypted pages to disk -->
-      <string id="DisableCachingOfSSLPages">DisableCachingOfSSLPages</string>
-      <string id="DisableCachingOfSSLPages_help">This policy setting allows you to manage whether Internet Explorer will save encrypted pages that contain secure (HTTPS) information such as passwords and credit card numbers to the Internet Explorer cache, which may be insecure.
-
-If you enable this policy setting, Internet Explorer will not save encrypted pages containing secure (HTTPS) information to the cache.
-
-If you disable this policy setting, Internet Explorer will save encrypted pages containing secure (HTTPS) information to the cache.
-
-If you do not configure this policy, Internet Explorer will save encrypted pages containing secure (HTTPS) information to the cache.
+Notes: 
+- Setting this policy to "Not Configured" will not restore the original system behavior. To revert to the original setting, ensure that the policy is explicitly set as "Enabled".
+- When disabling or enabling this setting, policy will apply next time when device will be restarted.
       </string>
     </stringTable>
   </resources>
