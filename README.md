@@ -16,7 +16,7 @@ This repository includes some custom Administrative Templates that can be used o
 | Docker Destop | [Hyperlink](./Docker%20Desktop) |
 | GlobalProtect | [Hyperlink](./GlobalProtect) |
 | iManage | [Hyperlink](./iManage) |
-| Microsoft Windows - Custom Settings | [Hyperlink](./Microsoft%20Windows%20-%20Custom%20Settings) |
+| Microsoft Windows - Custom Settings | [Hyperlink](./Microsoft%20Windows/Custom%20Settings) |
 | Sparx Enterprise Architect | [Hyperlink](./Sparx%20Enterprise%20Architect) |
 | VLC | [Hyperlink](./VLC) |
 | WinSCP | [Hyperlink](./WinSCP)  |
