@@ -16,7 +16,7 @@ Here you can see OMA-URI information of the common settings that are part of thi
 |---------|---------|---------|---------|---------|
 | ```Policy_AutoUpdateVersionControlPolicy``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/receiver~Policy~CITRIX_COMPONENTS~ICAClient~AutoUpdate/Policy_AutoUpdateVersionControlPolicy``` | String | ```<enabled/> <data id="Part_CWA_Version" value=""/> <data id="Part_UpgradeToLatest" value="true"/> <data id="Part_CustomStartDate" value=""/> <data id="Part_DeliveryPeriod" value="0"/>```
 | ```Policy_CheckAutoUpdatePolicy``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/receiver~Policy~CITRIX_COMPONENTS~ICAClient~AutoUpdate/Policy_CheckAutoUpdatePolicy``` | String | ```<enabled/> <data id="Part_CheckAutoUpdatePolicy" value="0"/>```
-| ```Policy_EnableAutoUpdatePolicy``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/receiver~Policy~CITRIX_COMPONENTS~ICAClient~AutoUpdate/Policy_EnableAutoUpdatePolicy``` | String | ```<enabled/> <data id="Part_EnableAutoUpdatePolicy" value="True"/> <data id="Part_EnableAutoUpdatePolicy_version" value="False"/>```
+| ```Policy_EnableAutoUpdatePolicy``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/receiver~Policy~CITRIX_COMPONENTS~ICAClient~AutoUpdate/Policy_EnableAutoUpdatePolicy``` | String | ```<enabled/> <data id="Part_EnableAutoUpdatePolicy" value="True"/> <data id="Part_EnableAutoUpdatePolicy_version" value="False"/> <data id="Part_EnableAutoUpdatePolicy_switchArchitecture" value="False"/>```
 | ```Policy_Keyboard_Hotkeys``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/receiver~Policy~CITRIX_COMPONENTS~ICAClient~UserExperience/Policy_Keyboard_Hotkeys``` | String | ```<enabled/> <data id="Part_Keyboard_Hotkey_Tasklist" value="Shift"/> <data id="Part_Keyboard_Hotkey_Tasklist_Plus" value="F1"/> <data id="Part_Keyboard_Hotkey_Close_Remote_Application" value="Shift"/> <data id="Part_Keyboard_Hotkey_Close_Remote_Application_Plus" value="F3"/> <data id="Part_Keyboard_Hotkey_Toggle_Title_Bar" value="Shift"/> <data id="Part_Keyboard_Hotkey_Toggle_Title_Bar_Plus" value="F2"/> <data id="Part_Keyboard_Hotkey_Ctrl_Alt_Del" value="Ctrl"/> <data id="Part_Keyboard_Hotkey_Ctrl_Alt_Del_Plus" value="F1"/> <data id="Part_Keyboard_Hotkey_Ctrl_Shift_Esc" value="Ctrl"/> <data id="Part_Keyboard_Hotkey_Ctrl_Shift_Esc_Plus" value="F3"/> <data id="Part_Keyboard_Hotkey_Alt_Tab" value="Alt"/> <data id="Part_Keyboard_Hotkey_Alt_Tab_Plus" value="F8"/> <data id="Part_Keyboard_Hotkey_Alt_Backtab" value="Alt"/> <data id="Part_Keyboard_Hotkey_Alt_Backtab_Plus" value="F9"/> <data id="Part_Keyboard_Hotkey_Ctrl_Esc" value="Ctrl"/> <data id="Part_Keyboard_Hotkey_Ctrl_Esc_Plus" value="F2"/> <data id="Part_Keyboard_Hotkey_Ctrl_Alt" value="Alt"/> <data id="Part_Keyboard_Hotkey_Ctrl_Alt_Plus" value="F2"/> <data id="Part_Keyboard_Hotkey_Toggle_Latency_Reduction" value="Ctrl"/> <data id="Part_Keyboard_Hotkey_Toggle_Latency_Reduction_Plus" value="F5"/> <data id="Part_Keyboard_Hotkey_Toggle_LOCALIME" value="Shift"/> <data id="Part_Keyboard_Hotkey_Toggle_LOCALIME_Plus" value="F4"/> <data id="Part_Keyboard_Hotkey_Toggle_RelativeMouse" value="Ctrl"/> <data id="Part_Keyboard_Hotkey_Toggle_RelativeMouse_Plus" value="F12"/> <data id="Part_Keyboard_Windows_Key" value="Remote"/>```
 
 ### Descriptions
@@ -116,8 +116,15 @@ Disabled – Citrix Workspace Updates option is hidden from the Advanced Prefere
 | True | ```<data id="Part_EnableAutoUpdatePolicy_version" value="True"/>``` |Only LTSR updates will be available.
 | False (Recommended) | ```<data id="Part_EnableAutoUpdatePolicy_version" value="False"/>``` |All updates will be available.
 
+*Migrate 32-bit application to system processir architecture (64-bit or ARM64):*
+| Preference | Value | Description
+|---------|---------|---------|
+| True | ```<data id="Part_EnableAutoUpdatePolicy_switchArchitecture" value="True"/>``` |The auto-updates upgrade Citrix Workspace from 32-bit to match the system processor architecture (64-bit or ARM64).
+| False (Recommended) | ```<data id="Part_EnableAutoUpdatePolicy_switchArchitecture" value="False"/>``` |Updates keep the current architecture. **This is the default value.**
+
 More information:
-https://docs.citrix.com/en-us/citrix-workspace-app-for-windows/updates#configure-the-delay-in-checking-for-updates
+- https://docs.citrix.com/en-us/citrix-workspace-app-for-windows/updates#configure-the-delay-in-checking-for-updates
+- https://docs.citrix.com/en-us/citrix-workspace-app-for-windows/transition-to-64-bit-faq
 
 ##### Technical information (Part_EnableAutoUpdatePolicy)
 - **Friendly name of the setting:** Citrix Workspace Updates > Enable Citrix Workspace Update Policy
@@ -135,6 +142,15 @@ https://docs.citrix.com/en-us/citrix-workspace-app-for-windows/updates#configure
 - **Value Type:** REG_SZ
 - **Value Name:** LTSROnly
 - **Enabled Value (Fast):** False
+- **Disabled Value:** N/A
+
+##### Technical information (Part_EnableAutoUpdatePolicy_switchArchitecture)
+- **Friendly name of the setting:** Migrate 32-bit application to system processir architecture (64-bit or ARM64)
+- **Registry Hive:** HKEY_LOCAL_MACHINE
+- **Registry Path:** SOFTWARE\Policies\Citrix\ICA Client\AutoUpdate
+- **Value Type:** REG_SZ
+- **Value Name:** MigrateCWAArchitecture
+- **Enabled Value (False):** False
 - **Disabled Value:** N/A
 
 > [!NOTE]  
