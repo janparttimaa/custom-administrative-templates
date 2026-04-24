@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.1" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
   <displayName>WinZip</displayName>
   <description>Group Policy Settings of WinZip</description>
   <resources>
@@ -28,9 +28,20 @@ More information:
 https://stealthpuppy.com/disabling-check-for-winzip-update/
       </string>
 
-      <!-- [Software Updates] Completely disable "Check for Updates" -->
-      <string id="NoUpdateChecking">[Software Updates] Completely disable "Check for Updates"</string>
-      <string id="NoUpdateChecking_help">If you want to completely disable "Check for Updates", enable this policy and set value 1.
+      <!-- [Software Updates - Nico Mak Computing] Completely disable "Check for Updates" -->
+      <string id="NoUpdateCheckingNMC">[Software Updates - Nico Mak Computing] Completely disable "Check for Updates"</string>
+      <string id="NoUpdateCheckingNMC_help">If you want to completely disable "Check for Updates", enable this policy and set value 1.
+
+If you don't want to disable "Check for Updates", enable this policy and set value 0.
+
+More information: 
+https://kb.winzip.com/en/130452
+https://stealthpuppy.com/disabling-check-for-winzip-update/
+      </string>
+
+      <!-- [Software Updates - WinZip Computing] Completely disable "Check for Updates" -->
+      <string id="NoUpdateCheckingWZC">[Software Updates - WinZip Computing] Completely disable "Check for Updates"</string>
+      <string id="NoUpdateCheckingWZC_help">If you want to completely disable "Check for Updates", enable this policy and set value 1.
 
 If you don't want to disable "Check for Updates", enable this policy and set value 0.
 
@@ -64,9 +75,16 @@ https://kb.corel.com/Attachments/kcs-189030/WZ27-Enterprise-Installation-and-Con
         </textBox>
       </presentation>
 
-    <!-- [Software Updates] Completely disable "Check for Updates" -->      
-      <presentation id="NoUpdateChecking_Pres">
-        <textBox refId="NoUpdateChecking">
+    <!-- [Software Updates - Nico Mak Computing] Completely disable "Check for Updates" -->      
+      <presentation id="NoUpdateCheckingNMC_Pres">
+        <textBox refId="NoUpdateCheckingNMC">
+          <label>Value:</label>
+        </textBox>
+      </presentation>
+
+    <!-- [Software Updates - WinZip Computing] Completely disable "Check for Updates" -->      
+      <presentation id="NoUpdateCheckingWZC_Pres">
+        <textBox refId="NoUpdateCheckingWZC">
           <label>Value:</label>
         </textBox>
       </presentation>

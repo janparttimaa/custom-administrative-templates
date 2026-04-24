@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.1" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
     <policyNamespaces>
 	    <target prefix="WinZip" namespace="CorelCorporation.Policies.WinZip"/>
 	    <using prefix="windows" namespace="Microsoft.Policies.Windows"/>
     </policyNamespaces>
-    <resources minRequiredRevision="1.0" />
+    <resources minRequiredRevision="1.1" />
     <supportedOn>
 		<definitions>
 			<definition name="WinZip" displayName="$(string.WinZipSupportedOn)"/>
@@ -33,12 +33,21 @@
         </elements>
         </policy>
 
-        <!-- [Software Updates] Completely disable "Check for Updates" -->
-        <policy name="NoUpdateChecking" class ="Both" displayName="$(string.NoUpdateChecking)" explainText="$(string.NoUpdateChecking_help)" presentation="$(presentation.NoUpdateChecking_Pres)" key="SOFTWARE\Nico Mak Computing\WinZip\UpdateCheck">
+        <!-- [Software Updates - Nico Mak Computing] Completely disable "Check for Updates" -->
+        <policy name="NoUpdateCheckingNMC" class ="Both" displayName="$(string.NoUpdateCheckingNMC)" explainText="$(string.NoUpdateCheckingNMC_help)" presentation="$(presentation.NoUpdateCheckingNMC_Pres)" key="SOFTWARE\Nico Mak Computing\WinZip\UpdateCheck">
         <parentCategory ref="WinZip"/>
         <supportedOn ref="WinZip"/>
         <elements>
-            <text id="NoUpdateChecking" valueName="NoUpdateChecking" required="true" />
+            <text id="NoUpdateCheckingNMC" valueName="NoUpdateChecking" required="true" />
+        </elements>
+        </policy>
+
+        <!-- [Software Updates - WinZip Computing] Completely disable "Check for Updates" -->
+        <policy name="NoUpdateCheckingWZC" class ="Both" displayName="$(string.NoUpdateCheckingWZC)" explainText="$(string.NoUpdateCheckingWZC_help)" presentation="$(presentation.NoUpdateCheckingWZC_Pres)" key="SOFTWARE\WinZip Computing\WinZip\UpdateCheck">
+        <parentCategory ref="WinZip"/>
+        <supportedOn ref="WinZip"/>
+        <elements>
+            <text id="NoUpdateCheckingWZC" valueName="NoUpdateChecking" required="true" />
         </elements>
         </policy>
 

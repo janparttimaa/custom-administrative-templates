@@ -17,7 +17,8 @@ Here you can see OMA-URI information of the settings that are part of this ADMX-
 | ```AutoMode``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/WinZip~Policy~WinZip/AutoMode```<br>```./User/Vendor/MSFT/Policy/Config/WinZip~Policy~WinZip/AutoMode``` | String | ```<enabled/> <data id="AutoMode" value="0"/>```
 | ```DisablePersonalContacts``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/WinZip~Policy~WinZip/DisablePersonalContacts``` | String | ```<enabled/> <data id="DisablePersonalContacts" value="1"/>```
 | ```InstallBGDD``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/WinZip~Policy~WinZip/InstallBGDD``` | String | ```<enabled/> <data id="InstallBGDD" value="0"/>```
-| ```NoUpdateChecking``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/WinZip~Policy~WinZip/NoUpdateChecking```<br>```./User/Vendor/MSFT/Policy/Config/WinZip~Policy~WinZip/NoUpdateChecking``` | String | ```<enabled/> <data id="NoUpdateChecking" value="1"/>```
+| ```NoUpdateCheckingNMC``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/WinZip~Policy~WinZip/NoUpdateCheckingNMC```<br>```./User/Vendor/MSFT/Policy/Config/WinZip~Policy~WinZip/NoUpdateCheckingNMC``` | String | ```<enabled/> <data id="NoUpdateCheckingNMC" value="1"/>```
+| ```NoUpdateCheckingWZC``` | (See below) | ```./Device/Vendor/MSFT/Policy/Config/WinZip~Policy~WinZip/NoUpdateCheckingWZC```<br>```./User/Vendor/MSFT/Policy/Config/WinZip~Policy~WinZip/NoUpdateCheckingWZC``` | String | ```<enabled/> <data id="NoUpdateCheckingWZC" value="1"/>```
 
 ### Descriptions
 More details of the settings can be found this chapter.
@@ -89,7 +90,7 @@ More information [here](https://kb.corel.com/129410).
 > [!NOTE]  
 > N/A in this context means that the registry key does not exist. In this case, the application uses the default value that is hardcoded in the application, and the setting is therefore not disabled, even though the registry value no longer exists (or application may re-create default registry value again). If you want to disable the setting via Intune, please ensure that value is then set to ```<enabled/> <data id="InstallBGDD" value="0"/>```
 
-#### NoUpdateChecking
+#### NoUpdateCheckingNMC
 If you want to completely disable "Check for Updates", enable this policy and set value 1.
 
 If you don't want to disable "Check for Updates", enable this policy and set value 0.
@@ -101,9 +102,33 @@ More information [here](https://kb.winzip.com/en/130452) and [here](https://stea
 > - If you want to disable the setting via Intune, please make sure that value is then set to ```<enabled/> <data id="NoUpdateChecking" value="0"/>```
 
 ##### Technical information
-- **Friendly name of the setting:** [Software Updates] Completely disable "Check for Updates"
+- **Friendly name of the setting:** [Software Updates - Nico Mak Computing] Completely disable "Check for Updates"
 - **Registry Hive:** HKEY_LOCAL_MACHINE / HKEY_CURRENT_USER
 - **Registry Path:** SOFTWARE\Nico Mak Computing\WinZip\UpdateCheck
+- **Value Type:** REG_SZ
+- **Value Name:** NoUpdateChecking
+- **Enabled Value:** 1
+- **Disabled Value:** N/A
+
+> [!NOTE]  
+> N/A in this context means that the registry key does not exist. In this case, the application uses the default value that is hardcoded in the application, and the setting is therefore not disabled, even though the registry value no longer exists (or application may re-create default registry value again). If you want to disable the setting via Intune, please ensure that value is then set to ```<enabled/> <data id="NoUpdateChecking" value="0"/>```
+
+
+#### NoUpdateCheckingWZC
+If you want to completely disable "Check for Updates", enable this policy and set value 1.
+
+If you don't want to disable "Check for Updates", enable this policy and set value 0.
+
+More information [here](https://kb.winzip.com/en/130452) and [here](https://stealthpuppy.com/disabling-check-for-winzip-update/).
+
+> [!NOTE]
+> - **Important:** Configure this policy to User and Device contexts.
+> - If you want to disable the setting via Intune, please make sure that value is then set to ```<enabled/> <data id="NoUpdateChecking" value="0"/>```
+
+##### Technical information
+- **Friendly name of the setting:** [Software Updates - WinZip Computing] Completely disable "Check for Updates"
+- **Registry Hive:** HKEY_LOCAL_MACHINE / HKEY_CURRENT_USER
+- **Registry Path:** SOFTWARE\WinZip Computing\WinZip\UpdateCheck
 - **Value Type:** REG_SZ
 - **Value Name:** NoUpdateChecking
 - **Enabled Value:** 1
