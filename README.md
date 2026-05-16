@@ -15,6 +15,7 @@ This repository includes some custom Administrative Templates that can be used o
 | Citrix Workspace | [Hyperlink](./Citrix%20Workspace) |
 | Docker Destop | [Hyperlink](./Docker%20Desktop) |
 | GlobalProtect | [Hyperlink](./GlobalProtect) |
+| Google Update (Google Chrome)| [Hyperlink](./Google%20Update%20(Google%20Chrome)/) |
 | iManage | [Hyperlink](./iManage) |
 | Microsoft Windows - Custom Settings | [Hyperlink](./Microsoft%20Windows/Custom%20Settings) |
 | Sparx Enterprise Architect | [Hyperlink](./Sparx%20Enterprise%20Architect) |
