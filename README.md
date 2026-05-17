@@ -18,6 +18,7 @@ This repository includes some custom Administrative Templates that can be used o
 | Google Update (Google Chrome)| [Hyperlink](./Google%20Update%20(Google%20Chrome)/) |
 | iManage | [Hyperlink](./iManage) |
 | Microsoft Windows - Custom Settings | [Hyperlink](./Microsoft%20Windows/Custom%20Settings) |
+| SAP GUI | [Hyperlink](./SAP%20GUI/) |
 | Sparx Enterprise Architect | [Hyperlink](./Sparx%20Enterprise%20Architect) |
 | VLC | [Hyperlink](./VLC) |
 | WinSCP | [Hyperlink](./WinSCP)  |
