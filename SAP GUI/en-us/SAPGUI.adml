@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName>SAP GUI</displayName>
+  <description>Group Policy Settings of SAP GUI</description>
+  <resources>
+    <stringTable>
+      <!-- SAP GUI -->
+      <string id="SAPGUISettingCategory">SAP GUI</string>
+      <string id="SAPGUISupportedOn">SAP GUI</string>
+
+      <!-- Set language -->
+      <string id="Language">Set language</string>
+      <string id="Language_help">Set and enforce language of the SAP GUI.
+
+If you want to set language, enable this policy and set prefferred language. If user changes preferred language to something else from SAP GUI's settings, language will be enforced back to preferred language next time when device's policy refresh cycle starts. 
+
+Please check language values from GitHub: https://github.com/janparttimaa/custom-administrative-templates  
+
+If you disable or not configure this setting, user can choose preferred language from SAP GUI's settings and we will not enforce user to use specific language.
+      </string>
+    </stringTable>
+    <presentationTable>      
+      <presentation id="Language_Pres">
+        <text>Set language</text>
+        <textBox refId="Language">
+          <label>Language:</label>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

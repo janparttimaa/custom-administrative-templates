@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+	<policyNamespaces>
+		<target prefix="SAPGUI" namespace="SAP.Policies.SAPGUI"/>
+		<using prefix="windows" namespace="Microsoft.Policies.Windows"/>
+  	</policyNamespaces>
+  	<resources minRequiredRevision="1.0" />
+	<supportedOn>
+		<definitions>
+			<definition name="SAPGUI" displayName="$(string.SAPGUISupportedOn)"/>
+		</definitions>
+	</supportedOn>
+	<categories>
+    	<category name="SAPGUI" displayName="$(string.SAPGUISettingCategory)"/>
+  </categories>
+	<policies>
+		<policy name="Language" class ="User" displayName="$(string.Language)" explainText="$(string.Language_help)" presentation="$(presentation.Language_Pres)" key="SOFTWARE\SAP\General">
+			<parentCategory ref="SAPGUI"/>
+			<supportedOn ref="SAPGUI"/>
+			<elements>
+        			<text id="Language" valueName="Language" required="true" />
+			</elements>
+    	</policy>
+  	</policies>
+</policyDefinitions>
